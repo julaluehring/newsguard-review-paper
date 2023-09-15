@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+
+%packages
+\usepackage[utf8]{inputenc}
+\usepackage{sectsty}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{natbib}
+
+%settings
+\sectionfont{\normalsize}
+\setlength{\bibhang}{0.5in}
+\bibliographystyle{apalike}
+
+%document
+\title{Letter of Inquiry}
+\author{Journal of Quantitative Description: Digital Media}
+
+\begin{document}
+
+\maketitle
+
+%What is your research question, in one sentence? 
+
+%The spread of misinformation has been studied extensively by scholars from various scientific disciplines, therefore, relying on diverse conceptualizations. Definitions of misinformation seem to largely depend on the respective methodological choices, resulting in imprecise or inconclusive findings \citep{altayMisinformationMisinformationConceptual2023a}.
+To study the diffusion or discussion of misinformation on social media, computational researchers commonly %use stories that were factchecked by experts \citep{vosoughiSpreadTrueFalse2018a}, or 
+rely on tracking blacklisted domains \citep{gonzalez-bailonAsymmetricIdeologicalSegregation2023a,guessExposureUntrustworthyWebsites2020a,grinbergFakeNewsTwitter2019}. 
+%The choice between story and source-based approaches hinges on the primary research objective. When operating at the level of the story, we capture misinformation with high precision, but the selection of stories can be narrow and is likely biased. Conversely, with a source-based strategy, we can cover a wider variety of sources and stories, and hence, the data may be less biased. However, this approach runs the risk of overgeneralizing across stories and source ratings may be especially sensitive to time and context. 
+Recent research published in top-tier journals has identified misinformation based on a domain-list curated by the organization \href{https://www.newsguardtech.com/ratings/rating-process-criteria/}{NewsGuard}, e.g., \cite{robertsonUsersChooseEngage2023a}. However, the database is proprietary and only validated for the U.S. context by \cite{linHighLevelCorrespondence2023}. Therefore, this proposal outlines a descriptive review of the NewsGuard list over time and across contexts, and is guided by the question: How reliable is the NewsGuard list to measure misinformation online?
+
+\section*{What is being described?}
+NewsGuard applies an expert-based approach; analysts assign ratings based on nine distinct criteria and regularly update these assessments. For the U.S. context, the lists has shown high agreement with other expert-rated lists \citep{linHighLevelCorrespondence2023}, but it is crucial to assess the usefulness of this list for research beyond the English-speaking world. Moreover, there are several challenges associated with NewsGuard: First, the domain ratings were initially created as a tool for brand security rather than a research instrument, which is why the list is propriatory and access as well as publication of the data is restricted. Second, the list is updated in unknown intervals, which is why it is important to understand the update process of the ratings. Third, the list is not exhaustive, and the coverage changes over time and for the selected countries. Finally, the list contains missing data points, and it is unclear how this would affect the results of a study.
+Consequently, we propose to provide a comprehensive description of this database over time (from 2019 until today, in monthly granularity) and across countries provided by NewsGuard. We believe that is is essential to address the following aspects of the database: 
+\begin{enumerate}[label= \alph*)]
+\item the distribution, construction, weighting and update process of the ratings,
+\item the selection and removal of sources, and 
+\item the completeness and reliability of other information provided in the database, e.g., political orientation.
+\end{enumerate}
+
+In addition, we reproduce published research relying on the NewsGuard list with different versions of the list to assess the degree to which results depend on a specific version of the list.
+
+\section*{How is the sample constructed?}
+
+
+\section*{How does it pertain to digital media?}
+The reach of misinformation on the general population has been debated \citep{wattsMeasuringNewsIts2021b}, with only a small number of people engaging with misinformation online \citep{allenEvaluatingFakeNews2020,grinbergFakeNewsTwitter2019}. Yet, when judging the consequences of the problem at the scale of the information ecosystem, misinformation seems to feed into growing partisan sorting and intergroup animosity \citep{gonzalez-bailonAsymmetricIdeologicalSegregation2023a, robertsonUsersChooseEngage2023a}. Misinformation is widely visible on social media and in the mainstream media \citep{tsfatiCausesConsequencesMainstream2020}, because it exploits the dynamics at play by fueling intergroup conflict and negative emotions. Consequently, to understand the spread of misinformation on digital platforms, it is imperative for computational social scientists to have access to reliable and valid data. By reviewing strategies to research misinformation online, and assessing the reliability of source-based approaches in particular, we outline potential drawbacks and pitfalls for digital media research and offer recommendations for the application of the NewsGuard database in different contexts.
+
+\bibliography{newsguard-review.bib}
+\end{document}
