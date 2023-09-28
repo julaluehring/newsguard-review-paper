@@ -6,6 +6,7 @@
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{natbib}
+\usepackage{graphicx}
 
 %settings
 \sectionfont{\normalsize}
@@ -20,33 +21,39 @@
 
 \maketitle
 
-%What is your research question, in one sentence? 
+\section*{Research question}
+How reliable is the NewsGuard database of domain trustworthiness ratings over time, language contexts and trustworthiness dimensions?
 
-%The spread of misinformation has been studied extensively by scholars from various scientific disciplines, therefore, relying on diverse conceptualizations. Definitions of misinformation seem to largely depend on the respective methodological choices, resulting in imprecise or inconclusive findings \citep{altayMisinformationMisinformationConceptual2023a}.
-To study the diffusion or discussion of misinformation on social media, computational researchers commonly use stories that were factchecked by experts \citep{vosoughiSpreadTrueFalse2018a}, or track blacklisted domains \citep{gonzalez-bailonAsymmetricIdeologicalSegregation2023a,guessExposureUntrustworthyWebsites2020a,grinbergFakeNewsTwitter2019}, 
-%The choice between story and source-based approaches hinges on the primary research objective. When operating at the level of the story, we capture misinformation with high precision, but the selection of stories can be narrow and is likely biased. Conversely, with a source-based strategy, we can cover a wider variety of sources and stories, and hence, the data may be less biased. However, this approach runs the risk of overgeneralizing across stories and source ratings may be especially sensitive to time and context. 
-% Recent research published in top-tier journals has identified misinformation based on a domain-list
-A prominent domain list is curated by the organization NewsGuard \citep{robertsonUsersChooseEngage2023a,lasserSocialMediaSharing2022a}, however, it is proprietary and so far only validated for the U.S. context by \cite{linHighLevelCorrespondence2023}. 
-Therefore, this proposal outlines a descriptive review of the NewsGuard list over time and across countries, and is guided by the question: How reliable is a domain-based list, such as NewsGuard, to measure misinformation online?
+\section*{Why is NewsGuard important for studying digital media?}
+On social media, misinformation is widely visible \citep{lazerScienceFakeNews2018} and embedded in growing partisan sorting and intergroup conflict~\citep{gonzalez-bailonAsymmetricIdeologicalSegregation2023a}. To study such dynamics on digital platforms, it is imperative for computational social scientists to have access to reliable and valid tools that enable them to identify misinformation. A prominent way to track misinformation is to use a list of domains curated by the organization NewsGuard, which offers the most comprehensive database of domain trustworthiness ratings. Despite increasing popularity~\citep[for example,][]{robertsonUsersChooseEngage2023a,lasserSocialMediaSharing2022a}, the ratings are made as a tool for brand security rather than research purposes, which is why the database is not public and access is expensive. 
+
+This proposal outlines a descriptive analysis of the content of the NewsGuard database over time and across countries, focusing on three aspects:
+\begin{itemize}
+    \item \textbf{How volatile are trustworthiness ratings in the NewsGuard database, e.g. how often do ratings change or domains vanish?} This is important for misinformation researchers to estimate whether using an older database in their research will distort results.
+    \item \textbf{How reliable and complete is the provided information, particularly for countries other than the U.S.?} A recent study has shown high agreement of NewsGuard with other expert-rated lists in the U.S. context~\citep{linHighLevelCorrespondence2023}, but an assessment for other countries is missing. 
+    \item \textbf{How can other information in the database be used for misinformation research?} For each domain, NewsGuard rates journalistic quality criteria, topics, political slants, and recently added labels for AI-generated content. This information might shed light on aspects of misinformation beyond binary true/false labels.
+\end{itemize}
+By describing the database, we outline potential pitfalls and recommendations for digital media research. We also want to empower misinformation researchers to make informed decisions about whether the substantial expense associated with acquiring access to NewsGuard is necessary for their research. 
 
 \section*{What is being described?}
-NewsGuard applies an expert-based approach; analysts assign and regularly update overall reliability ratings (0 to 100) based on nine binary criteria (see \href{https://www.newsguardtech.com/ratings/rating-process-criteria/}{here}). For the U.S. context, the list has shown high agreement with other expert-rated lists \citep{linHighLevelCorrespondence2023}, but it is crucial to assess the usefulness for research beyond the English-speaking world. Moreover, the ratings were initially created as a tool for brand security rather than a research instrument, which is why access as well as publication of the data is restricted. %Second, ratings and sources are updated in unknown intervals, which is why it is important to understand the update process of the ratings as well as changes in source coverage. 
-Finally, it remains unclear how inconsistencies in source selection, reliability ratings and other categories rated by NewsGuard would affect the results of a study. Therefore, we propose to provide a comprehensive description of this database over time and across countries by addressing the following aspects of the database: 
-\begin{enumerate}[label= \alph*)]
-\item the distribution, construction, weighting and update process of the ratings,
-\item the selection and removal of sources, and 
-\item the completeness and reliability of other information provided in the database, e.g., political orientation.
-\end{enumerate}
-
-In addition, we reproduce published research relying on the NewsGuard list with different versions of the list to assess the degree to which results depend on a specific version of the list.
+NewsGuard analysts assess and regularly update the trustworthiness of news domains. As of September 20, 2023, the database contains 10,993 trustworthiness assessments. Each assessment includes:
+\begin{itemize}
+    \item The domain and overall trustworthiness score (between 0 and 100).
+    \item Binary labels (yes/no) for each of the nine journalistic rating criteria constituting the overall trustworthiness ratings. Criteria are ``Regularly corrects or clarifies errors'' (12.5 points) or ``Gathers and presents information responsibly'' (18 points)\footnote{See \href{https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://www.newsguardtech.com/ratings/rating-process-criteria/} for a full list.}
+    \item The language and country associated with the domain. Currently, the database covers nine countries (US, GB, IT, CA, FR, DE, AU, AT, NZ) as well as a ```global'' label, and five languages (English, Italian, French, German, Spanish). Most assessments are from the US (66\%), followed by global domains (12\%), Great Britain (5\%), Italy (5\%), Canada (4\%), France (4\%) and Germany (3\%).
+    \item Topics covered (e.g., ``local news'', ``political news'', ``health information'') and political orientation (left/right).
+    \item A flag indicating whether the outlet frequently posts AI-generated content.
+\end{itemize}
 
 \section*{How is the sample constructed?}
-NewsGuard describes that they derive the source list from data services tracking 95\% of all online activity. Notably, they add sources they deem influential, or that frequently change domains. In the database, the list automatically updates every hour. Given that we have access to the entire NewsGuard database, we constructed a sample by merging all lists with monthly granularity, covering March 2019 until March 2023. Over four years, the dataset has grown from 2,622 to 8,664 sources, and now covers 9 countries (United States, Italy, Great Britain, France, Germany, Canada, Australia, Austria, New Zealand) and five different languages (English, Italian, French, German, Spanish). Yet, %the dataset is not balanced across countries and languages: 
-the majority of the sources (76\%) are in English and come from the United States. After analyzing global trends for the whole sample, we subset the non-U.S. data and compare across those countries.
-
-\section*{How does it pertain to digital media?}
-%The reach of misinformation on the general population has been debated \citep{wattsMeasuringNewsIts2021b}, with only a small number of people engaging with misinformation online \citep{allenEvaluatingFakeNews2020,grinbergFakeNewsTwitter2019}. Yet, 
-When judging the consequences of misinformation at the scale of the information ecosystem \citep{allenEvaluatingFakeNews2020}, it feeds into a system shaped by growing partisan sorting and intergroup animosity \citep{gonzalez-bailonAsymmetricIdeologicalSegregation2023a, robertsonUsersChooseEngage2023a}. Misinformation is widely visible on social media \citep{lazerScienceFakeNews2018} and in the mainstream media \citep{tsfatiCausesConsequencesMainstream2020}, because it exploits the dynamics at play by fueling intergroup conflict and negative emotions. Consequently, to understand the spread of misinformation on digital platforms, it is imperative for computational social scientists to have access to reliable and valid data. By assessing the reliability of source-based approaches, we outline potential pitfalls for digital media research and offer recommendations for the application of the NewsGuard database in different countries.
+NewsGuard rates news outlets based on web traffic data, claiming that they have reviewed all domains accounting for 95\% of online engagement. The organization sometimes adds outlets they deem influential or that changed domains. NewsGuard saves hourly snapshots of the database, allowing us to track changes as well as additions to and deletions from the database going back to March 2019, when the organization started to operate. 
+Notably, NewsGuard is not a blacklist. In fact, close to 60\% of the domains in the database have an overall rating of over 60 and are therefore considered ``trustworthy''(see Fig.~\ref{fig:fig1}) for a distribution of scores. 
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{NewsGuard_histogram.pdf}
+    \caption{Distribution of trustworthiness scores of domains contained in the NewsGuard database as of September 20, 2023.}
+    \label{fig:fig1}
+\end{figure}
 
 \bibliography{newsguard-review.bib}
 \end{document}
