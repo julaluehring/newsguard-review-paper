@@ -99,7 +99,7 @@ More precisely, we believe that it is essential to address the following aspects
 By describing the database, we outline potential pitfalls for digital media research and offer recommendations for the application of the NewsGuard database in different contexta. We also want to empower misinformation researchers to make informed decisions about whether the substantial expense associated with acquiring access to NewsGuard is necessary for their research. 
 
 \section{Results}
-As of September 20, 2023, the database contains 10,993 trustworthiness assessments. For every domain, this includes (see Table for full list of variables):
+As of September 20, 2023, the database contains 11,093 trustworthiness assessments. For every domain, this includes (see Table for full list of variables):
 \begin{itemize}
     \item Domain and trustworthiness rating (between 0 and 100).
     \item Binary labels for nine journalistic quality criteria constituting the trustworthiness rating. 
@@ -111,7 +111,7 @@ As of September 20, 2023, the database contains 10,993 trustworthiness assessmen
 \end{itemize}
 
 \subsection{How volatile are trustworthiness ratings?}
-A trained team of NewsGuard experts regularly assesses the trustworthiness of selected news outlets. However, the organization also manually adds outlets they deem influential or that changed domains. The organization saves hourly snapshots of the database, allowing us to track changes going back to March 2019, when the organization started operating. Here, we review the distribution, contstruction, weighting and update process of the ratings over the years. 
+A trained team of NewsGuard experts regularly assesses the trustworthiness of selected news outlets. However, the organization also manually adds outlets they deem influential or that changed domains. The organization saves hourly snapshots of the database, allowing us to track changes going back to March 2019, when the organization started operating. Here, we review the distribution, construction, weighting and update process of the ratings over the years. 
 
 %%distribution
 NewsGuard trustworthiness ratings are assigned on a scale from 0 to 100, with 100 being trustworthy. The threshold for the trustworthiness of a source is set at 60. Notably, NewsGuard is not a blacklist. In fact, close to 60\% of domains have an overall rating of over 60 and are therefore considered ``trustworthy''(see Fig.~\ref{fig:fig1}) for the distribution of trustworthiness scores. 
@@ -128,7 +128,7 @@ In addition, some sources do not receive a trustworthiness score as they are cla
 When looking at the score distribution over time, the right skew has been diminishing; while the mean and median rating averaged per year, was XY in 2019, it is now XY. In other words, the average trustworthiness of domains has increased over time. The distributions of trustworthiness over time are shown in Figure XY.
 
 %%added vs updated sources
-However, new sources that were added to the database tend to have a lower score, as shown in Figure XY. This is likely due to the fact that the organization has been adding untrustworthy domains. A great number of sources have been added in September 2020, which might explain the lower average trustworthiness score in the following. In contrast, scores of already covered sources tend to decrease over time, i.e., when NewsGuard updates trustworthiness ratings, they tend to get a lower score. This is shown in Figure XY. 
+However, new sources added to the database tend to have a lower score, as shown in Figure XY. This is likely due to the fact that the organization has been adding untrustworthy domains. A great number of sources have been added in September 2020, which might explain the lower average trustworthiness score in the following. In contrast, scores of already covered sources tend to decrease over time, i.e., when NewsGuard updates trustworthiness ratings, they tend to get a lower score. This is shown in Figure XY. 
 
 %%construction
 The trustworthiness score is a composite score that calculated based on nine journalistic criteria. For each domain, the organization assigns a binary label (yes/no) per criterion. The trustworthiness score is then calculated as the sum of the weighted criteria. 
@@ -149,10 +149,16 @@ Further explanation of the criteria and their weights can be found in the NewsGu
 
 In the latest version of the dataset, the first criterion was the most respected and XY of sources satisfy it. Across all versions of the dataset, the most common combination of values is that all criteria are satisfied (XY\% of sources), given that most sources are considered trustworthy. The second most common combination is that all criteria are satisfied except for the criterion ``Does not repeatedly publish false content'' (XY\% of sources).
 
-Furthermore, looking at domain criteria updates, we find that most sources also keep their scores. However, hte most common update pattern is a negative change in the criterion ``Website discloses ownership and financing'', occuring for sources like XYZ. This criterion appears to be the most volatile, with XY\% of sources changing their label for this criterion. On the other hand, a positive update is also the fourth most common pattern, showing that it might be the one that is most frequently updated/monitored by NewsGuard.
+Furthermore, looking at domain criteria updates, we find that most sources also keep their scores. However, the most common update pattern is a negative change in the criterion ``Website discloses ownership and financing'', occurring for sources like XYZ. This criterion appears to be the most volatile, with XY\% of sources changing their label for this criterion. On the other hand, a positive update is also the fourth most common pattern, showing that it might be the one that is most frequently updated/monitored by NewsGuard.
 
 \subsection{How reliable and complete is the provided information, particularly for non-US countries?}
-Over the span of four years, NewsGuard has grown from 2,622 to 8,664 domains, as shown in Figure X. The selection and removal of domains is unclear, but the organization claims to have reviewed domains accounting for 95\% of online engagement.
+Over the span of four years, NewsGuard has grown from 2,641 to 9,734 domains, as shown in Figure X. The selection and removal of domains is unclear. Still, the organization claims to have reviewed domains accounting for 95\% of online engagement.
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{NewsGuard_histogram.pdf}
+    \caption{Distribution of domain trustworthiness contained in the NewsGuard database as of September 20, 2023.}
+    \label{fig:fig2}
+\end{figure}
 
 The dataset contains sources for nine countries in total (United States, Italy, Great Britain, France, Germany, Canada, Australia, Austria, New Zealand) plus sources considered to be global. The majority of sources are from the United States (66\%), followed by global sources (12\%), Great Britain (5\%), Italy (5\%), Canada (4\%), France (4\%) and Germany (3\%). The remaining countries account for less than 1\% of sources each. The dataset also clusters sources based on language (English, Italian, French, German, Spanish). See Table X for an overview of the number of sources per country and language, as well as distribution of scores, topics, and political orientation.
 
