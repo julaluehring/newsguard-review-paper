@@ -98,8 +98,8 @@ More precisely, we believe that it is essential to address the following aspects
 \end{itemize}
 By describing the database, we outline potential pitfalls for digital media research and offer recommendations for the application of the NewsGuard database in different contexts. We also want to empower misinformation researchers to make informed decisions about whether the substantial expense associated with acquiring access to NewsGuard is necessary for their research. 
 
-\section{Results}
-As of November 15, 2023, the database contains 11,093 trustworthiness assessments. A trained team of NewsGuard experts regularly assesses the trustworthiness of the selected news sources. The organization also manually adds sources they deem influential or that changed domains. The organization saves hourly snapshots of the database, allowing us to track changes going back to March 2019, when the organization started operating. The organization claims to have reviewed domains accounting for 95\% of online engagement. Still, the procedure by which domains are selected or removed is undisclosed on the website as well as the intervals in which the ratings are updated in the database. 
+\section{Dataset construction}
+As of November 15, 2023, the database contains 11,093 trustworthiness assessments. A trained team of NewsGuard experts regularly assesses the trustworthiness of the selected news sources. The organization also manually adds sources they deem influential or that changed domains. The database automatically updates every hour and allows us to track changes going back to March 2019, when the organization started operating. On their website, NewsGuard claims to have reviewed domains accounting for 95\% of online engagement. Still, the procedure by which domains are selected or removed is undisclosed on the website, as are the intervals in which the trustworthiness assessments are updated in the database. 
 Some sources, however, do not receive a trustworthiness score as they are classified as a ``platform'' (63 domains, e.g., YouTube). In addition, the database includes 63 sources judged as ``satire'' (e.g., The Onion) and 454 fashion and lifestyle sources (e.g., fitworldnow.com). NewsGuard does not rate these sources, but they make up less than 1\% of the listed sources in the database. We excluded them from further analysis. For the other 10,513 rated sources, the database includes the following types of ratings (see Table SX for a full list of variables):
 \begin{itemize}
     \item Domain and trustworthiness rating (between 0 and 100).
@@ -108,12 +108,10 @@ Some sources, however, do not receive a trustworthiness score as they are classi
     \item Political orientation of the outlet.
     \item Topics covered (e.g., ``local news'', ``political news'', ``health information'') by the outlet
     \item A flag indicating whether the outlet frequently posts AI-generated content.
-    \item 
 \end{itemize}
 
-Over the span of four years, NewsGuard has grown from 2,615 to 10,513 rated sources, as shown in Figure ~\ref{fig:fig1}. We sampled the database in monthly intervals and chose the middle of the month for the snapshot. However, we first started with the second day of the month and observed some irregular patterns in the data for May 2022, which can also be seen in the figure. While this pattern seems to be caused by an error (Appendix), it shows that sampling multiple snapshots of the database can be decisive. 
+Over the span of four years, NewsGuard has grown from 2,615 to 10,513 rated sources, as shown in Figure ~\ref{fig:fig1}. We sampled the database in monthly intervals and chose the middle of the month for the snapshot. However, when we sampled from the second day of each month, we observed an irregular dip in the number of domains (see May 2022 in Figure ~\ref{fig:fig1}. We think an error caused this fluctuation, as the approximately 3,500 removed domains were added again two weeks later (see Appendix). In our case, changing the sampling procedure to mid-month shows to be more stable. Nevertheless, the substantive loss in the number of domains caused by one difference in the sampling strategy indicates that comparing multiple snapshots of the database can be decisive. 
 
-In the following, we review the distribution, construction, weighting and update process of the ratings over the years. 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{sources_over_time_bimonthly.png}
@@ -122,7 +120,7 @@ In the following, we review the distribution, construction, weighting and update
 \end{figure}
 
 \subsection{How volatile are trustworthiness ratings?}
-NewsGuard trustworthiness ratings are assigned on a scale from 0 to 100, with 100 being trustworthy. The threshold for the trustworthiness of a source is set at 60. Notably, NewsGuard is not a blacklist. In fact, close to 60\% of domains have an overall rating of over 60 and are therefore considered ``trustworthy''(see Fig.~\ref{fig:fig2}) for the distribution of trustworthiness scores. 
+In the following, we review the distribution, construction, weighting and update process of the trustworthiness ratings over the years. NewsGuard trustworthiness ratings are assigned on a scale from 0 to 100, with 100 being trustworthy. The threshold for the trustworthiness of a source is set at 60. Notably, NewsGuard is not a blacklist. In fact, close to 60\% of domains have an overall rating of over 60 and are therefore considered ``trustworthy''(see Fig.~\ref{fig:fig2}) for the distribution of trustworthiness scores. 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{trustworthiness_distribution.png}
@@ -131,7 +129,7 @@ NewsGuard trustworthiness ratings are assigned on a scale from 0 to 100, with 10
 \end{figure}
 
 %%development over time
-When looking at the score distribution over time, the right skew has been diminishing; while the mean and median rating averaged per year, was XY in 2019, it is now XY. In other words, the average trustworthiness of domains has increased over time. The distributions of trustworthiness over time are shown in Figure XY.
+When looking at the score distribution over time, the right skew has been diminishing; while the mean and median rating averaged per year, was 71.77 (SD=33.29) in 2019, it is now 64.54 (SD=32.44). In other words, the average trustworthiness of domains has decreased over time. The distributions of trustworthiness over time are shown in Figure XY.
 
 
 %%added vs updated sources
@@ -186,12 +184,11 @@ The ``Conspiracy'' label contains only 39\% of the untrustworthy sources, sugges
 
 \textbf{AI-labelled content}
 
-\section{Discussion}
+\section{Conclusion}
 Points:
 Right-skewed distribution of scores reflects the presence of misinformation. Even if there are more sources out there, their prevalence should be small
 Misses user-created misinformation
 
-\section{Methods}
 
 \section{Acknowledgments}
 Acknowledgements/ Author's disclosure/ funding statement.
