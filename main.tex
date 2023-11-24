@@ -114,29 +114,38 @@ Over the span of four years, NewsGuard has grown from 2,615 to 10,513 rated sour
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{sources_over_time_bimonthly.png}
+    \includegraphics[width=\textwidth]{f1-sources_over_time_bimonthly.png}
     \caption{Number of unique domains in the NewsGuard database over time}
     \label{fig:fig1}
 \end{figure}
 
+\section{Descriptive Analyses}
 \subsection{How volatile are trustworthiness ratings?}
-In the following, we review the distribution, construction, weighting and update process of the trustworthiness ratings over the years. NewsGuard trustworthiness ratings are assigned on a scale from 0 to 100, with 100 being trustworthy. The threshold for the trustworthiness of a source is set at 60. Notably, NewsGuard is not a blacklist. In fact, close to 60\% of domains have an overall rating of over 60 and are therefore considered ``trustworthy''(see Fig.~\ref{fig:fig2}) for the distribution of trustworthiness scores. 
+In the following, we review the distribution, construction, weighting and update process of the trustworthiness ratings over the years. 
+
+\textbf{Distribution.} NewsGuard trustworthiness ratings are assigned on a scale from 0 to 100, with 100 being trustworthy. The threshold for the trustworthiness of a source is set at 60. Notably, NewsGuard is not a blacklist. In fact, close to 60\% of domains have an overall rating of over 60 and are therefore considered ``trustworthy''(see Fig.~\ref{fig:fig2}) for the distribution of trustworthiness scores. 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{trustworthiness_distribution.png}
+    \includegraphics[width=\textwidth]{f2-trustworthiness_distribution.png}
     \caption{Distribution of domain trustworthiness contained in the NewsGuard database as of November 15, 2023.}
     \label{fig:fig2}
 \end{figure}
 
-%%development over time
-When looking at the score distribution over time, the right skew has been diminishing; while the mean and median rating averaged per year, was 71.77 (SD=33.29) in 2019, it is now 64.54 (SD=32.44). In other words, the average trustworthiness of domains has decreased over time. The distributions of trustworthiness over time are shown in Figure XY.
+When looking at the score distribution over time, the right skew has been diminishing; while the average score was 71.77 (SD=33.29) in 2019, it is now 64.54 (SD=32.44). In other words, the average trustworthiness of domains has decreased over time. The distributions of trustworthiness from 2019 to 2023 are shown in Figure ~\ref{fig:fig3}.
 
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{f4-scores_over_time.png}
+    \caption{Distribution of trustworthiness scores over time}
+    \label{fig:fig3}
+\end{figure}
 
-%%added vs updated sources
-However, new sources added to the database tend to have a lower score, as shown in Figure XY. This is likely due to the fact that the organization has been adding untrustworthy domains. A great number of sources have been added in September 2020, which might explain the lower average trustworthiness score in the following. In contrast, scores of already covered sources tend to decrease over time, i.e., when NewsGuard updates trustworthiness ratings, they tend to get a lower score. This is shown in Figure XY. 
+NewsGuard regularly adds new sources to the database but rarely removes any, i.e., the database is growing. Removed sources tend to have lower trustworthiness scores in some years and appear to be outlets with a lower reach. 
+% Zooming in on the type of sources added to the database, they tend to have a lower score. This is likely due to the fact that the organization has been adding untrustworthy domains. 
+A great number of sources with lower ratings (M=46.5, SD=31.62) were added in 2020, which might explain the lower average trustworthiness score in the following. In contrast, scores of already covered sources tend to decrease over time, i.e., when NewsGuard updates trustworthiness ratings, they tend to get a lower score. This is shown in Figure XY. 
 
 %%construction
-The trustworthiness score is a composite score that calculated based on nine journalistic criteria. For each domain, the organization assigns a binary label (yes/no) per criterion. The trustworthiness score is then calculated as the sum of the weighted criteria. 
+\textbf{Construction.} The trustworthiness score is a composite score that calculated based on nine journalistic criteria. For each domain, the organization assigns a binary label (yes/no) per criterion. The trustworthiness score is then calculated as the sum of the weighted criteria. 
 The criteria are weighted differently, ordered in descending relevance:
 \begin{itemize}
   \item ``Does not repeatedly publish false content'' (22 points)
