@@ -102,7 +102,7 @@ We also want to empower misinformation researchers to make informed decisions ab
 
 \section{Dataset construction}
 As of November 15, 2023, the database contains 11,093 trustworthiness assessments. A trained team of NewsGuard experts regularly assesses the trustworthiness of the selected news sources. The organization also manually adds sources they deem influential or that changed domains. The database automatically updates every hour and allows us to track changes going back to March 2019, when the organization started operating. On their website, NewsGuard claims to have reviewed domains accounting for 95\% of online engagement. Still, the procedure by which domains are selected or removed is undisclosed on the website, as are the intervals in which the trustworthiness assessments are updated in the database. 
-Some sources, however, do not receive a trustworthiness score as they are classified as a ``platform'' (63 domains, e.g., YouTube). In addition, the database includes 63 sources judged as ``satire'' (e.g., The Onion) and 454 fashion and lifestyle sources (e.g., fitworldnow.com). NewsGuard does not rate these sources, but they make up less than 1\% of the listed sources in the database. We excluded them from further analysis. For the other 10,513 rated sources, the database includes the following types of ratings (see Table SX for a full list of variables):
+Some sources, however, do not receive a trustworthiness score as they are classified as a ``platform'' (63 domains, e.g., YouTube). In addition, the database includes 63 sources judged as ``satire'' (e.g., The Onion) and 454 lifestyle sources (e.g., fitworldnow.com). NewsGuard does not rate these sources, but they make up less than 1\% of the listed sources in the database. We exclude them from further analysis. For the other 10,513 rated sources, the database includes the following types of ratings (see Table SX for a full list of variables):
 \begin{itemize}
     \item Domain and trustworthiness rating (between 0 and 100).
     \item Binary labels for nine journalistic quality criteria constituting the trustworthiness rating. 
@@ -142,8 +142,9 @@ When looking at the score distribution over time, the right skew has been dimini
     \label{fig:fig3}
 \end{figure}
 
-NewsGuard regularly adds new sources to the database but rarely removes any, i.e., the database has been growing. Zooming in on the type of sources removed from the database, they overall tend to have a lower trustworthiness score than added sources. Over time, the  is likely due to the fact that the organization has been adding untrustworthy domains, while trustworthy domains 
-A great number of sources with lower ratings (M=46.5, SD=31.62) were added in 2020, which might explain the lower average trustworthiness score in the following. In contrast, scores of already covered sources tend to decrease over time, i.e., when NewsGuard updates trustworthiness ratings, they tend to get a lower score. This is shown in Figure XY. %how relevant is this point?
+NewsGuard regularly adds new sources to the database but rarely removes any, i.e., the database has been growing. When comparing the unique domains for one month to the previous month, NewsGuard has added 7,705 sources over time while they only removed 612. Removed sources tend to have a slightly lower trustworthiness score (M=53.50, SD=31.60) than added sources (M=62.09, SD=32.14). A great number of sources with lower ratings (M=46.5, SD=31.62) were added in 2020, which might explain the drop in trustworthiness in the following. 
+
+In contrast, scores of already covered sources tend to decrease over time, i.e., when NewsGuard updates trustworthiness ratings, they tend to get a lower score. This is shown in Figure XY. %how relevant is this point?
 
 %%construction
 \textbf{Construction.} The trustworthiness score is a composite score that is calculated based on nine journalistic criteria. For each domain, the organization assigns a binary label (yes/no) per criterion. The trustworthiness score is then calculated as the sum of the weighted criteria. 
