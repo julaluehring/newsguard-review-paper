@@ -116,19 +116,19 @@ Over the span of four years, NewsGuard has grown from 2,615 to 10,513 rated sour
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{f1-sources_over_time_bimonthly.png}
+    \includegraphics[width=\textwidth]{figures/f1-sources_over_time_bimonthly.png}
     \caption{Number of unique domains in the NewsGuard database over time}
     \label{fig:fig1}
 \end{figure}
 
 \section{Descriptive Analyses}
 \subsection{How volatile are trustworthiness ratings?}
-In the following, we review the distribution, construction, weighting and update process of the trustworthiness ratings over the years. 
+In the following, we review the distribution, construction, weighting, and update process of the trustworthiness ratings over the years. 
 
 \textbf{Distribution.} NewsGuard trustworthiness ratings are assigned on a scale from 0 to 100, with 100 being trustworthy. The threshold for the trustworthiness of a source is set at 60. Notably, NewsGuard is not a blacklist. In fact, close to 60\% of domains have an overall rating of over 60 and are therefore considered ``trustworthy''(see Fig.~\ref{fig:fig2}) for the distribution of trustworthiness scores. 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{f2-trustworthiness_distribution.png}
+    \includegraphics[width=\textwidth]{figures/f2-trustworthiness_distribution.png}
     \caption{Distribution of domain trustworthiness contained in the NewsGuard database as of November 15, 2023.}
     \label{fig:fig2}
 \end{figure}
@@ -137,14 +137,21 @@ When looking at the score distribution over time, the right skew has been dimini
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{f4-scores_over_time.png}
+    \includegraphics[width=\textwidth]{figures/f3-scores_over_time.png}
     \caption{Distribution of trustworthiness scores over time}
     \label{fig:fig3}
 \end{figure}
 
 NewsGuard regularly adds new sources to the database but rarely removes any, i.e., the database has been growing. When comparing the unique domains for one month to the previous month, NewsGuard has added 7,705 sources over time while they only removed 612. Removed sources tend to have a slightly lower trustworthiness score (M=53.50, SD=31.60) than added sources (M=62.09, SD=32.14). A great number of sources with lower ratings (M=46.5, SD=31.62) were added in 2020, which might explain the drop in trustworthiness in the following. 
 
-In contrast, scores of already covered sources tend to decrease over time, i.e., when NewsGuard updates trustworthiness ratings, they tend to get a lower score. This is shown in Figure XY. %how relevant is this point?
+For each entry in the database, NewsGuard indicates the date when it was last updated. Updates happen in regular intervals (on average every 20 days), but this varies strongly per domain, with a maximum of 192 days. When updated, trustworthiness scores mostly remain untouched, i.e., most sources have not decreased in trustworthiness. However, some domains drastically dropped in trustworthiness; for instance, conservativedailynews.com lost 80 points in trustworthiness in one update. Figure ~\ref{fig:fig4} shows trends in trustworthiness based on the updates. 
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/f4-score_updates.png}
+    \caption{Changes in trustworthiness scores over time.}
+    \label{fig:fig4}
+\end{figure}
 
 %%construction
 \textbf{Construction.} The trustworthiness score is a composite score that is calculated based on nine journalistic criteria. For each domain, the organization assigns a binary label (yes/no) per criterion. The trustworthiness score is then calculated as the sum of the weighted criteria. 
@@ -168,7 +175,7 @@ In the latest version of the dataset, the criterion ``Avoids deceptive headlines
 Furthermore, looking at domain criteria updates, we find that most sources also keep their scores. However, the most common update pattern is a negative change in the criterion ``Website discloses ownership and financing'', occurring for sources like XYZ. This criterion appears to be the most volatile, with XY\% of sources changing their label for this criterion. On the other hand, a positive update is also the fourth most common pattern, showing that it might be the one that is most frequently updated/monitored by NewsGuard.
 
 \subsection{How reliable and complete is the provided information, particularly for non-US countries?}
-The dataset contains sources for nine countries in total (United States, Italy, Great Britain, France, Germany, Canada, Australia, Austria, New Zealand) plus sources considered to be global. The majority of sources are from the United States (66\%), followed by global sources (12\%), Great Britain (5\%), Italy (5\%), Canada (4\%), France (4\%) and Germany (3\%). The remaining countries account for less than 1\% of sources each. The dataset also clusters sources based on language (English, Italian, French, German, Spanish). See Table X for an overview of the number of sources per country and language, as well as distribution of scores, topics, and political orientation.
+The dataset contains sources for nine countries in total (United States, Italy, Great Britain, France, Germany, Canada, Australia, Austria, New Zealand) plus sources considered to be global. The majority of sources are from the United States (66\%), followed by global sources (12\%), Great Britain (5\%), Italy (5\%), Canada (4\%), France (4\%) and Germany (3\%). The remaining countries account for less than 1\% of sources each. The dataset also clusters sources based on language (English, Italian, French, German, Spanish). See Table X for an overview of the number of sources per country and language, as well as the distribution of scores, topics, and political orientation.
 
 %%completeness
 In the latest iteration, sources have a mean rating of 64.49, a median of 77.5 (SD = 32.56). The statistics appear to be uniform, except for US sources: U.S.-based outlets are of lower quality on average, which could be related to the relative number of outlets in the dataset (6433 US sources versus 375 sources per other countries on average).
