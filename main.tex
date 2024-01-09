@@ -116,7 +116,7 @@ Over the span of four years, NewsGuard has grown from 2,615 to 10,513 rated sour
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/f1-sources_over_time_bimonthly.png}
+    \includegraphics[width=\textwidth]{figures/f1-sources_over_time.png}
     \caption{Number of unique domains in the NewsGuard database over time}
     \label{fig:fig1}
 \end{figure}
@@ -144,12 +144,12 @@ When looking at the score distribution over time, the right skew has been dimini
 
 NewsGuard regularly adds new sources to the database but rarely removes any, i.e., the database has been growing. When comparing the unique domains for one month to the previous month, NewsGuard has added 7,705 sources over time while they only removed 612. Removed sources tend to have a slightly lower trustworthiness score (M=53.50, SD=31.60) than added sources (M=62.09, SD=32.14). A great number of sources with lower ratings (M=46.5, SD=31.62) were added in 2020, which might explain the drop in trustworthiness in the following. 
 
-For each entry in the database, NewsGuard indicates the date when it was last updated. Updates happen in regular intervals (on average every 20 days), but this varies strongly per domain, with a maximum of 192 days. When updated, trustworthiness scores mostly remain untouched, i.e., most sources have not decreased in trustworthiness. However, some domains drastically dropped in trustworthiness; for instance, conservativedailynews.com lost 80 points in trustworthiness in one update. Figure ~\ref{fig:fig4} shows trends in trustworthiness based on the updates. 
+For each entry in the database, NewsGuard indicates the date when it was last updated. Updates happen in regular intervals (on average every 20 days), but this varies strongly per domain, with a maximum of 192 days. When updated, trustworthiness scores mostly remain untouched, i.e., most sources have not decreased in trustworthiness. However, some domains drastically dropped in trustworthiness; for instance, conservativedailynews.com lost 80 points in trustworthiness in one update. Figure ~\ref{fig:fig4} shows trends in trustworthiness based on the updates, with major differences in scores  
 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{figures/f4-score_updates.png}
-    \caption{Changes in trustworthiness scores over time.}
+    \caption{Changes in trustworthiness scores over time, calculated as the difference in scores per domain between consecutive updates.}
     \label{fig:fig4}
 \end{figure}
 
@@ -170,7 +170,9 @@ The criteria are weighted differently, ordered in descending relevance:
 
 Further explanation of the criteria and their weights can be found in the NewsGuard FAQ\footnote{\href{https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://www.newsguardtech.com/ratings/rating-process-criteria/}}. 
 
-In the latest version of the dataset, the criterion ``Avoids deceptive headlines'' was the most respected, and 8,754 of the sources satisfied it (79 \% of sources). Across all dataset versions, the most common combination of values is that all criteria are satisfied (XY\% of sources), given that most sources are considered trustworthy. The second most common combination is that all criteria are satisfied except for the criterion ``Does not repeatedly publish false content'' (XY\% of sources).
+In the latest version of the dataset, the criterion ``Avoids deceptive headlines'' was the most respected, and 8,597 of the sources satisfied it (78.9 \% of sources), followed by ``Does not repeatedly publish false content'' (77.5 \% of sources). Across all dataset versions, when one of these criteria is satisfied, the other one tends to as well ( Pearson's r = 0.88). The two criteria are the strongest indicators for a low rating. 
+
+Across all dataset versions, the most common combination of values is that all criteria are satisfied (16.1\% of ratings), given that a majority of sources are considered trustworthy. The second most common combination is that all criteria are satisfied except for the criterion ``Does not repeatedly publish false content'' (XY\% of sources).
 
 Furthermore, looking at domain criteria updates, we find that most sources also keep their scores. However, the most common update pattern is a negative change in the criterion ``Website discloses ownership and financing'', occurring for sources like XYZ. This criterion appears to be the most volatile, with XY\% of sources changing their label for this criterion. On the other hand, a positive update is also the fourth most common pattern, showing that it might be the one that is most frequently updated/monitored by NewsGuard.
 
