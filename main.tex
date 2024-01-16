@@ -181,9 +181,30 @@ Furthermore, looking at domain criteria updates, we find that most sources also 
 \subsection{How reliable and complete is the provided information, particularly for non-US countries?}
 The dataset contains sources from nine countries in total (United States, Great Britain, Italy, Canada, France, Germany, Austria, Australia, and New Zealand) plus sources considered to be global. The majority of sources are from the United States (75.04\%), followed by global sources (14.05\%), Great Britain (6.4\%), Italy (5.28\%), Canada (4.91\%), France (3.8\%) and Germany (3.59\%), and Australia (1.3\%). The remaining countries, Austria and New Zealand, account for less than 1\% of sources each. The dataset also clusters sources based on language (English, Italian, French, German, Spanish). See Table~\ref{table:table1} for an overview of the number of sources per country and language, as well as the distribution of scores.
 
-\input{t1_countries}
+\begin{table}[H]
+\caption{\textbf{Country Descriptives and Average Trustworthiness.}}
+\begin{tabularx}{\textwidth}{ X c c c  c c }
+\toprule
+ Country & Language & Mean (SD) & N & \% \\ 
+ \midrule
+     US &       en &    61.68 (35.43) & 6646 & 75.04 \\
+    ALL &       en &    73.71 (27.05) & 1244 & 14.05 \\
+     GB &       en &    80.95 (19.87) &  566 &  6.39 \\
+     IT &       it &    73.77 (23.34) &  468 &  5.28 \\
+     CA &       en &    89.57 (12.30) &  391 &  4.41 \\
+     FR &       fr &    69.18 (27.87) &  337 &  3.80 \\
+     DE &       de &    78.71 (30.13) &  318 &  3.59 \\
+     AU &       en &    70.76 (28.77) &  115 &  1.30 \\
+     CA &       fr &    79.27 (21.44) &   44 &  0.50 \\
+     AT &       de &    71.96 (30.42) &   37 &  0.42 \\
+     NZ &       en &    83.76 (24.67) &   15 &  0.17 \\
+     US &       es &    82.50 (0.00) &    1 &  0.01 \\
+ \bottomrule
+ \textit{Note.} Across all versions of the database.
+ \label{table:table1}
+\end{tabularx}
+\end{table}
 
-%%completeness
 In the latest iteration, sources have a mean rating of 64.49, a median of 77.5 (SD = 32.56). The statistics appear to be uniform, except for US sources: U.S.-based outlets are of lower quality on average, which could be related to the relative number of outlets in the dataset (6433 US sources versus 375 sources per other countries on average).
 
 %%reliability
