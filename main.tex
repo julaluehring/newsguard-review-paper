@@ -174,9 +174,9 @@ NewsGuard indicates the date when a rating was last updated, even if the score d
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/f5-scores_over_time_per_country.png}
+    \includegraphics[width=\textwidth]{figures/f4-scores_over_time_per_country.png}
     \caption{Monthly aggregates of trustworthiness scores over time, per country covered by NewsGuard.}
-    \label{fig:fig5}
+    \label{fig:fig4}
 \end{figure}
 
 \subsection{How can other information be used for misinformation research?}
@@ -209,55 +209,68 @@ Trustworthiness ratings are generally lower for right-leaning sources. In the cu
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/f6-scores_orientation_over_time.png}
+    \includegraphics[width=\textwidth]{figures/f5-scores_orientation_over_time.png}
     \caption{Monthly aggregates of trustworthiness scores over time, per political orientation}
-    \label{fig:fig6}
+    \label{fig:fig5}
 \end{figure}
 
 The trustworthiness ratings per political orientation differ based on the context, probably due to the different political systems of the countries covered. Figure~\ref{fig:fig7} shows the average scores per country, considering all unique ratings over time. Sources that were considered far left (prior to December 2022), for instance, overall had a trustworthiness score of>70 in Germany and Great Britain, whereas they were considered untrustworthy (<60) in five other countries (U.S., Australia, and Canada, Italy, France). Similarly, the trustworthiness of right-leaning sources varies based on the country.
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/f7-scores_orientation_per_country.png}
+    \includegraphics[width=\textwidth]{figures/f6-scores_orientation_per_country.png}
     \caption{Trustworthiness averages per country, considering all unique ratings}
-    \label{fig:fig7}
+    \label{fig:fig6}
 \end{figure}
 
 \textbf{Topics.} The database assigns topic labels, which are based on the topics covered by the outlets. The topics are not mutually exclusive, i.e., a source can be assigned to multiple topics. The most popular topics in the database are ``Political News or Commentary'' (37.89\% of ratings), ``Conspiracy Theories or Hoaxes'' (17.93\%), and ``Health or medical information'' (17.24\%). The topic ratings are also not complete: Out of all ratings, 18,245 ratings (40.9\%) are not classified under any topic, but in the most recent version of the database, only 282 domains are without a topic (2.9\%). 
 
-Up until 2022, fewer topic labels were given (see~\ref{fig:figa2}), but throughout the covered time frame, the most popular topics remained the same. Especially health-related information as well as political news show peaks at least once a year, most likely coinciding with update intervals. Interestingly, only about a year after the COVID-19 pandemic started,  in August, 2021, 1,468 labels related to COVID-19 misinformation were added to the database.
+Up until 2022, fewer topic labels were given (see~\ref{fig:figa2}), but throughout the covered time frame, the most popular topics remained the same. Especially health-related information, as well as political news shows, peaks at least once a year, most likely coinciding with update intervals. Interestingly, only about a year after the COVID-19 pandemic started, in August 2021, 1,468 labels related to COVID-19 misinformation were added to the database.
 
-Trustworthiness ratings greatly differ across topics. The quality of sources linked to each topic is illustrated in Figure~\ref{fig:fig8}. Sources covering conspiracy theories have the lowest average rating (M=10.62, SD=11.05), while those covering ``Education'' (M=92.18, SD=8.18) and ``Local News'' (M=87.95, SD=12.69) have the highest average trustworthiness scores. The topic trustworthiness, again, heavily depends on the context. For instance, for medical information, sources in Canada are rated as relatively trustworthy (M=64, SD=34.55). In the U.S., the average is below 60 (M=20.44, SD=28.98). %%add some analyses here; could be interesting to interpret later
+Trustworthiness ratings greatly differ across topics. The quality of sources linked to each topic is illustrated in Figure~\ref{fig:fig8}. Sources covering conspiracy theories have the lowest average rating (M=10.62, SD=11.05), while those covering ``Education'' (M=92.18, SD=8.18) and ``Local News'' (M=87.95, SD=12.69) have the highest average trustworthiness scores.
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/f8-topics_score.png}
+    \includegraphics[width=\textwidth]{figures/f7-topics_score.png}
     \caption{Average trustworthiness per topic taken across all unique ratings in the database}
+    \label{fig:fig7}
+\end{figure}
+
+Topic trustworthiness heavily depends on the context, and variance within topics largely depends on the country and the political orientation of the source. For instance, for medical information, sources in Canada are rated as relatively trustworthy (M=64, SD=34.55). In the U.S., the average is below 60 (M=20.44, SD=28.98). Across time, the most popular category, ``Political News and Commentary,'' attracts the highest share of bad sources: 79.85\% of all untrustworthy sources are said to cover that topic, making up 48.64\% of all unique sources having covered that topic. The ``COVID-19 misinformation'' label contains 51.60\% of all untrustworthy domains, while the ``Conspiracy'' label contains only 38.14\% of the untrustworthy sources. COVID-related misinformation or conspiracy seems to only make up a small proportion of all untrustworthy information, while most of it relates to politicized information. Nonetheless, the following topics are typical topics for untrustworthy information: ``Conspiracy theories and hoaxes'' (99\% of sources covering this topic are untrustworthy), ``COVID-19 misinformation'' (96.96\%), ``Political news or commentary'' (78.28\%), ``Health or medical information'' (75.62\%), ``Viral content'' (48.62\%). 
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/f8-topics_score_per_country.png}
+    \caption{Trustworthiness averages per country, considering all unique ratings}
     \label{fig:fig8}
 \end{figure}
 
-Across time, the most popular category, ``Political News and Commentary,'' attracts the highest share of bad sources: 79.85\% of all untrustworthy sources are said to cover that topic, making up 48.64\% of all unique sources having covered that topic. The ``COVID-19 misinformation'' label contains 51.60\% of all untrustworthy domains, while the ``Conspiracy'' label contains only 38.14\% of the untrustworthy sources. COVID-related misinformation or conspiracy seems to only make up a small proportion of all untrustworthy information, while most of it relates to politicized information. Nonetheless, the following topics are typical topics for untrustworthy information: ``Conspiracy theories and hoaxes'' (99\% of sources covering this topic are untrustworthy), ``COVID-19 misinformation'' (96.96\%), ``Political news or commentary'' (78.28\%), ``Health or medical information'' (75.62\%), ``Viral content'' (48.62\%). 
+We also looked at the interaction of topic trustworthiness and political orientation (see Figure~\ref{fig:fig9}). 
+%%add some analyses here; could be interesting to interpret later
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/f9-topics_score_per_country.png}
-    \caption{Trustworthiness averages per country, considering all unique ratings}
+    \includegraphics[width=\textwidth]{figures/f9-topics_orientation.png}
+    \caption{Heatmaps showing the interaction of topics and political orientation (A: Counts, B: Trustworthiness)}
     \label{fig:fig9}
 \end{figure}
 
 
 \textbf{Other content.}
 NewsGuard also maintains ``Flags'' labels that were first added to the database in August 2020. In the current database, the most common combination of flags is ``hideParty,covid,vacc,hlth,PartisanLocal'' (1073 times), or ``covid,abortion,hlth,ukraine,elec,vacc,climate'' (458 times). Other flags are ``dead'', ``qanon'', or ``plag''. 
-In addition, ``False Narratives'' column and a ``myths'' column, but they contain only IDs %linking to what?
+In addition, ``False Narratives'' column and a ``myths'' column, but they contain only IDs. %linking to what?
 
 \section{Conclusion}
-Points:
-Right-skewed distribution of scores reflects the presence of misinformation. Even if there are more sources out there, their prevalence should be small
+Findings:
+The skewed distribution of scores reflects the presence of misinformation on the right-wing spectrum. Even if there are more sources out there, their prevalence should be small.
+The database gets updated regularly, but...
+
+Implications:
+Using a monthly snapshot of the database should be enough to cover changes
+Always consider the country context: English-speaking countries (U.S. and U.K.) coverage is great; Italy, France, and Germany depend.
+
+Limitations:
 Misses user-created misinformation
-Monthly snapshot of database should be enough to cover changes
-Always consider country-context: English-speaking countries (U.S. and U.K.) coverage is great, Italy, France and Germany depends
-
-
 \section{Acknowledgments}
 Acknowledgements/ Author's disclosure/ funding statement.
 
@@ -271,14 +284,14 @@ Appendix goes here.
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/f4-score_updates.png}
+    \includegraphics[width=\textwidth]{figures/fa1-score_updates.png}
     \caption{Changes in trustworthiness scores over time, calculated as the difference in scores per domain between consecutive updates.}
     \label{fig:figa1}
 \end{figure}
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/topics_over_time.png}
+    \includegraphics[width=\textwidth]{figures/fa2-topics_over_time.png}
     \caption{Topic counts over time}
     \label{fig:figa2}
 \end{figure}
