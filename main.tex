@@ -259,34 +259,34 @@ However, mapping trustworthiness for each country and political orientation, we 
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/f6-scores_orientation_per_country.png}
-    \caption{Trustworthiness averages per country, considering all unique ratings}
+    \includegraphics[width=\textwidth]{figures/f6-scores_orientation_country.png}
+    \caption{Trustworthiness averages per country}
     \label{fig:fig6}
 \end{figure}
 
 \textbf{Topics.} The database assigns topic labels, which are based on the topics covered by the outlets. The topics are not mutually exclusive, i.e., a source is usually assigned to multiple topics. The topic ratings were introduced around October 2020 and are incomplete for older versions of the database. In the most recent version of the database, only 161 sources are without a topic rating (1.7\%). The most popular topics are ``Local News'' (39.1\%), ``Political News or Commentary'' (37.9\%), ``General News'' (19.9\%), ``Health or medical information'' (10.5\%), and ``Conspiracy Theories or Hoaxes'' (9.5\%). 
 
-Up until 2022, fewer topic labels were given (see Fig.~\ref{fig:figa3}), but throughout the covered time frame, the most popular topics remained the same. Especially health-related information, as well as political news, peaks at least once a year, most likely coinciding with update intervals. Interestingly, only about a year after the COVID-19 pandemic started, in August 2021, 1,468 labels related to COVID-19 misinformation were added to the database. This update coincides with a drop in trustworthiness for right-wing sources, as described above.
+Up until 2022, fewer topic labels were given (see Fig.~\ref{fig:figa3}), but throughout the covered time frame, the most popular topics remained the same. Especially health-related information, as well as political news, peaks at least once a year, most likely coinciding with update intervals. Interestingly, only about a year after the COVID-19 pandemic started, in August 2021, 1,039 labels related to COVID-19 misinformation were added to the database. This update coincides with a drop in trustworthiness for right-wing sources, as described above.
 
-Trustworthiness ratings greatly differ across topics. Sources covering issues related to ``Military and Defense'' (M=58.3, SD=39.6) and ``Political news or commentary'' have the lowest average rating (M=61.5, SD=30.9), while those covering sports, business, or technology topics have the highest average trustworthiness scores (~80). The quality of sources linked to each topic is illustrated in Figure~\ref{fig:fig7}, with source ratings taken from the most recent version of the database. 
+Trustworthiness ratings greatly differ across topics. Sources covering issues related to ``Military and Defense'' (M=58.3, SD=39.6) and ``Political news or commentary'' have the lowest average rating (M=61.5, SD=30.9), while those covering sports, business, or technology topics have the highest average trustworthiness scores (around 80). The quality of sources linked to each topic is illustrated in Figure~\ref{fig:fig7}, with source ratings taken from the most recent version of the database. 
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/f7-topics_score_time.png}
+    \includegraphics[width=\textwidth]{figures/f7-topics_score_recent.png}
     \caption{Average trustworthiness per topic (SD)}
     \label{fig:fig7}
 \end{figure}
 
-The category ``Political News and Commentary'' attracts the highest share of bad sources: 49.6\% of all untrustworthy sources are said to cover that topic, making up 48.64\% of all unique sources having covered that topic. The ``COVID-19 misinformation'' label contains 51.60\% of all untrustworthy domains, while the ``Conspiracy'' label contains only 38.14\% of the untrustworthy sources. COVID-related misinformation or conspiracy seems to only make up a small proportion of all untrustworthy information, while most of it relates to politicized information. Nonetheless, the following topics are typical topics for untrustworthy information: ``Conspiracy theories and hoaxes'' (99\% of sources covering this topic are untrustworthy), ``COVID-19 misinformation'' (96.96\%), ``Political news or commentary'' (78.28\%), ``Health or medical information'' (75.62\%), ``Viral content'' (48.62\%). 
+In the latest version of the database, conspiracy narratives and health-related misinformation only make up a small proportion of all untrustworthy information, while most of it relates to political news. In the latest database, the category ``Political News and Commentary'' attracts the highest share of bad sources: 49.6\% of all untrustworthy sources cover that topic, followed by ``Local news'' (45.6\%), whereas only 10.8\% of untrustworthy sources cover ``Health or medical information'' and only 9.4\% are related to ``Conspiracy theories or hoaxes''. Nonetheless, this highlights that untrustworthy information appears in many topics and that untrustworthy information is not just a fringe phenomenon. 
 
-Topic trustworthiness heavily depends on the context, and variance within topics largely depends on the country and the political orientation of the source. For instance, for medical information, sources in Canada are rated as relatively trustworthy (M=64, SD=34.55). In the U.S., the average is below 60 (M=20.44, SD=28.98). In Figure~\ref{fig:fig9}, we illustrate the trustworthiness averages per country for the five least trustworthy topics. Especially for health and political news, we observe large differences between countries. For instance, Great Britain overall shows high trustworthiness for both topics (>60), while the U.S. and Italy have scores below 60. 
-%topics variance within countries?
+Topic trustworthiness heavily depends on the context, and variance within topics largely depends on the country and the political orientation of the source. For instance, for medical information, sources in Canada are rated as trustworthy (M=91.29, SD=8.5), while the average is around 60 in the United States (M=62.1, SD=33.8). The country difference is even bigger for political news, with 53.4 (31.2) for the United States, 77.0 (29.7) in Germany, and 90.20 (13.5) in Canada. Differences in health and political information are illustrated in Figure~\ref{fig:fig9}, where we show the trustworthiness averages per country for the five most popular untrustworthy topics. 
+%visualize topics variance within countries differently?
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/f9-topics_score_per_country.png}
-    \caption{Trustworthiness averages per country for the top 5 untrustworthy topics, considering all unique ratings in the database}
-    \label{fig:fig9}
+    \includegraphics[width=\textwidth]{figures/f8-topics_score_per_country.png}
+    \caption{Trustworthiness averages per country for the top 5 popular and untrustworthy topics.}
+    \label{fig:fig8}
 \end{figure}
 
 We also looked at the interaction of topic trustworthiness and political orientation (see Figure~\ref{fig:fig10}). Political news or commentary, as well as conspiracy theories, are the most popular topics for right-wing sources to cover, followed by health information and COVID-19 misinformation. This is also where we see the lowest trustworthiness scores on the right spectrum. For sources labeled as left-leaning, trustworthiness is especially low when they frequently discuss topics such as military and defense, as well as COVID-19 misinformation and conspiracy theories. However, due to the skewed distribution of political orientation in the database, the number of sources covering those topics is generally low on the left (e.g., for conspiracy theories: left = 224, right = 6,513).
