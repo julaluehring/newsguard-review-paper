@@ -280,7 +280,7 @@ Trustworthiness ratings greatly differ across topics. Sources covering issues re
 In the latest version of the database, conspiracy narratives and health-related misinformation only make up a small proportion of all untrustworthy information, while most of it relates to political news. In the latest database, the category ``Political News and Commentary'' attracts the highest share of bad sources: 49.6\% of all untrustworthy sources cover that topic, followed by ``Local news'' (45.6\%), whereas only 10.8\% of untrustworthy sources cover ``Health or medical information'' and only 9.4\% are related to ``Conspiracy theories or hoaxes''. Nonetheless, this highlights that untrustworthy information appears in many topics and that untrustworthy information is not just a fringe phenomenon. 
 
 Topic trustworthiness heavily depends on the context, and variance within topics largely depends on the country and the political orientation of the source. For instance, for medical information, sources in Canada are rated as trustworthy (M=91.29, SD=8.5), while the average is around 60 in the United States (M=62.1, SD=33.8). The country difference is even bigger for political news, with 53.4 (31.2) for the United States, 77.0 (29.7) in Germany, and 90.20 (13.5) in Canada. Differences in health and political information are illustrated in Figure~\ref{fig:fig9}, where we show the trustworthiness averages per country for the five most popular untrustworthy topics. 
-%visualize topics variance within countries differently?
+%visualize variance within countries differently?
 
 \begin{figure}[!ht]
     \centering
@@ -289,13 +289,16 @@ Topic trustworthiness heavily depends on the context, and variance within topics
     \label{fig:fig8}
 \end{figure}
 
-We also looked at the interaction of topic trustworthiness and political orientation (see Figure~\ref{fig:fig10}). Political news or commentary, as well as conspiracy theories, are the most popular topics for right-wing sources to cover, followed by health information and COVID-19 misinformation. This is also where we see the lowest trustworthiness scores on the right spectrum. For sources labeled as left-leaning, trustworthiness is especially low when they frequently discuss topics such as military and defense, as well as COVID-19 misinformation and conspiracy theories. However, due to the skewed distribution of political orientation in the database, the number of sources covering those topics is generally low on the left (e.g., for conspiracy theories: left = 224, right = 6,513).
+We also looked at the interaction of topic trustworthiness and political orientation (see Figure~\ref{fig:fig9}). Political news or commentary, as well as local news, are the most popular topics for both left- and right-wing sources to cover, followed by local and general news. On the right-wing spectrum, trustworthiness scores for all topics are below 50. 
+For sources labeled as left-leaning, trustworthiness is especially low (below 50) when they frequently discuss topics such as the environment, science, criminal justice or science. However, due to the skewed distribution of political orientation in the database, the number of sources covering those topics is generally low on the left (e.g., for political news: left = 151, right = 1,159).
+
+For sources labeled as left-leaning, trustworthiness is especially low when they frequently discuss topics such as military and defense, as well as COVID-19 misinformation and conspiracy theories. 
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/f10-topics_orientation.png}
+    \includegraphics[width=\textwidth]{figures/f9-topics_orientation.png}
     \caption{Heatmap showing the interaction of topic trustworthiness and political orientation}
-    \label{fig:fig10}
+    \label{fig:fig9}
 \end{figure}
 
 \textbf{Other content.}
