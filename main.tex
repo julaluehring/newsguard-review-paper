@@ -227,7 +227,7 @@ Due to the size of the database per country, the U.S. database was updated on av
 
 \textbf{Comparison with other lists.} In order to measure the true coverage of sources per country, it is necessary to compare the sources covered by NewsGuard with other lists. However, other lists are often not compiled with the same objective, here, to cover all sources responsible for most of the traffic. Therefore, their scope and rating system may differ. In addition, other lists are not available for every country. 
 
-For the U.S. context, ~\citet{linHighLevelCorrespondence2023} have compared five lists of existing expert ratings with NewsGuard and found a high number of non-overlapping domains, while the quality ratings largely overlapped. Further, Puschmann et al. (2024) collected a list of German online news domains (GOND)\footnote{\href{https://osf.io/s5uhb/}{https://osf.io/s5uhb/}}, largely relying on web tracking data of a representative sample of 1,500 German citizens. In the first version of the list, the authors also classified the domains into types, among others ``legacy press'' (49\%), ``digital-born news outlet'' (18.0\%), or ``hyperpartisan news'' (8.2\%). GOND shares 543 global sources with NewsGuard, with 147 English-speaking, 47 French, and 56 Italian sources. Out of all global sources that overlap, 285 are legacy press and 56 are hyperpartisan news. Furthermore, GOND covers the same 237 German sources as NewsGuard, including 24 hyperpartisan and 19 digital-born news outlets. Overall, it seems that NewsGuard coverage for the United States and Germany are extensive, while comparisons for other countries are missing. 
+For the U.S. context, ~\citet{linHighLevelCorrespondence2023} have compared five lists of existing expert ratings with NewsGuard and found a high number of non-overlapping domains, while the quality ratings largely overlapped. Further, Puschmann et al. (2024) collected a list of German online news domains (GOND)\footnote{\href{https://osf.io/s5uhb/}{https://osf.io/s5uhb/}}, largely relying on web tracking data of a representative sample of 1,500 German citizens. In the first version of the list, the authors also classified the domains into types, among others ``legacy press'' (49\%), ``digital-born news outlet'' (18.0\%), or ``hyperpartisan news'' (8.2\%). GOND shares 543 global sources with NewsGuard, with 147 English-speaking, 47 French, and 56 Italian sources. Out of all global sources that overlap, 285 are legacy press, and 56 are hyperpartisan news. Furthermore, GOND covers the same 237 German sources as NewsGuard, including 24 hyperpartisan and 19 digital-born news outlets. Overall, it seems that NewsGuard's coverage of the United States and Germany is extensive, while comparisons for other countries are missing. 
  
 \begin{figure}[!ht]
     \centering
@@ -239,47 +239,45 @@ For the U.S. context, ~\citet{linHighLevelCorrespondence2023} have compared five
 \subsection{How can other information be used for misinformation research?}
 \textbf{Political Orientation.} The dataset also classifies sources according to their political orientation. The classification relies on a left-to-right conception of the political spectrum. In December 2022, the labels shifted from four (far left/ slightly left/slightly right/far right) to only two possible labels (left/right). 
 
-Overall, the political orientation dimension covers only a minority of the sources in the database. In the current version of the database, 31.2\% of the sources have a rating for political orientation (2,980 sources). The ratio decreases when zooming in on individual countries: 41.1\% of news outlets have a political orientation rating in the United States, whereas only 9.8\% have such a rating in Great Britain, 11.6\% in Italy, 16.1\% in Germany, and 15.3\% in France. Here, again, the over-representation of the United States in the data set becomes apparent. Table~\ref{table:table4} shows the ratings per country and the coverage per country in terms of the percentage of sources in the most recent database that have a political orientation rating. In most countries, the majority of sources with political orientation ratings are judged as belonging to the right-wing spectrum. 
+Overall, the political orientation dimension covers only a minority of the sources in the database. In the current version of the database, 31.2\% of the sources have a rating for political orientation (2,980 sources). The ratio decreases when zooming in on individual countries: 41.1\% of news outlets have a political orientation rating in the United States, whereas only 9.8\% have such a rating in Great Britain, 11.6\% in Italy, 16.1\% in Germany, and 15.3\% in France. Here, again, the over-representation of the United States in the data set becomes apparent. Table~\ref{table:table4} shows the total number of political orientation ratings per country as well as the number and percentage of sources rated as left or right-leaning in the most recent database.
+In most countries, the majority of sources with political orientation ratings belong to the right-wing spectrum. %add plot per country over time?
 
-%\input{tables/t4_orientation_countries.tex}
+\input{tables/t4_orientation_countries.tex}
 
-Trustworthiness ratings are generally lower for right-leaning sources. In the current database (December 2023), the mean trustworthiness score for right-leaning sources is 26.7 (SD=23.4), while it is 61.7 (SD=20.1) for left-leaning sources, Mdiff=35.0, t(2978)=32.4, p < .001. Before the political orientation rating system changed, left- and right-leaning sources had moderate trustworthiness ratings (for example, in June 2021, 82.16 and 61.9, respectively) in contrast to the far left and far right sources. In August/September 2021, however, when a high number of untrustworthy sources were added to the database, particularly the trustworthiness of right-leaning sources dropped by almost 23 points, see Figure~\ref{fig:fig6}. When the ratings changed to left/right, this classification also to a lower average score of right-leaning sources by adding low-quality sources from what was classified as "far right" before (where trustworthiness ranged between 13.5 and 17.8 points). 
+Trustworthiness ratings are generally lower for right-leaning sources. In the current database (December 2023), the mean trustworthiness score for right-leaning sources is 26.7 (SD=23.4), while it is 61.7 (SD=20.1) for left-leaning sources, Mdiff=35.0, t(2978)=32.4, p < .001. Before the political orientation rating system changed, left- and right-leaning sources had moderate trustworthiness ratings (for example, in June 2021, 82.16 and 61.9, respectively) in contrast to far left and far right sources. In August/September 2021, however, when a high number of untrustworthy sources were added to the database, particularly the trustworthiness of slightly right sources dropped by almost 23 points, see Figure~\ref{fig:fig5}. When the ratings changed to left/right, this classification also led to a lower average score of right-leaning sources by adding low-quality sources from what was classified as "far right" before (where trustworthiness ranged between 13.5 and 17.8 points). 
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/f6-scores_orientation_over_time.png}
+    \includegraphics[width=\textwidth]{figures/f5-scores_orientation_over_time.png}
     \caption{Monthly aggregates of trustworthiness scores over time, per political orientation}
+    \label{fig:fig5}
+\end{figure}
+
+The trustworthiness ratings per political orientation differ based on the countries covered. Across countries, the general pattern reveals reduced trustworthiness for right-wing sources (see Figure~\ref{fig:figa4} showing trustworthiness averages per orientation per country with 95\% confidence intervals). 
+
+However, mapping trustworthiness for each country and political orientation, we also see a high variance in trustworthiness based on the country. Figure~\ref{fig:fig6} shows the average scores per country, considering only the most recent database. Sources that were considered far left (prior to December 2022), for instance, overall had a trustworthiness score of >70 in Germany and Great Britain, whereas they were considered untrustworthy (<60) in five other countries (U.S., Australia, and Canada, Italy, France). Similarly, the trustworthiness of right-leaning sources varies based on the country.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/f6-scores_orientation_per_country.png}
+    \caption{Trustworthiness averages per country, considering all unique ratings}
     \label{fig:fig6}
 \end{figure}
 
-The trustworthiness ratings per political orientation differ based on the context due to the different political and media systems of the countries covered. Across countries, the general pattern reveals reduced trustworthiness for right-wing sources (see Figure ~\ref{fig:figa4} with 95\% confidence intervals). 
-However, when we look at the point estimates for each country and political orientation, we see high variance in trustworthiness based on the country. Figure~\ref{fig:fig7} shows the average scores per country, considering all unique ratings over time. Sources that were considered far left (prior to December 2022), for instance, overall had a trustworthiness score of >70 in Germany and Great Britain, whereas they were considered untrustworthy (<60) in five other countries (U.S., Australia, and Canada, Italy, France). Similarly, the trustworthiness of right-leaning sources varies based on the country.
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=\textwidth]{figures/f7-scores_orientation_per_country.png}
-    \caption{Trustworthiness averages per country, considering all unique ratings}
-    \label{fig:fig7}
-\end{figure}
-
-%% continue here
-\textbf{Topics.} The database assigns topic labels, which are based on the topics covered by the outlets. The topics are not mutually exclusive, i.e., a source is usually assigned to multiple topics. The topic ratings were introduced around October 2020 and are incomplete for older versions of the database. In the most recent version of the database, only 146 sources are without a topic rating (1.7\%). The most popular topics are ``Local News'' (39.1\%), ``Political News or Commentary'' (37.9\%), ``General News'' (19.9\%), ``Health or medical information'' (10.5\%), and ``Conspiracy Theories or Hoaxes'' (9.5\%). 
+\textbf{Topics.} The database assigns topic labels, which are based on the topics covered by the outlets. The topics are not mutually exclusive, i.e., a source is usually assigned to multiple topics. The topic ratings were introduced around October 2020 and are incomplete for older versions of the database. In the most recent version of the database, only 161 sources are without a topic rating (1.7\%). The most popular topics are ``Local News'' (39.1\%), ``Political News or Commentary'' (37.9\%), ``General News'' (19.9\%), ``Health or medical information'' (10.5\%), and ``Conspiracy Theories or Hoaxes'' (9.5\%). 
 
 Up until 2022, fewer topic labels were given (see Fig.~\ref{fig:figa3}), but throughout the covered time frame, the most popular topics remained the same. Especially health-related information, as well as political news, peaks at least once a year, most likely coinciding with update intervals. Interestingly, only about a year after the COVID-19 pandemic started, in August 2021, 1,468 labels related to COVID-19 misinformation were added to the database. This update coincides with a drop in trustworthiness for right-wing sources, as described above.
 
-Trustworthiness ratings greatly differ across topics. Sources covering issues related to ``Military and Defense'' have the lowest average rating (M=58.3, SD=39.6), while those covering ``Education'' (M=90.2, SD=10.9), ``Business or Personal Finance'' (M=87.5, SD=2.3), and ``General News'' (M=83.3, SD=14.3) have the highest average trustworthiness scores. 
-
-The quality of sources linked to each topic is illustrated in Figure~\ref{fig:fig8}, with source ratings taken across all unique ratings in the database 
-``Local News'' (M=87.95, SD=12.69)
+Trustworthiness ratings greatly differ across topics. Sources covering issues related to ``Military and Defense'' (M=58.3, SD=39.6) and ``Political news or commentary'' have the lowest average rating (M=61.5, SD=30.9), while those covering sports, business, or technology topics have the highest average trustworthiness scores (~80). The quality of sources linked to each topic is illustrated in Figure~\ref{fig:fig7}, with source ratings taken from the most recent version of the database. 
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/f8-topics_score_time.png}
-    \caption{Average trustworthiness per topic taken across all unique ratings in the database}
-    \label{fig:fig8}
+    \includegraphics[width=\textwidth]{figures/f7-topics_score_time.png}
+    \caption{Average trustworthiness per topic (SD)}
+    \label{fig:fig7}
 \end{figure}
 
-Across time, the most popular category, ``Political News and Commentary,'' attracts the highest share of bad sources: 79.85\% of all untrustworthy sources are said to cover that topic, making up 48.64\% of all unique sources having covered that topic. The ``COVID-19 misinformation'' label contains 51.60\% of all untrustworthy domains, while the ``Conspiracy'' label contains only 38.14\% of the untrustworthy sources. COVID-related misinformation or conspiracy seems to only make up a small proportion of all untrustworthy information, while most of it relates to politicized information. Nonetheless, the following topics are typical topics for untrustworthy information: ``Conspiracy theories and hoaxes'' (99\% of sources covering this topic are untrustworthy), ``COVID-19 misinformation'' (96.96\%), ``Political news or commentary'' (78.28\%), ``Health or medical information'' (75.62\%), ``Viral content'' (48.62\%). 
+The category ``Political News and Commentary'' attracts the highest share of bad sources: 49.6\% of all untrustworthy sources are said to cover that topic, making up 48.64\% of all unique sources having covered that topic. The ``COVID-19 misinformation'' label contains 51.60\% of all untrustworthy domains, while the ``Conspiracy'' label contains only 38.14\% of the untrustworthy sources. COVID-related misinformation or conspiracy seems to only make up a small proportion of all untrustworthy information, while most of it relates to politicized information. Nonetheless, the following topics are typical topics for untrustworthy information: ``Conspiracy theories and hoaxes'' (99\% of sources covering this topic are untrustworthy), ``COVID-19 misinformation'' (96.96\%), ``Political news or commentary'' (78.28\%), ``Health or medical information'' (75.62\%), ``Viral content'' (48.62\%). 
 
 Topic trustworthiness heavily depends on the context, and variance within topics largely depends on the country and the political orientation of the source. For instance, for medical information, sources in Canada are rated as relatively trustworthy (M=64, SD=34.55). In the U.S., the average is below 60 (M=20.44, SD=28.98). In Figure~\ref{fig:fig9}, we illustrate the trustworthiness averages per country for the five least trustworthy topics. Especially for health and political news, we observe large differences between countries. For instance, Great Britain overall shows high trustworthiness for both topics (>60), while the U.S. and Italy have scores below 60. 
 %topics variance within countries?
@@ -319,6 +317,7 @@ Limitations:
 Misses user-created misinformation
 \section{Acknowledgments}
 Acknowledgements/ Author's disclosure/ funding statement.
+
 
 \bibliography{newsguard-review.bib}
 
