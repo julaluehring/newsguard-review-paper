@@ -176,9 +176,9 @@ When looking at the score distribution over time, the left skew diminishes sligh
     \label{fig:fig2}
 \end{figure}
 
-Second, NewsGuard employs different teams of editors per country, potentially leading to country differences in coverage and ratings. Dips in trustworthiness may be related to country-specific sources being added (e.g., 1,015 of the 1,030 added sources in September 2020 are coded as U.S.). In contrast, adding entirely new countries has little effect on the trustworthiness scores (see Figure~\ref{fig:figa1}). Overall, smaller dips appear across all countries covered and are most likely related to many low-quality sources popping up around the time of the COVID-19 pandemic. 
+Second, NewsGuard employs different teams of editors per country, potentially leading to country differences in coverage and ratings. Dips in trustworthiness may be related to country-specific sources being added (e.g., 1,015 of the 1,030 added sources in September 2020 are coded as U.S., see Figure~\ref{figa1} for the number of sources added per country over time). In contrast, adding entirely new countries seems to have little effect on the trustworthiness scores (see Figure~\ref{fig:figa2}). Overall, smaller dips appear across all countries covered and are most likely related to many low-quality sources popping up around the time of the COVID-19 pandemic. 
 
-A third possibility is updates of existing ratings. NewsGuard indicates the date when a rating was last updated, even if the score did not change. Updates to entries happen on average once every eight months (243 days), but this varies strongly per source between a few seconds to a maximum of 1,109 days (interquartile range: 162 to 355 days). When updated, trustworthiness scores mostly remain unchanged, i.e., the majority of sources have not decreased in trustworthiness. However, a few sources drastically dropped in trustworthiness; for instance, conservativedailynews.com lost 80 points in one update in November 2020. Figure~\ref{fig:figa2} illustrates the differences in consecutive scores over time, with major score updates in early 2020. Overall, the decrease in trustworthiness that we can see in the right-hand plot in Figure~\ref{fig:fig2} can, therefore, likely be attributed to NewsGuard adding untrustworthy sources rather than previously trustworthy sources losing their reliability. 
+A third possibility is updates of existing ratings. NewsGuard indicates the date when a rating was last updated, even if the score did not change. Updates to entries happen on average once every eight months (243 days), but this varies strongly per source between a few seconds to a maximum of 1,109 days (interquartile range: 162 to 355 days). When updated, trustworthiness scores mostly remain unchanged, i.e., the majority of sources have not decreased in trustworthiness. However, a few sources drastically dropped in trustworthiness; for instance, conservativedailynews.com lost 80 points in one update in November 2020. Figure~\ref{fig:figa3} illustrates the differences in consecutive scores over time, with major score updates in early 2020. Overall, the decrease in trustworthiness that we can see in the right-hand plot in Figure~\ref{fig:fig2} can, therefore, likely be attributed to NewsGuard adding untrustworthy sources rather than previously trustworthy sources losing their reliability. 
 
 \textbf{Composition of trustworthiness score.} 
 The trustworthiness score is a composite score that is calculated based on nine journalistic criteria. For each source, the organization assigns a Boolean value (yes/no) per criterion. The trustworthiness score is then calculated as the sum of the weighted criteria. Because of the discrete point contributions to the overall score, the resulting trustworthiness score has a limited number of values it can take based on the different combinations of categories. The criteria are weighted differently, ordered in descending relevance:
@@ -221,7 +221,7 @@ The majority of sources are from the United States (76\%), followed by global so
 
 \input{tables/t2_countries.tex}
 
-Across all versions of the database and most countries covered by NewsGuard, the overall trustworthiness of sources remains >65, except for the United States: U.S.-based outlets are of lower quality on average (see Table~\ref{table:table2}). Figure~\ref{fig:fig4} shows the average trustworthiness of sources per country over time. The development of trustworthiness indicates that for countries with good coverage (a higher number of sources), the database seems to have settled into a stable state, whereas for newer countries (CA, NZ, AU), rating coverage seems to vary. It is unclear whether U.S. sources are of lower trustworthiness overall or if the relative number of outlets in the dataset can explain this finding. 
+Across all versions of the database and most countries covered by NewsGuard, the overall trustworthiness of sources remains >65, except for the United States: U.S.-based outlets are of lower quality on average (see Table~\ref{table:table2}). Figure~\ref{fig:fig4} shows the average trustworthiness of sources per country over time (also see Figure~\ref{fig:figa4} and Figure~\ref{fig:figa5} for trustworthiness distribution per country). The development of trustworthiness indicates that for countries with good coverage (a higher number of sources), the database seems to have settled into a stable state, whereas for newer countries (CA, NZ, AU), rating coverage seems to vary. It is unclear whether U.S. sources are of lower trustworthiness overall or if the relative number of outlets in the dataset can explain this finding. 
 
 \begin{figure}[!ht]
     \centering
@@ -229,7 +229,6 @@ Across all versions of the database and most countries covered by NewsGuard, the
     \caption{Trustworthiness scores from 50 to 90 over time (yearly aggregates), per country covered by NewsGuard.}
     \label{fig:fig4}
 \end{figure}
-
 
 When comparing the number of sources that meet the journalistic criteria per country, we observe some striking patterns. Table~\ref{table:table3} shows the percentage of sources that miss a given indicator per country, i.e., a high percentage indicates that many sources fail to meet the criterion. For most countries, more than 50\% of sources meet each criterion. Interestingly, almost 80\% of Italian sources do not provide names of content creators, and over 70\% do not effectively correct errors. A similar but less pronounced pattern is visible for French sources. Across all criteria, the United States shows the highest percentage of sources not meeting the criteria. This indicates that lower trustworthiness scores in Figure~\ref{fig:fig4} and Table~\ref{table:table2} result from a high number of sources not meeting the journalistic quality criteria, as well as a high number of sources not meeting the two criteria with the biggest weights (18.8\% for ``Does not repeatedly publish false or egregiously misleading content'' and 47.5\% for ``Gathers and presents information responsibly''). 
 
@@ -247,7 +246,7 @@ For the U.S. context, ~\citet{linHighLevelCorrespondence2023} have compared five
 \textbf{Political Orientation.} The dataset also classifies sources according to their political orientation. The classification relies on a left-to-right conception of the political spectrum. In December 2022, the labels shifted from four (far left/ slightly left/slightly right/far right) to only two possible labels (left/right). 
 
 Overall, the political orientation label is only available for a minority of the sources. In the current version of the database, 31.2\% of the sources have a label for political orientation (2,980 sources). The percentage decreases for most individual countries: 41.1\% of news outlets have a political orientation label in the United States, but only 9.8\% in Great Britain, 11.6\% in Italy, 16.1\% in Germany, and 15.3\% in France. Here, again, the over-representation of the United States in the data set becomes apparent. Table~\ref{table:table4} shows the total number of political orientation labels per country as well as the number and percentage of sources classified as left or right-leaning in the most recent database.
-In most countries, the majority of sources with political orientation labels belong to the right-wing spectrum. %Figures~\ref{fig:figa4} shows the distribution of political orientation per country over time. 
+In most countries, the majority of sources with political orientation labels belong to the right-wing spectrum. Figure~\ref{fig:figa6} shows the distribution of political orientation per country over time. 
 
 \input{tables/t4_orientation_countries.tex}
 
@@ -260,7 +259,7 @@ Trustworthiness ratings are generally lower for right-leaning sources. In the cu
     \label{fig:fig5}
 \end{figure}
 
-The trustworthiness ratings per political orientation differ by country. Across countries, the general pattern reveals reduced trustworthiness for right-wing sources (see Figure~\ref{fig:figa4} showing trustworthiness averages per orientation per country). 
+The trustworthiness ratings per political orientation differ by country. Across countries, the general pattern reveals reduced trustworthiness for right-wing sources (see Figure~\ref{fig:figa7} showing trustworthiness averages per orientation per country). 
 
 However, by mapping trustworthiness for each country and political orientation, we also see differences in trustworthiness per political orientation across countries. Figure~\ref{fig:fig6} shows the average scores per country based on the most recent database. Sources that were considered far left prior to December 2022, for instance, had a trustworthiness score of >70 in Germany and Great Britain, whereas they were considered untrustworthy (<60) in five other countries (U.S., Australia, and Canada, Italy, France). Similarly, the trustworthiness of right-leaning sources varies based on the country. 
 
@@ -273,7 +272,7 @@ However, by mapping trustworthiness for each country and political orientation, 
 
 \textbf{Topics.} The database assigns topic labels based on the topics covered by the outlets. A source is usually assigned to multiple topics. The topic ratings were introduced around October 2020 and are incomplete for older versions of the database. In the most recent version of the database, only 161 sources are without a topic label (1.7\%). The most popular topics are ``Local News'' (39.1\%), ``Political News or Commentary'' (37.9\%), ``General News'' (19.9\%), ``Health or medical information'' (10.5\%), and ``Conspiracy Theories or Hoaxes'' (9.5\%). 
 
-Up until 2022, fewer topic labels were given (see Fig.~\ref{fig:figa3}), but throughout the covered time frame, the most popular topics remained the same. Especially health-related information and political news peak at least once a year, most likely coinciding with update intervals. Interestingly, only about a year after the COVID-19 pandemic started, in August 2021, 1,039 labels related to COVID-19 misinformation were added to the database. This update coincides with a drop in trustworthiness for right-wing sources, as described above.
+Up until 2022, fewer topic labels were given (see Fig.~\ref{fig:figa8}), but throughout the covered time frame, the most popular topics remained the same. Especially health-related information and political news peak at least once a year, most likely coinciding with update intervals. Interestingly, only about a year after the COVID-19 pandemic started, in August 2021, 1,039 labels related to COVID-19 misinformation were added to the database. This update coincides with a drop in trustworthiness for right-wing sources, as described above.
 
 Trustworthiness ratings greatly differ across topics. Sources covering issues related to ``Military and Defense'' (M=58.3, SD=39.6) and ``Political news or commentary'' have the lowest average rating (M=61.5, SD=30.9), while those covering sports, business, or technology topics have the highest average trustworthiness scores (around 80). The quality of sources linked to each topic is illustrated in Figure~\ref{fig:fig7}, with ratings from the most recent version of the database. 
 
@@ -348,16 +347,23 @@ Final approval of the version to be published: R. Lazzaroni, J. Lühring, J. Las
 
 \begin{figure}[!ht]
     \centering
+    \includegraphics[width=\textwidth]{figures/n_country_over_time.png}
+    \caption{Number of sources over time, per country.}
+    \label{fig:figa1}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
     \includegraphics[width=\textwidth]{figures/fa1-scores_by_country.png}
     \caption{Changes in trustworthiness scores over time, with colors indicating the countries added to the database.}
-    \label{fig:figa1}
+    \label{fig:figa2}
 \end{figure}
 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{figures/fa2-score_updates.png}
     \caption{Changes in trustworthiness scores over time, calculated as the difference in scores per news domain between consecutive updates.}
-    \label{fig:figa2}
+    \label{fig:figa3}
 \end{figure}
 
 \begin{sidewaystable}[htbp]
@@ -366,18 +372,38 @@ Final approval of the version to be published: R. Lazzaroni, J. Lühring, J. Las
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/fa3-topics_over_time.png}
-    \caption{Topic counts over time}
-    \label{fig:figa3}
+    \includegraphics[width=\textwidth]{figures/scores_per_country_recent.png}
+    \caption{Distribution of trustworthiness per country as of December, 2023.}
+    \label{fig:figa4}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/scores_country_over_time.png}
+    \caption{Distribution of trustworthiness per country over time.}
+    \label{fig:figa5}
+\end{figure}
+
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/orientation_over_time_per_country_before_after.png}
+    \caption{Distribution of political orientation over time, by country}
+    \label{fig:figa6}
 \end{figure}
 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{figures/fa4-scores_orientation_per_country_95.png}
     \caption{Averages in trustworthiness per country by orientation and 95\% confidence intervals in recent database}
-    \label{fig:figa4}
+    \label{fig:figa7}
 \end{figure}
 
-
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/fa3-topics_over_time.png}
+    \caption{Topic counts over time}
+    \label{fig:figa8}
+\end{figure}
 
 \end{document}
