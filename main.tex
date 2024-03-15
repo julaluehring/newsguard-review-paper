@@ -97,6 +97,8 @@ Against a backdrop of declining trust in both media outlets \citep{newmanReuters
 Digital media not only facilitate the measurement of these dynamics but also have the potential to reinforce polarization and misinformation \citep{lorenz-spreenSystematicReviewWorldwide2022}.
 
 The spread of misinformation has been studied extensively by scholars from various scientific disciplines, relying on different conceptualizations and terms \cite{guessMisinformationDisinformationOnline2020}.
+%what do they have in common and how do they differ? 
+%definition influences measurement, measurement influences definition!
 In psychology, researchers commonly use misinformation as an umbrella term for inaccurate or unreliable information, regardless of intent, e.g., \cite{eckerPsychologicalDriversMisinformation2022} or \cite{vanderlindenMisinformationSusceptibilitySpread2022}. 
 In communication science, a popular definition by Claire Wardle and Hossein Derakhshan (\citeyear{wardleInformationDisorderInterdisciplinary2017}) distinguishes non-intentional misinformation from disinformation designed with the intent to misinform, including fake news that pursues financial or political intentions and conspiracy theories, summarizing them under the umbrella term information disorder. According to this definition, misinformation covers only false and misleading information that is created unintentionally, such as honest mistakes or incomplete reporting.
 Computational social scientists, such as David Lazer and colleagues (\citeyear{lazerScienceFakeNews2018}), tend to follow this notion of information disorders:
@@ -104,7 +106,7 @@ Computational social scientists, such as David Lazer and colleagues (\citeyear{l
 
 The ambiguous nature of misinformation, and the ethical challenge of who defines misinformation, presents researchers with numerous challenges, leaving them with a number of degrees of freedom. 
 Defining the boundaries of misinformation, essentially deciding where to draw the line to the truth, is a very complex task for numerous reasons: 
-First, misinformation often appears in subtle forms rather than obvious lies \citep{altayMisinformationMisinformationConceptual2023a, bakirFakeNewsEconomy2018a, vargoAgendasettingPowerFake2018}, making it hard to define where misinformation starts. In the real world, professional editors and politicians leave out true but important details, or they decontextualize parts to fit a narrative or a storyline without saying anything wrong. Implicit interpretations of facts can be different from explicit lying, making subtle forms of misinformation hard to detect, especially using automated methods (REF).
+First, misinformation often appears in subtle forms rather than obvious lies \citep{altayMisinformationMisinformationConceptual2023a, bakirFakeNewsEconomy2018a, vargoAgendasettingPowerFake2018}, making it hard to define where misinformation starts. In the real world, professional editors and politicians leave out true but important details, or they decontextualize parts to fit a narrative or a storyline without saying anything wrong. Implicit interpretations of facts can be different from explicit lying, making subtle forms of misinformation hard to detect, especially using automated methods (REF Noelle).
 Second, making this decision involves a number of ethical issues, and different groups of people would come to different conclusions. Trying to consider these challenges, researchers have often retreated to investigating binary (false/true) examples of misinformation, here nobody would argue against the examples of misinformation––solving the ethical problem. 
 Third, conceptual choices are often shaped by methodological constraints (e.g., the type of data that is available) or disciplinary preferences (e.g., the methodological traditions), which is why misinformation is often used as a general umbrella term for different phenomena \citep{weeksWhatNextSix2021}.
 Consequently, this semantic variance has contributed to imprecise or inconclusive findings regarding the prevalence and impact of misinformation. 
@@ -129,7 +131,7 @@ Investigating the development of the NewsGuard database over time is important t
 
 \textbf{How reliable and complete is the provided information, particularly for non-US countries?} A recent study has shown high agreement of NewsGuard with other expert-rated lists in the U.S. context~\citep{linHighLevelCorrespondence2023}, but an assessment for other countries is missing. Therefore, we next compare the distribution and completeness of information provided by NewsGuard across different contexts. 
 
-\textbf{How can other source labels in the NewsGuard database be used for misinformation research?} For each source, NewsGuard experts rate journalistic quality criteria that make the overall trustworthiness score. Estimating to what extent the different journalistic criteria constitute the overall trustworthiness score and the completeness of additional information might shed light on aspects of misinformation beyond binary true/false labels used in other lists. In addition, NewsGuard labels the topics covered as well as the political orientation of the source, further unraveling patterns of untrustworthy sources. 
+\textbf{How can other source labels in the NewsGuard database be used for misinformation research?} NewsGuard experts categorize each source on nine binary journalistic quality criteria. The criteria are weighted and aggregated to a continuous trustworthiness score. In addition, NewsGuard labels the topics covered as well as the political orientation of the source. %Analyzing the importance of journalistic criteria to trustworthiness ratings as well as the completeness of additional information might shed light on aspects of misinformation beyond binary true/false labels used in other lists.
 
 By describing the database, we outline potential pitfalls for digital media research and offer recommendations for the application of the NewsGuard database in different contexts. We also want to empower misinformation researchers to make informed decisions about whether the substantial expense associated with acquiring access to NewsGuard is necessary for their research. 
 
@@ -141,15 +143,28 @@ As of December 15, 2023, the database has 11,314 entries in total, some without 
     \item Unique identifier for each rating and date of the last update
     \item Domain name and parent domain (e.g., nytimes.com)
     \item A trustworthiness rating as a continuous scale (between 0 and 100) and binary labels (N = Not Trustworthy/T = Trustworthy) based on a threshold at 60
-    \item Binary labels for nine journalistic quality criteria, each awarding a number of points which together constitute the overall trustworthiness rating
     \item Language and country associated with the source
     \item Political orientation of the source
     \item Topics covered (e.g., ``local news'', ``political news'', ``health information'') by the source
 \end{itemize}
 
+A trained team of NewsGuard experts regularly judges the trustworthiness of the selected news sources based on nine journalistic criteria\footnote{\href{https://web.archive.org/web/20240131155450/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://web.archive.org/web/20240131155450/https://www.newsguardtech.com/ratings/rating-process-criteria/}} that are treated globally for all sources across countries. The trustworthiness score is a composite score of these nine indicators. Binary labels for nine journalistic quality criteria, each awarding a number of points which together constitute the overall trustworthiness rating. The criteria are weighted differently, ordered in descending relevance:
+
+\begin{itemize}
+  \item ``Does not repeatedly publish false content'', changed to ``Does not repeatedly publish false or egregiously misleading content'' in December 2023 (22 points)
+  \item ``Gathers and presents information responsibly'' (18 points) 
+  \item ``Regularly corrects or clarifies errors'', changed to ``Has effective practices for correcting errors''(12.5 points)
+  \item ``Handles the difference between news and opinion responsibly'' (12.5 points)
+  \item ``Avoids deceptive headlines'' (10 points)
+  \item ``Website discloses ownership and financing' (7.5 points)
+  \item ``Clearly labels advertising'' (7.5 points)
+  \item ``Reveals who's in charge, including possible conflicts of interest'' (5 points)
+  \item ``The site provides the names of content creators, along with either contact or biographical information'' (5 points)
+\end{itemize}
+
 \section{Descriptive Analyses}
 \subsection{How volatile are trustworthiness ratings?}
-A trained team of NewsGuard experts regularly judges the trustworthiness of the selected news sources based on nine journalistic criteria\footnote{\href{https://web.archive.org/web/20240131155450/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://web.archive.org/web/20240131155450/https://www.newsguardtech.com/ratings/rating-process-criteria/}} that are treated globally for all sources across countries. The trustworthiness score is a composite score of these nine indicators. In the following, we review how the database, and particularly the trustworthiness ratings and source selection, have changed over the years.
+In the following, we review how the database, and particularly the trustworthiness ratings and source selection, have changed over the years.
 
 \textbf{Coverage across time.} Over the span of four years, NewsGuard has grown from 2,615 to 10,658 sources with ratings, as shown in Figure~\ref{fig:fig1}. NewsGuard regularly adds new sources but rarely removes any, i.e., the database has been growing to three times its initial size. When counting the added domains based on monthly comparisons of the list, NewsGuard has added 7,937 domains over time in total but only removed 632. More precisely, the NewsGuard team adds an average of 144 new domains per month.
 
@@ -181,29 +196,15 @@ Second, NewsGuard employs different teams of editors per country, potentially le
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/fa1-scores_by_country.png}
-    \caption{Changes in trustworthiness scores over time, with colors indicating the countries added to the database.}
+    \includegraphics[width=\textwidth]{figures/f3-scores_by_country.png}
+    \caption{Changes in trustworthiness scores over time, with colors indicating the countries added to the database and size representing the number of sources added.}
     \label{fig:fig3}
 \end{figure}
 
 A third possibility is updates of existing ratings. NewsGuard indicates the date when a rating was last updated, even if the score did not change. Updates to entries happen on average once every eight months (243 days), but this varies strongly per source between a few seconds to a maximum of 1,109 days (interquartile range: 162 to 355 days). When updated, trustworthiness scores mostly remain unchanged, i.e., the majority of sources have not decreased in trustworthiness. However, a few sources drastically dropped in trustworthiness; for instance, conservativedailynews.com lost 80 points in one update in November 2020. Figure~\ref{fig:figa2} illustrates the differences in consecutive scores over time, with major score updates in early 2020. Overall, the decrease in trustworthiness that we can see in the right-hand plot in Figure~\ref{fig:fig2} can, therefore, likely be attributed to NewsGuard adding untrustworthy sources rather than previously trustworthy sources losing their reliability. 
 
 \textbf{Composition of trustworthiness score.} 
-The trustworthiness score is a composite score that is calculated based on nine journalistic criteria. For each source, the organization assigns a Boolean value (yes/no) per criterion. The trustworthiness score is then calculated as the sum of the weighted criteria. Because of the discrete point contributions to the overall score, the resulting trustworthiness score has a limited number of values it can take based on the different combinations of categories. The criteria are weighted differently, ordered in descending relevance:
-
-\begin{itemize}
-  \item ``Does not repeatedly publish false content'', changed to ``Does not repeatedly publish false or egregiously misleading content'' in December 2023 (22 points)
-  \item ``Gathers and presents information responsibly'' (18 points) 
-  \item ``Regularly corrects or clarifies errors'', changed to ``Has effective practices for correcting errors''(12.5 points)
-  \item ``Handles the difference between news and opinion responsibly'' (12.5 points)
-  \item ``Avoids deceptive headlines'' (10 points)
-  \item ``Website discloses ownership and financing' (7.5 points)
-  \item ``Clearly labels advertising'' (7.5 points)
-  \item ``Reveals who's in charge, including possible conflicts of interest'' (5 points)
-  \item ``The site provides the names of content creators, along with either contact or biographical information'' (5 points)
-\end{itemize}
-
-Further explanation of the criteria and their weights can be found in the NewsGuard FAQ\footnote{Here taken from December 31st, 2023: \href{https://web.archive.org/web/20231230155214/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://web.archive.org/web/20231230155214/https://www.newsguardtech.com/ratings/rating-process-criteria/}}. 
+The trustworthiness score is a composite score that is calculated based on nine journalistic criteria. For each source, the organization assigns a Boolean value (yes/no) per criterion. The trustworthiness score is then calculated as the sum of the weighted criteria. Because of the discrete point contributions to the overall score, the resulting trustworthiness score has a limited number of values it can take based on the different combinations of categories. Further explanation of the criteria and their weights can be found in the NewsGuard FAQ\footnote{Here taken from December 31st, 2023: \href{https://web.archive.org/web/20231230155214/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://web.archive.org/web/20231230155214/https://www.newsguardtech.com/ratings/rating-process-criteria/}}. 
 
 In the latest version of the dataset, 83.6\% of sources fulfill the criterion ``Avoids deceptive headlines'' alone (8,903 sources). It is followed by ``Does not repeatedly publish false or egregiously misleading content'', which is met by 82\% of all sources. These two top criteria often go together: When one of them is satisfied, the other one tends to be as well (Pearson's correlation coefficient = 0.88). 
 A factor analysis with oblique rotation confirms that the two criteria load on one factor, accounting for 56.4\% of the explained variance, with factor loadings > 0.9. All other criteria share 36.5\% of the variance explained (factor loadings >.6). 
@@ -219,8 +220,8 @@ Looking at the journalistic criteria values over time, we find that most sources
     \label{fig:fig4}
 \end{figure}
 
-\textbf{Reproducibility.}
-%to add.
+\textbf{Reproducibility of downstream research results using different snapshots of the database.}
+%to add Janas analysis
 
 \subsection{How reliable and complete is the provided information, particularly for non-US countries?}
 \textbf{Country coverage.} The dataset (2019-2023) contains sources from nine countries in total (United States, Great Britain, Italy, Canada, France, Germany, Austria, Australia, and New Zealand) plus sources considered to be global. Countries were added in the following order: GB, US, ALL, IT, FR, DE (all in 2019), CA (2021), AU, AT (2022), and NZ (2023). 
