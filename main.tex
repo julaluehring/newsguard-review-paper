@@ -96,15 +96,12 @@ Consequently, it is unsurprising that misinformation capitalizes on these dynami
 Against a backdrop of declining trust in both media outlets \citep{newmanReutersInstituteDigital2023} and institutions \citep{bennettDisinformationAge2020}, it becomes increasingly crucial to comprehend the mechanisms driving the dissemination of misinformation, particularly in the digital sphere. 
 Digital media not only facilitate the measurement of these dynamics but also have the potential to reinforce polarization and misinformation \citep{lorenz-spreenSystematicReviewWorldwide2022}.
 
-The spread of misinformation has been studied extensively by scholars from various scientific disciplines, relying on different conceptualizations and terms \cite{guessMisinformationDisinformationOnline2020}.
-%what do they have in common and how do they differ? 
-%definition influences measurement, measurement influences definition!
-In psychology, researchers commonly use misinformation as an umbrella term for inaccurate or unreliable information, regardless of intent, e.g., \cite{eckerPsychologicalDriversMisinformation2022} or \cite{vanderlindenMisinformationSusceptibilitySpread2022}. 
-In communication science, a popular definition by Claire Wardle and Hossein Derakhshan (\citeyear{wardleInformationDisorderInterdisciplinary2017}) distinguishes non-intentional misinformation from disinformation designed with the intent to misinform, including fake news that pursues financial or political intentions and conspiracy theories, summarizing them under the umbrella term information disorder. According to this definition, misinformation covers only false and misleading information that is created unintentionally, such as honest mistakes or incomplete reporting.
-Computational social scientists, such as David Lazer and colleagues (\citeyear{lazerScienceFakeNews2018}), tend to follow this notion of information disorders:
+Scholars across scientific disciplines have extensively studied different aspects of misinformation, therefore relying on various conceptualizations. Conceptual differences in the boundaries and harmfulness of misinformation affect the measurement of the concept, while methodological constraints influence the definition. Terms like misinformation, disinformation, fake news, rumors, or conspiracy theories are often used interchangeably \cite{guessMisinformationDisinformationOnline2020}, yet they share a common focus on facticity.
+In communication science, a popular definition by Claire Wardle and Hossein Derakhshan (\citeyear{wardleInformationDisorderInterdisciplinary2017}) differentiates between unintentional misinformation and deliberate disinformation designed with the intent to misinform. Here, disinformation includes fake news as a type of disinformation that pursues financial or political intentions. According to this definition, misinformation covers only false and misleading information that is created unintentionally, such as honest mistakes or incomplete reporting. Such nuances are important when researching, for instance, the content of misinformation or the diffusion of specific fake news articles. Computational social scientists, such as David Lazer and colleagues (\citeyear{lazerScienceFakeNews2018}), tend to follow this notion of information disorders:
 "Fake news overlaps with other information disorders, such as misinformation (false or misleading information) and disinformation (false information that is purposely spread to deceive people)." (p. 1094) 
+In practice, however, it is difficult to determine the exact intention, especially in research contexts that focus on effects\citep{weeksWhatNextSix2021}. In psychology, researchers, therefore, commonly use misinformation as an umbrella term for inaccurate or unreliable information, regardless of intent, e.g., \cite{eckerPsychologicalDriversMisinformation2022} or \cite{vanderlindenMisinformationSusceptibilitySpread2022}. 
 
-The ambiguous nature of misinformation, and the ethical challenge of who defines misinformation, presents researchers with numerous challenges, leaving them with a number of degrees of freedom. 
+The ambiguous nature of misinformation and the ethical challenge of who defines misinformation present researchers with numerous methodological challenges, leaving them with a number of degrees of freedom. 
 Defining the boundaries of misinformation, essentially deciding where to draw the line to the truth, is a very complex task for numerous reasons: 
 First, misinformation often appears in subtle forms rather than obvious lies \citep{altayMisinformationMisinformationConceptual2023a, bakirFakeNewsEconomy2018a, vargoAgendasettingPowerFake2018}, making it hard to define where misinformation starts. In the real world, professional editors and politicians leave out true but important details, or they decontextualize parts to fit a narrative or a storyline without saying anything wrong. Implicit interpretations of facts can be different from explicit lying, making subtle forms of misinformation hard to detect, especially using automated methods (REF Noelle).
 Second, making this decision involves a number of ethical issues, and different groups of people would come to different conclusions. Trying to consider these challenges, researchers have often retreated to investigating binary (false/true) examples of misinformation, here nobody would argue against the examples of misinformation––solving the ethical problem. 
@@ -150,7 +147,7 @@ As of December 15, 2023, the database has 11,314 entries in total, some without 
 
 A trained team of NewsGuard experts regularly judges the trustworthiness of the selected news sources based on nine journalistic criteria\footnote{\href{https://web.archive.org/web/20240131155450/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://web.archive.org/web/20240131155450/https://www.newsguardtech.com/ratings/rating-process-criteria/}} that are treated globally for all sources across countries. The trustworthiness score is a composite score of these nine indicators. Binary labels for nine journalistic quality criteria, each awarding a number of points which together constitute the overall trustworthiness rating. The criteria are weighted differently, ordered in descending relevance:
 
-\begin{itemize}
+\begin{enumerate}
   \item ``Does not repeatedly publish false content'', changed to ``Does not repeatedly publish false or egregiously misleading content'' in December 2023 (22 points)
   \item ``Gathers and presents information responsibly'' (18 points) 
   \item ``Regularly corrects or clarifies errors'', changed to ``Has effective practices for correcting errors''(12.5 points)
@@ -160,7 +157,7 @@ A trained team of NewsGuard experts regularly judges the trustworthiness of the 
   \item ``Clearly labels advertising'' (7.5 points)
   \item ``Reveals who's in charge, including possible conflicts of interest'' (5 points)
   \item ``The site provides the names of content creators, along with either contact or biographical information'' (5 points)
-\end{itemize}
+\end{enumerate}
 
 \section{Descriptive Analyses}
 \subsection{How volatile are trustworthiness ratings?}
@@ -197,7 +194,7 @@ Second, NewsGuard employs different teams of editors per country, potentially le
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{figures/f3-scores_by_country.png}
-    \caption{Changes in trustworthiness scores over time, with colors indicating the countries added to the database and size representing the number of sources added.}
+    \caption{Changes in trustworthiness scores (60 t0 80) over time (monthly granularity), with colors indicating the countries added to the database and size representing the number of sources added.}
     \label{fig:fig3}
 \end{figure}
 
@@ -287,8 +284,8 @@ Trustworthiness ratings greatly differ across topics. Sources covering issues re
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/f7-topics_score_recent.png}
-    \caption{Average trustworthiness per topic (SD)}
+    \includegraphics[width=\textwidth]{figures/f7-topics_score_recent-95ci.png}
+    \caption{Average trustworthiness per topic (95\% CI)}
     \label{fig:fig8}
 \end{figure}
 
