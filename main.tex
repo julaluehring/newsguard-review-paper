@@ -240,7 +240,7 @@ Figure~\ref{fig:reproduction} B shows the average difference in the NewsGuard sc
 
 The finding that for the US, there are only minor changes depending on which version of the database is used is likely largely due to the fact that sources rarely change their rating, and that for the US, almost all major news sources were already covered in the first version of the NewsGuard database: the snapshot from 2019 covers 15.0\% of links posted by Democrats on Twitter and 18.5\% of links posted by Republicans. The links not covered by NewsGuard are mostly links to platforms, campaign sites etc., see also supplement of \cite{Lasser2022} for a detailed analysis of links not covered by NewsGuard. For the snapshot from 2024, the coverage slightly increases to 16.3\% and 19.6\% of links for Democrats and Republicans, respectively.
 
-For the other two countries, Germany and the UK, the picture changes: differences in average ratings stratified by party show larger differences between years (see Figures~\ref{fig:reproduction_DE} and~\ref{fig:reproduction_UK} in the appendix). This is likely due to massive changes in the coverage of the sources shared by politicians in these countries by NewsGuard. For example, for members of the German party SPD, coverage increased from 0.5\% in 2019 to 12.7\% in 2024 and from 0.2\% to 12.0\% for members of CDU/CSU. For smaller parties like DIE LINKE and the Greens, using different versions of the database also leads to different conclusions: for the 2019 version, it seems like there is an upward trend in the average NewsGuard score of linked sources, whereas for other versions, this trend is absent. 
+For the other two countries, Germany and the UK, the picture changes: differences in average ratings stratified by party show larger differences between years (see Figures~\ref{fig:figa4} and~\ref{fig:figa5} in the appendix). This is likely due to massive changes in the coverage of the sources shared by politicians in these countries by NewsGuard. For example, for members of the German party SPD, coverage increased from 0.5\% in 2019 to 12.7\% in 2024 and from 0.2\% to 12.0\% for members of CDU/CSU. For smaller parties like DIE LINKE and the Greens, using different versions of the database also leads to different conclusions: for the 2019 version, it seems like there is an upward trend in the average NewsGuard score of linked sources, whereas for other versions, this trend is absent. 
 In the UK, the coverage for members of the Labour Party increased from 7.8\% to 13.5\%, and for Tories, it increased from 2.4\% to 7.8\%. In the UK, the main conclusion of the reproduced research, namely that there is no trend in the average NewsGuard score, would not have changed depending on the database version used. This analysis shows that for countries other than the US, the usage of different versions of the database has the potential to significantly influence research outcomes, likely due to the addition of a significant number of relevant new sources to the database over the years. Researchers investigating countries for which sources were only recently added to the database should, therefore, proceed with caution and invest time into validating the coverage of the database for the given country. 
 
 \begin{figure}
@@ -381,7 +381,7 @@ Final approval of the version to be published: R. Lazzaroni, J. Luehring, J. Las
 \renewcommand\thefigure{\thesection.\arabic{figure}}
 \setcounter{figure}{0}
 
-\renewcommand\thetable{\thesection.\arabic{figure}}
+\renewcommand\thetable{\thesection.\arabic{table}}
 \setcounter{table}{0}
 
 \section{Online Appendix}
@@ -403,7 +403,7 @@ Final approval of the version to be published: R. Lazzaroni, J. Luehring, J. Las
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/n_country_over_time.png}
+    \includegraphics[width=\textwidth]{figures/n_sources_per_country_over_time.png}
     \caption{Number of sources over time, per country.}
     \label{fig:figa2}
 \end{figure}
@@ -411,7 +411,7 @@ Final approval of the version to be published: R. Lazzaroni, J. Luehring, J. Las
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/fa2-score_updates.png}
+    \includegraphics[width=\textwidth]{figures/score_updates.png}
     \caption{Changes in trustworthiness scores over time, calculated as the difference in scores per news domain between consecutive updates.}
     \label{fig:figa3}
 \end{figure}
@@ -419,7 +419,7 @@ Final approval of the version to be published: R. Lazzaroni, J. Luehring, J. Las
 \begin{table}[htbp] 
 \centering
 \input{tables/criteria_correlation_recent}
-\caption{Correlation matrix.}
+\caption{Correlation matrix of journalistic quality criteria.}
 \label{tab:taba2}
 \end{table}
 
@@ -428,54 +428,55 @@ Final approval of the version to be published: R. Lazzaroni, J. Luehring, J. Las
     \centering
     \includegraphics[width=\textwidth]{figures/politician_trustworthiness_replication_DE.pdf}
     \caption{Reproduction of trustworthiness ratings of sources shared by German politicians on Twitter over time from~\cite{Lasser2022}. Panel A shows average NewsGuard scores in Twitter posts by members of the party DIE LINKE, panel B for members of the Greens, panel C for members of the SPD, panel D for members of the FDP, panel E for members of the CDU and CSU, and panel F for members of the AFD.}
-    \label{fig:reproduction_DE}
+    \label{fig:figa4}
 \end{figure}
 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{figures/politician_trustworthiness_replication_UK.pdf}
     \caption{Reproduction of trustworthiness ratings of sources shared by UK politicians on Twitter over time from~\cite{Lasser2022}. Panel A shows average NewsGuard scores in Twitter posts by members of the Labour party, panel B for members of the Scottish National Party, panel C for Liberal Democrats, panel D for Tories, and panel E for members of the Democratic Unionist Party.}
-    \label{fig:reproduction_UK}
+    \label{fig:figa5}
 \end{figure}
 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{figures/scores_per_country_recent.png}
     \caption{Distribution of trustworthiness per country as of June, 2024.}
-    \label{fig:figa4}
+    \label{fig:figa6}
 \end{figure}
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/scores_country_over_time.png}
+    \includegraphics[width=\textwidth]{figures/scores_per_country_over_time.png}
     \caption{Trustworthiness per country over time, aggregated by month.}
-    \label{fig:figa5}
+    \label{fig:figa7}
 \end{figure}
 
-\begin{sidewaystable}[htbp]
-\input{tables/t3_criteria_country.tex}
+\begin{sidewaystable}[htbp] 
+\centering
+\input{tables/criteria_country.tex}
+\caption{Criteria per country.}
 \end{sidewaystable}
-
 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{figures/orientation_over_time_per_country_before_after.png}
     \caption{Distribution of political orientation over time, by country}
-    \label{fig:figa6}
+    \label{fig:figa8}
 \end{figure}
 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{figures/fa4-scores_orientation_per_country_95.png}
     \caption{Averages in trustworthiness per country by orientation and 95\% confidence intervals in recent database}
-    \label{fig:figa7}
+    \label{fig:figa9}
 \end{figure}
 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{figures/fa3-topics_over_time.png}
     \caption{Topic counts over time}
-    \label{fig:figa8}
+    \label{fig:figa10}
 \end{figure}
 
 
