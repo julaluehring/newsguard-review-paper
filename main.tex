@@ -187,7 +187,7 @@ Furthermore, the distributions also clearly show a multimodal structure, indicat
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/f1-panel.png}
+    \includegraphics[width=\textwidth]{figures/f1-panel.pdf}
     \caption{Description of trustworthiness ratings with A) showing the number of sources with rating over time based on two different sampling strategies: when sampling one snapshot of the database mid-month (solid line), we observe a steady increase, whereas sampling at the beginning of the month results in two irregular dips (dashed line). B) indicates the distribution of trustworthiness in the first and most recent database as a histogram. C) displays changes in trustworthiness scores over time (monthly granularity), with flags and dotted lines indicating when countries were added and vertical lines highlighting the top five updates (i.e., major score changes, also shown with arrows). The height of the bars describes the aggregate trustworthiness score of updated and changed sources, and colors indicate the proportion of sources that were updated vs. changed. Note: For the major changes, we include the number of sources added in green.}
     \label{fig:fig1}
 \end{figure}
@@ -208,7 +208,7 @@ Overall, the decrease in trustworthiness we can see in Figure~\ref{fig:fig1}C ca
 \textbf{Composition of trustworthiness score.} 
 The trustworthiness score is a composite score that is calculated based on nine journalistic criteria. 
 For each source, NewsGuard's raters assign a Boolean value (yes/no) per criterion. 
-The trustworthiness score is then calculated as the sum of the weighted criteria. Further explanation of the criteria and their weights can be found in the NewsGuard FAQ\footnote{Snapshot taken from December 31st, 2023: \href{https://web.archive.org/web/20231230155214/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://web.archive.org/web/20231230155214/https://www.newsguardtech.com/ratings/rating-process-criteria/}}. 
+The trustworthiness score is then calculated as the sum of the weighted criteria. Further explanation of the criteria and their weights can be found in the NewsGuard FAQ\footnote{From December 31st, 2023: \href{https://web.archive.org/web/20231230155214/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://www.newsguardtech.com/ratings/rating-process-criteria/}}.
 
 In the latest version of the dataset, 81.2\% of sources fulfill the criterion ``Avoids deceptive headlines'' (9,033 sources). The second most prevalent criterion is ``Does not repeatedly publish false or egregiously misleading content'', which is met by 80.0\% of all sources. These two top criteria often go together: When one is satisfied, the other tends to be as well (Pearson's correlation coefficient = 0.9). 
 A factor analysis with oblique rotation confirms that the two criteria load on one factor, accounting for 58.0\% of the explained variance, with factor loadings > 0.9. All other criteria share 37.5\% of the variance explained (factor loadings > 0.6). 
@@ -221,8 +221,8 @@ On the other hand, a positive change for this criterion is the third most common
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/f2-panel.png}
-    \caption{A) represents the percentage of sources that have stopped or started to fulfill a criterion, including multiple changes (positive vs. negative) of a single source. B) shows the percentage of sources that miss a criterion, per country. C) shows trustworthiness per country over time (truncuated from 55 to 90), aggregated per year with 95\% confidence intervals.}
+    \includegraphics[width=\textwidth]{figures/f2-panel.pdf}
+    \caption{A) represents the percentage of sources that have stopped or started to fulfill a criterion, including multiple changes (positive vs. negative) of a single source. B) shows the percentage of sources that miss a criterion, per country. C) shows trustworthiness per country over time (truncated to range from 55 to 90), aggregated per year with 95\% confidence intervals.}
     \label{fig:fig2}
 \end{figure}
 
