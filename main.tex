@@ -181,7 +181,7 @@ The other 6,424 ratings do not have a parent domain entry in the database.
 Domains belonging to the same parent domain usually have the same trustworthiness rating.
 Furthermore, NewsGuard updates domains belonging to the same parent domain at once, and they seem to assign the same unique identifier to those domains. 
 
-\textbf{Distribution.} NewsGuard trustworthiness ratings range from 0 to 100. Historically, NewsGuard considered sources with a rating below 60 as not trustworthy, therefore assigning binary trustworthiness labels\footnote{Snapshot of the described rating process from December 31st, 2022 \href{https://web.archive.org/web/20221231134910/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://web.archive.org/web/20221231134910/https://www.newsguardtech.com/ratings/rating-process-criteria/}}. Since February 2023\footnote{Snapshot of the updated rating process from February 1st, 2023: \href{https://web.archive.org/web/20230201003836/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://web.archive.org/web/20230201003836/https://www.newsguardtech.com/ratings/rating-process-criteria/}}, NewsGuard uses a more granular categorization, classifying sources with a score of 100 as "high credibility", scores between 75 and 99 as "generally credible", scores between 60 and 74 as "credible with exceptions", scores between 40 and 59 as "proceed with caution", and scores between 0 and 39 as "proceed with maximum caution". Notably, NewsGuard is not a blacklist. In fact, close to 60\% of sources have an overall rating of over 60 (see Fig.~\ref{fig:fig1}B for the distribution of trustworthiness scores in the most recent vs. the first version of the database %and ). 
+\textbf{Distribution.} NewsGuard trustworthiness ratings range from 0 to 100. Historically, NewsGuard considered sources with a rating below 60 as not trustworthy, therefore assigning binary trustworthiness labels\footnote{Snapshot of the described rating process from December 31st, 2022 \href{https://web.archive.org/web/20221231134910/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://web.archive.org/web/20221231134910/https://www.newsguardtech.com/ratings/rating-process-criteria/}}. Since February 2023\footnote{Snapshot of the updated rating process from February 1st, 2023: \href{https://web.archive.org/web/20230201003836/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://web.archive.org/web/20230201003836/https://www.newsguardtech.com/ratings/rating-process-criteria/}}, NewsGuard uses a more granular categorization, classifying sources with a score of 100 as "high credibility", scores between 75 and 99 as "generally credible", scores between 60 and 74 as "credible with exceptions", scores between 40 and 59 as "proceed with caution", and scores between 0 and 39 as "proceed with maximum caution". Notably, NewsGuard is not a blacklist. In fact, close to 60\% of sources have an overall rating of over 60 (see Fig.~\ref{fig:fig1}B for the distribution of trustworthiness scores in the most recent vs. the first version of the database and Fig.~\ref{fig:figa1} for distributions per year). 
 
 Furthermore, the distributions also clearly show a multimodal structure, indicative of the quasi-continuous nature of the overall NewsGuard score. In addition, some combinations of characteristics seem to be much more prevalent than others, indicating that the individual characteristics are not independent of each other (see also ``Composition of trustworthiness score'' below).
 
@@ -199,9 +199,9 @@ The height of the bars shows the average trustworthiness of changes, while the c
 For all major updates, we can see that the proportion of added sources is larger than changed sources.
 The highest number of sources added was in September 2020, when 1,030 sources with, on average, very low trustworthiness (M=35.3, SD=14.1) were included. It is unclear if this development is due to an effort by NewsGuard to include more untrustworthy news or a global increase in untrustworthy sources. 
 
-Second, NewsGuard employs teams of experts per country, potentially leading to differences in coverage and ratings in different countries. Dips in trustworthiness may be related to country-specific sources being added. For instance, 1,015 of the 1,030 added sources in September 2020 are coded as US, resulting in a drop in trustworthiness of 5\% (see Figure~\ref{figa1} for the number of sources added per country over time). In contrast, adding entirely new countries to the database seems to have little effect on the trustworthiness scores (see the dotted grey lines and the country flags in Figure~\ref{fig:fig1}C). Overall, smaller dips appear across all countries covered and are most likely related to many low-quality sources gaining traction around the time of the COVID-19 pandemic. 
+Second, NewsGuard employs teams of experts per country, potentially leading to differences in coverage and ratings in different countries. Dips in trustworthiness may be related to country-specific sources being added. For instance, 1,015 of the 1,030 added sources in September 2020 are coded as US, resulting in a drop in trustworthiness of 5\% (see Figure~\ref{figa2} for the number of sources added per country over time). In contrast, adding entirely new countries to the database seems to have little effect on the trustworthiness scores (see the dotted grey lines and the country flags in Figure~\ref{fig:fig1}C). Overall, smaller dips appear across all countries covered and are most likely related to many low-quality sources gaining traction around the time of the COVID-19 pandemic. 
 
-A third possibility is updates of existing ratings. NewsGuard indicates the date when a rating was last updated, even if the score did not change. Updates to entries are documented on average once every eight months (248 days), but this varies strongly per source between a few seconds to a maximum of 790 days (interquartile range: 162 to 332 days). When updated, trustworthiness scores mostly remain unchanged (on average, 20\% of updates mean a change in the rating). In other words, ratings realistically change every two years (M=572 days, IQR=398 days to 673 days). In addition, the majority of sources have not decreased in trustworthiness (M=-0.05, SD=3.38). However, a few sources drastically dropped in trustworthiness; for instance, conservativedailynews.com lost 80 points in one update in November 2020. Figure~\ref{fig:figa2} illustrates the differences in consecutive scores over time, with major score updates in early 2020. 
+A third possibility is updates of existing ratings. NewsGuard indicates the date when a rating was last updated, even if the score did not change. Updates to entries are documented on average once every eight months (248 days), but this varies strongly per source between a few seconds to a maximum of 790 days (interquartile range: 162 to 332 days). When updated, trustworthiness scores mostly remain unchanged (on average, 20\% of updates mean a change in the rating). In other words, ratings realistically change every two years (M=572 days, IQR=398 days to 673 days). In addition, the majority of sources have not decreased in trustworthiness (M=-0.05, SD=3.38). However, a few sources drastically dropped in trustworthiness; for instance, conservativedailynews.com lost 80 points in one update in November 2020. Figure~\ref{fig:figa3} illustrates the differences in consecutive scores over time, with major score updates in early 2020. 
 
 Overall, the decrease in trustworthiness we can see in Figure~\ref{fig:fig1}C can, therefore, be attributed to NewsGuard adding untrustworthy sources rather than previously trustworthy sources losing their reliability. This interpretation is also supported by our analysis of changes in individual rating criteria below.
 
@@ -213,16 +213,16 @@ The trustworthiness score is then calculated as the sum of the weighted criteria
 In the latest version of the dataset, 81.2\% of sources fulfill the criterion ``Avoids deceptive headlines'' (9,033 sources). The second most prevalent criterion is ``Does not repeatedly publish false or egregiously misleading content'', which is met by 80.0\% of all sources. These two top criteria often go together: When one is satisfied, the other tends to be as well (Pearson's correlation coefficient = 0.9). 
 A factor analysis with oblique rotation confirms that the two criteria load on one factor, accounting for 58.0\% of the explained variance, with factor loadings > 0.9. All other criteria share 37.5\% of the variance explained (factor loadings > 0.6). 
 %Meeting any of the two criteria strongly predicts a high rating (with regression coefficients of \(\beta\)=62.8, p<.001, and \(\beta\)=60.8, p<.001, respectively). 
-In line with that, 13.4\% of all sources meet both of the top criteria combined, while 14.5\% of sources satisfy none of the nine journalistic criteria. The most common combination of criteria is that all nine criteria are satisfied simultaneously (15.6\% of sources). We provide a correlation matrix of criteria in the Appendix (Table~\ref{table:tablea1}).
+In line with that, 13.4\% of all sources meet both of the top criteria combined, while 14.5\% of sources satisfy none of the nine journalistic criteria. The most common combination of criteria is that all nine criteria are satisfied simultaneously (15.6\% of sources). We provide a correlation matrix of criteria in the Appendix (Table~\ref{table:tablea2}).
 
 We find that around 60\% of sources have never changed in journalistic criteria during updates. 
 The most common change is sources that stop disclosing ownership and financing, with 12.5\% out of the observed changes being related to a negative change in this criterion.
-On the other hand, a positive change for this criterion is the third most common pattern, occurring in 10.7\% of score updates. This indicates that NewsGuard might frequently check criteria related to ownership. We present update patterns of individual criteria over time in Figure~\ref{fig:fig2}.
+On the other hand, a positive change for this criterion is the third most common pattern, occurring in 10.7\% of score updates. This indicates that NewsGuard might frequently check criteria related to ownership. We present update patterns of individual criteria over time in Figure~\ref{fig:fig2}A.
 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{figures/f2-panel.png}
-    \caption{A) Proportion of sources meeting a given criterion over time, and B) the percentage of sources that have stopped or started to fulfill a criterion, including multiple changes (positive vs. negative) of a single source.}
+    \caption{A) represents the percentage of sources that have stopped or started to fulfill a criterion, including multiple changes (positive vs. negative) of a single source. B) shows the percentage of sources that miss a criterion, per country. C) shows trustworthiness per country over time (truncuated from 55 to 90), aggregated per year with 95\% confidence intervals.}
     \label{fig:fig2}
 \end{figure}
 
@@ -258,29 +258,17 @@ The majority of sources are from the United States (65.8\%), followed by global 
 \input{tables/t2_countries.tex}
 
 Across all versions of the database and most countries covered by NewsGuard, the overall trustworthiness of sources remains >65, except for the United States: US-based outlets are of lower trustworthiness on average (see Table~\ref{table:table2}). 
-Figure~\ref{fig:fig5} shows the average trustworthiness of sources per country over time (see also Figures~\ref{fig:figa3} and~\ref{fig:figa4} for the distribution of scores by country). 
+Figure~\ref{fig:fig2}C shows the average trustworthiness of sources per country over time (see also Figures~\ref{fig:figa6} and~\ref{fig:figa7} for plots by country). 
 The development of trustworthiness indicates that for countries with good coverage (a higher number of sources), the database seems to have settled into a stable state, whereas for newer countries (Canada, New Zealand, Australia), rating coverage seems to vary. 
 It is unclear whether US sources are of lower trustworthiness overall or if the relative number of outlets in the dataset can explain this finding. 
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=\textwidth]{figures/f4-scores_over_time_per_country.png}
-    \caption{Trustworthiness scores from 50 to 90 over time (yearly aggregates), per country covered by NewsGuard.}
-    \label{fig:fig5}
-\end{figure}
-
-When comparing the number of sources that meet the journalistic criteria per country, we observe some striking patterns. 
-Table~\ref{table:table3} shows the percentage of sources that \emph{miss} a given indicator by country, i.e., a high percentage indicates that many sources fail to meet the criterion. 
+When comparing the number of sources that meet the journalistic criteria per country, we observe some striking patterns. Figure~\ref{fig:fig2}B shows the percentage of sources that \emph{miss} a given indicator by country, i.e., a high percentage indicates that many sources fail to meet the criterion (also see Table~\ref{table:table3} for the exact percentages of which criterion is met). 
 For most countries, more than 50\% of sources meet each criterion. Interestingly, over 70\% of Italian sources do not provide names of content creators, and over 80\% do not effectively correct errors. 
 A similar but less pronounced pattern is visible for French sources. 
-Across all criteria, the United States shows the highest percentage of sources not meeting the criteria, with 47.5\% of sources failing to gather and present information responsibly. This is almost twice the share of sources than in any other country. 
-For US-based sources, 18.8\% fail the heavy-weighted criterion ``Does not repeatedly publish false or egregiously misleading content'' and even 47.5\% fail ``Gathers and presents information responsibly''), almost twice the share of sources than in any other country.
+Across all criteria, the United States shows the highest percentage of sources not meeting the criteria, with 47.7\% of sources failing to gather and present information responsibly, almost twice the share of sources than in any other country.
+Furthermore, 19.2\% of US-based sources fail the heavy-weighted criterion ``Does not repeatedly publish false or egregiously misleading content''.
 
-\begin{sidewaystable}[htbp]
-\input{tables/t3_criteria_country.tex}
-\end{sidewaystable}
-
-Intervals between updates of sources vary substantially by country (see Table~\ref{table:table2}, ranging from 278 days for New Zealand, and 225 days for the US to 306 days for Germany. Updating patterns seem to depend on the country, with sources getting updated once a year per country on average. Overall, however, the US coverage seems the most complete and reliable, given the total number of outlets rated by NewsGuard.
+Intervals between updates of sources vary substantially by country (see Table~\ref{table:table2}, ranging from 278 days for New Zealand, and 225 days for the US to 306 days for Germany. Updating patterns seem to depend on the country, with sources getting updated once a year per country on average. Overall, however, the US coverage seems the most complete and stable, given the number of outlets rated by NewsGuard relative to the population size of each country. 
 
 \textbf{Comparison with other lists.} In order to measure the actual coverage of sources per country, it is necessary to compare the sources covered by NewsGuard with other lists. However, other lists are often not compiled with the same objective as NewsGuard, which is to cover all sources responsible for most of the internet traffic. Therefore, their scope and rating system may differ. In addition, other lists are not available for every country. 
 
@@ -344,7 +332,7 @@ For sources labeled as left-leaning, trustworthiness is particularly low (below 
 
 
 \section{Conclusion}
-An inherent bias in misinformation research lies in the definitions of false information and its measurement methodologies. This review first describes source- and story-based approaches for tracking online misinformation and assesses their reliability, validity, and feasibility. Second, we describe the NewsGuard database which contains trustworthiness ratings of over 10,000 sources based on journalistic criteria and requires a license to use for research. To date, NewsGuard is the most comprehensive database of source-level trustworthiness scores, selecting the sources it rates based on web traffic data and employing professional editors and journalists to compile and update its ratings. We discuss the content of the data base and its usefulness for misinformation research relating to its completeness, volatility and additional information contained in the data base next to trustworthiness ratings. We discuss the implications of our findings and provide recommendations for utilizing the NewsGuard database for research.
+An inherent bias in misinformation research lies in the definitions of false information and its measurement methodologies. This review first describes source- and story-based approaches for tracking online misinformation and assesses their reliability, validity, and feasibility. Second, we describe the NewsGuard database which contains trustworthiness ratings of over 10,000 sources based on journalistic criteria and requires a license to use for research. To date, NewsGuard is the most comprehensive database of source-level trustworthiness scores, selecting the sources it rates based on web traffic data and employing professional editors and journalists to compile and update its ratings. We discuss the content of the database and its usefulness for misinformation research relating to its completeness, volatility, and additional information contained in the database next to trustworthiness ratings. We discuss the implications of our findings and provide recommendations for utilizing the NewsGuard database for research.
 
 The database contains ratings for sources from nine countries. It extensively covers sources based in the United States, with substantially lower coverage for the other eight countries. Still, source ratings are regularly updated across all countries with at most on average 399 days between updates in Germany and as little as 235 days in New Zealand. Over 50\% of the sources included in the database have a score of 60 points or higher and are therefore considered at least ``credible with exceptions'' according to NewsGuard's nomenclature. NewsGuard contains more right- than left-leaning sources, with the former generally rated as less trustworthy. However, as the ratings provided by NewsGuard are largely consistent with ratings provided by other independent fact checking organisations~\cite{linHighLevelCorrespondence2023}, it is unlikely that this difference is caused by an inherent bias against right-leaning sources in NewsGuard's rating processes. 
 
@@ -392,9 +380,18 @@ Final approval of the version to be published: R. Lazzaroni, J. Luehring, J. Las
 \appendix
 \renewcommand\thefigure{\thesection.\arabic{figure}}
 \setcounter{figure}{0}
+
+\renewcommand\thetable{\thesection.\arabic{figure}}
+\setcounter{table}{0}
+
 \section{Online Appendix}
 
-%\input{tables/ta1_variables.tex}
+%\begin{table}[htbp] 
+%\centering
+%\input{tables/ta1_variables.text}
+%\caption{Described variables.}
+%\label{tab:taba1}
+%\end{table}
 
 \begin{figure}[!ht]
     \centering
@@ -408,7 +405,7 @@ Final approval of the version to be published: R. Lazzaroni, J. Luehring, J. Las
     \centering
     \includegraphics[width=\textwidth]{figures/n_country_over_time.png}
     \caption{Number of sources over time, per country.}
-    \label{fig:figa1}
+    \label{fig:figa2}
 \end{figure}
 
 
@@ -416,48 +413,16 @@ Final approval of the version to be published: R. Lazzaroni, J. Luehring, J. Las
     \centering
     \includegraphics[width=\textwidth]{figures/fa2-score_updates.png}
     \caption{Changes in trustworthiness scores over time, calculated as the difference in scores per news domain between consecutive updates.}
-    \label{fig:figa2}
-\end{figure}
-
-\begin{sidewaystable}[htbp]
-\input{tables/criteria_correlation_recent}
-\end{sidewaystable}
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=\textwidth]{figures/scores_per_country_recent.png}
-    \caption{Distribution of trustworthiness per country as of December, 2023.}
     \label{fig:figa3}
 \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=\textwidth]{figures/scores_country_over_time.png}
-    \caption{Distribution of trustworthiness per country over time.}
-    \label{fig:figa4}
-\end{figure}
+\begin{table}[htbp] 
+\centering
+\input{tables/criteria_correlation_recent}
+\caption{Correlation matrix.}
+\label{tab:taba2}
+\end{table}
 
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=\textwidth]{figures/orientation_over_time_per_country_before_after.png}
-    \caption{Distribution of political orientation over time, by country}
-    \label{fig:figa5}
-\end{figure}
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=\textwidth]{figures/fa4-scores_orientation_per_country_95.png}
-    \caption{Averages in trustworthiness per country by orientation and 95\% confidence intervals in recent database}
-    \label{fig:figa6}
-\end{figure}
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=\textwidth]{figures/fa3-topics_over_time.png}
-    \caption{Topic counts over time}
-    \label{fig:figa7}
-\end{figure}
 
 \begin{figure}[!ht]
     \centering
@@ -472,4 +437,46 @@ Final approval of the version to be published: R. Lazzaroni, J. Luehring, J. Las
     \caption{Reproduction of trustworthiness ratings of sources shared by UK politicians on Twitter over time from~\cite{Lasser2022}. Panel A shows average NewsGuard scores in Twitter posts by members of the Labour party, panel B for members of the Scottish National Party, panel C for Liberal Democrats, panel D for Tories, and panel E for members of the Democratic Unionist Party.}
     \label{fig:reproduction_UK}
 \end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/scores_per_country_recent.png}
+    \caption{Distribution of trustworthiness per country as of June, 2024.}
+    \label{fig:figa4}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/scores_country_over_time.png}
+    \caption{Trustworthiness per country over time, aggregated by month.}
+    \label{fig:figa5}
+\end{figure}
+
+\begin{sidewaystable}[htbp]
+\input{tables/t3_criteria_country.tex}
+\end{sidewaystable}
+
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/orientation_over_time_per_country_before_after.png}
+    \caption{Distribution of political orientation over time, by country}
+    \label{fig:figa6}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/fa4-scores_orientation_per_country_95.png}
+    \caption{Averages in trustworthiness per country by orientation and 95\% confidence intervals in recent database}
+    \label{fig:figa7}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/fa3-topics_over_time.png}
+    \caption{Topic counts over time}
+    \label{fig:figa8}
+\end{figure}
+
+
 \end{document}
