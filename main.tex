@@ -181,14 +181,14 @@ The other 6,424 ratings do not have a parent domain entry in the database.
 Domains belonging to the same parent domain usually have the same trustworthiness rating.
 Furthermore, NewsGuard updates domains belonging to the same parent domain at once, and they seem to assign the same unique identifier to those domains. 
 
-\textbf{Distribution.} NewsGuard trustworthiness ratings range from 0 to 100. Historically, NewsGuard considered sources with a rating below 60 as not trustworthy, therefore assigning binary trustworthiness labels\footnote{Snapshot of the described rating process from December 31st, 2022 \href{https://web.archive.org/web/20221231134910/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://web.archive.org/web/20221231134910/https://www.newsguardtech.com/ratings/rating-process-criteria/}}. Since February 2023\footnote{Snapshot of the updated rating process from February 1st, 2023: \href{https://web.archive.org/web/20230201003836/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://web.archive.org/web/20230201003836/https://www.newsguardtech.com/ratings/rating-process-criteria/}}, NewsGuard uses a more granular categorization, classifying sources with a score of 100 as "high credibility", scores between 75 and 99 as "generally credible", scores between 60 and 74 as "credible with exceptions", scores between 40 and 59 as "proceed with caution", and scores between 0 and 39 as "proceed with maximum caution". Notably, NewsGuard is not a blacklist. In fact, close to 60\% of sources have an overall rating of over 60 (see Fig.~\ref{fig:fig1}B for the distribution of trustworthiness scores in the most recent vs. the first version of the database). 
+\textbf{Distribution.} NewsGuard trustworthiness ratings range from 0 to 100. Historically, NewsGuard considered sources with a rating below 60 as not trustworthy, therefore assigning binary trustworthiness labels\footnote{Snapshot of the described rating process from December 31st, 2022 \href{https://web.archive.org/web/20221231134910/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://web.archive.org/web/20221231134910/https://www.newsguardtech.com/ratings/rating-process-criteria/}}. Since February 2023\footnote{Snapshot of the updated rating process from February 1st, 2023: \href{https://web.archive.org/web/20230201003836/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://web.archive.org/web/20230201003836/https://www.newsguardtech.com/ratings/rating-process-criteria/}}, NewsGuard uses a more granular categorization, classifying sources with a score of 100 as "high credibility", scores between 75 and 99 as "generally credible", scores between 60 and 74 as "credible with exceptions", scores between 40 and 59 as "proceed with caution", and scores between 0 and 39 as "proceed with maximum caution". Notably, NewsGuard is not a blacklist. In fact, close to 60\% of sources have an overall rating of over 60 (see Fig.~\ref{fig:fig1}B for the distribution of trustworthiness scores in the most recent vs. the first version of the database %and ). 
 
 Furthermore, the distributions also clearly show a multimodal structure, indicative of the quasi-continuous nature of the overall NewsGuard score. In addition, some combinations of characteristics seem to be much more prevalent than others, indicating that the individual characteristics are not independent of each other (see also ``Composition of trustworthiness score'' below).
 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{figures/f1-panel.png}
-    \caption{Description of trustworthiness ratings with A) showing the number of sources with rating over time based on two different sampling strategies: when sampling one snapshot of the database mid-month (solid line), we observe a steady increase, whereas sampling at the beginning of the month results in two irregular dips (dashed line). Plot B indicates the distribution of trustworthiness in the first and most recent database as a bar chart. C) Changes in trustworthiness scores over time (monthly granularity), with flags indicating the countries added and vertical lines for the top 5 major updates (score changes). Bars represent the aggregate trustworthiness of those updates and colors indicate the proportion domains that were updated vs. changed.}
+    \caption{Description of trustworthiness ratings with A) showing the number of sources with rating over time based on two different sampling strategies: when sampling one snapshot of the database mid-month (solid line), we observe a steady increase, whereas sampling at the beginning of the month results in two irregular dips (dashed line). B) indicates the distribution of trustworthiness in the first and most recent database as a histogram. C) displays changes in trustworthiness scores over time (monthly granularity), with flags and dotted lines indicating when countries were added and vertical lines highlighting the top five updates (i.e., major score changes, also shown with arrows). The height of the bars describes the aggregate trustworthiness score of updated and changed sources, and colors indicate the proportion of sources that were updated vs. changed. Note: For the major changes, we include the number of sources added in green.}
     \label{fig:fig1}
 \end{figure}
 
@@ -280,8 +280,7 @@ Lower trustworthiness scores for US-based sources in Figure~\ref{fig:fig5} and T
 \input{tables/t3_criteria_country.tex}
 \end{sidewaystable}
 
-%Due to the size of the database per country, the US database was updated on average 6,306 times per year (37,839 times in total, based on our sampling strategy). The maximum number of times that Italy, the second largest database, was updated is only 663. 
-Intervals between updates of sources vary substantially by country (see Table~\ref{table:table2}, ranging from 235 days for New Zealand, and 262 days for the US to 399 days for Germany. Updating patterns seem to depend on the country, with sources getting updated once a year per country on average. Overall, however, the US coverage seems the most complete and reliable, given the total number of outlets rated by NewsGuard.
+Intervals between updates of sources vary substantially by country (see Table~\ref{table:table2}, ranging from 278 days for New Zealand, and 225 days for the US to 306 days for Germany. Updating patterns seem to depend on the country, with sources getting updated once a year per country on average. Overall, however, the US coverage seems the most complete and reliable, given the total number of outlets rated by NewsGuard.
 
 \textbf{Comparison with other lists.} In order to measure the actual coverage of sources per country, it is necessary to compare the sources covered by NewsGuard with other lists. However, other lists are often not compiled with the same objective as NewsGuard, which is to cover all sources responsible for most of the internet traffic. Therefore, their scope and rating system may differ. In addition, other lists are not available for every country. 
 
@@ -397,7 +396,13 @@ Final approval of the version to be published: R. Lazzaroni, J. Luehring, J. Las
 
 %\input{tables/ta1_variables.tex}
 
-%Note that the y-axis is truncated to show only ratings between 60 and 80. D) shows the distribution of trustworthiness per year as a violin plot (with M and SD), standardized by count.
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/score_per_year-violinplot.png}
+    \caption{Distribution of trustworthiness per year as a violin plot (with M and SD), standardized by count.}
+    \label{fig:figa1}
+\end{figure}
+
 
 \begin{figure}[!ht]
     \centering
