@@ -213,7 +213,7 @@ The trustworthiness score is then calculated as the sum of the weighted criteria
 In the latest version of the dataset, 81.2\% of sources fulfill the criterion ``Avoids deceptive headlines'' (9,033 sources). The second most prevalent criterion is ``Does not repeatedly publish false or egregiously misleading content'', which is met by 80.0\% of all sources. These two top criteria often go together: When one is satisfied, the other tends to be as well (Pearson's correlation coefficient = 0.9). 
 A factor analysis with oblique rotation confirms that the two criteria load on one factor, accounting for 58.0\% of the explained variance, with factor loadings > 0.9. All other criteria share 37.5\% of the variance explained (factor loadings > 0.6). 
 %Meeting any of the two criteria strongly predicts a high rating (with regression coefficients of \(\beta\)=62.8, p<.001, and \(\beta\)=60.8, p<.001, respectively). 
-In line with that, 13.4\% of all sources meet both of the top criteria combined, while 14.5\% of sources satisfy none of the nine journalistic criteria. The most common combination of criteria is that all nine criteria are satisfied simultaneously (15.6\% of sources). We provide a correlation matrix of criteria in the Appendix (Table~\ref{table:tablea2}).
+In line with that, 13.4\% of all sources meet both of the top criteria combined, while 14.5\% of sources satisfy none of the nine journalistic criteria. The most common combination of criteria is that all nine criteria are satisfied simultaneously (15.6\% of sources). We provide a correlation matrix of criteria in the Appendix (Table~\ref{tab:taba2}).
 
 We find that around 60\% of sources have never changed in journalistic criteria during updates. 
 The most common change is sources that stop disclosing ownership and financing, with 12.5\% out of the observed changes being related to a negative change in this criterion.
@@ -262,7 +262,7 @@ Figure~\ref{fig:fig2}C shows the average trustworthiness of sources per country 
 The development of trustworthiness indicates that for countries with good coverage (a higher number of sources), the database seems to have settled into a stable state, whereas for newer countries (Canada, New Zealand, Australia), rating coverage seems to vary. 
 It is unclear whether US sources are of lower trustworthiness overall or if the relative number of outlets in the dataset can explain this finding. 
 
-When comparing the number of sources that meet the journalistic criteria per country, we observe some striking patterns. Figure~\ref{fig:fig2}B shows the percentage of sources that \emph{miss} a given indicator by country, i.e., a high percentage indicates that many sources fail to meet the criterion (also see Table~\ref{table:table3} for the exact percentages of which criterion is met). 
+When comparing the number of sources that meet the journalistic criteria per country, we observe some striking patterns. Figure~\ref{fig:fig2}B shows the percentage of sources that \emph{miss} a given indicator by country, i.e., a high percentage indicates that many sources fail to meet the criterion (also see Table~\ref{tab:taba3} for the exact percentages of which criterion is met). 
 For most countries, more than 50\% of sources meet each criterion. Interestingly, over 70\% of Italian sources do not provide names of content creators, and over 80\% do not effectively correct errors. 
 A similar but less pronounced pattern is visible for French sources. 
 Across all criteria, the United States shows the highest percentage of sources not meeting the criteria, with 47.7\% of sources failing to gather and present information responsibly, almost twice the share of sources than in any other country.
@@ -386,12 +386,7 @@ Final approval of the version to be published: R. Lazzaroni, J. Luehring, J. Las
 
 \section{Online Appendix}
 
-%\begin{table}[htbp] 
-%\centering
-%\input{tables/ta1_variables.text}
-%\caption{Described variables.}
-%\label{tab:taba1}
-%\end{table}
+\input{tables/variables.tex}
 
 \begin{figure}[!ht]
     \centering
@@ -417,10 +412,10 @@ Final approval of the version to be published: R. Lazzaroni, J. Luehring, J. Las
 \end{figure}
 
 \begin{table}[htbp] 
-\centering
-\input{tables/criteria_correlation_recent}
 \caption{Correlation matrix of journalistic quality criteria.}
 \label{tab:taba2}
+\centering
+\input{tables/criteria_correlation_recent}
 \end{table}
 
 
@@ -454,8 +449,7 @@ Final approval of the version to be published: R. Lazzaroni, J. Luehring, J. Las
 
 \begin{sidewaystable}[htbp] 
 \centering
-\input{tables/criteria_country.tex}
-\caption{Criteria per country.}
+\input{tables/criteria_country}
 \end{sidewaystable}
 
 \begin{figure}[!ht]
