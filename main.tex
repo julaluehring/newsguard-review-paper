@@ -258,9 +258,9 @@ The majority of sources are from the United States (65.8\%), followed by global 
 \input{tables/t2_countries.tex}
 
 Across all versions of the database and most countries covered by NewsGuard, the overall trustworthiness of sources remains >65, except for the United States: US-based outlets are of lower trustworthiness on average (see Table~\ref{table:table2}). 
-Figure~\ref{fig:fig2}C shows the average trustworthiness of sources per country over time (see also Figures~\ref{fig:figa6} and~\ref{fig:figa7} for plots by country). 
-The development of trustworthiness indicates that for countries with good coverage (a higher number of sources), the database seems to have settled into a stable state, whereas for newer countries (Canada, New Zealand, Australia), rating coverage seems to vary. 
+Figure~\ref{fig:fig2}C shows the average trustworthiness of sources per country over time (see also Figures~\ref{fig:figa6} and~\ref{fig:figa7} for plots by country).  
 It is unclear whether US sources are of lower trustworthiness overall or if the relative number of outlets in the dataset can explain this finding. 
+The development of trustworthiness indicates that for countries with good coverage (a higher number of sources), the database seems to have settled into a stable state, whereas for newer countries (Canada, New Zealand, Australia), rating coverage seems to vary.
 
 When comparing the number of sources that meet the journalistic criteria per country, we observe some striking patterns. Figure~\ref{fig:fig2}B shows the percentage of sources that \emph{miss} a given indicator by country, i.e., a high percentage indicates that many sources fail to meet the criterion (also see Table~\ref{tab:taba3} for the exact percentages of which criterion is met). 
 For most countries, more than 50\% of sources meet each criterion. Interestingly, over 70\% of Italian sources do not provide names of content creators, and over 80\% do not effectively correct errors. 
@@ -268,32 +268,64 @@ A similar but less pronounced pattern is visible for French sources.
 Across all criteria, the United States shows the highest percentage of sources not meeting the criteria, with 47.7\% of sources failing to gather and present information responsibly, almost twice the share of sources than in any other country.
 Furthermore, 19.2\% of US-based sources fail the heavy-weighted criterion ``Does not repeatedly publish false or egregiously misleading content''.
 
-Intervals between updates of sources vary substantially by country (see Table~\ref{table:table2}, ranging from 278 days for New Zealand, and 225 days for the US to 306 days for Germany. Updating patterns seem to depend on the country, with sources getting updated once a year per country on average. Overall, however, the US coverage seems the most complete and stable, given the number of outlets rated by NewsGuard relative to the population size of each country. 
+Intervals between updates of sources vary substantially by country (see Table~\ref{table:table2}, ranging from 278 days for New Zealand, and 225 days for the US to 306 days for Germany. Updating patterns seem to depend on the country, with sources getting updated once a year per country on average. Overall, the US coverage seems the most stable and complete, given the total number of outlets rated by NewsGuard. 
+However, the number of media outlets in each country may depend on numerous factors (e.g., population size, fragmentation of the media system, political system, and so on). To get an understanding of the completeness of the NewsGuard database per country, we describe comparisons with domains shared on social media and covered by other lists in the following sections.
+
+\textbf{Comparison with domains shared on social media.}
+In the supplementary material of ~\cite{Lasser2022}, the authors describe a manual inspection of web domains in their Twitter (now X) dataset that were not covered by NewsGuard (see ``Reproducibility of downstream research results using different snapshots of the database''). 
+More precisely, the authors investigate all links posted by politicians that point to web pages other than social media platforms and search platforms. Overall, NewsGuard seems to cover a notable fraction of those links (US: 46.5\%, Germany: 58.8\%, UK: 39.2\%). 
+Per country, the authors selected relevant domains not covered by NewsGuard by focusing on those that individually accounted for 0.1\% of the total volume of linked domains, i.e., these domains were likely to have been shared repeatedly. Subsequently, the authors inspected the missing domains and manually assigned labels to them (e.g., ``government'', ``news'', or ``blog'').
+In the following, we highlight only the main findings of this analysis of missing domains in the light of this study; however, more information can be found in the supplementary material of ~\cite{Lasser2022} online.
+
+For the US, 47 domains were analyzed, making up only 21.2\% of missing domains in the dataset but comprising more than 0.1\% of the total link volume. While most of these domains link to government or personal websites, none of the 47 domains lead to a news site. 
+Similarly, in the UK, 19.3\% of the links related to 78 domains (40.3\% of missing domains) point to government websites. 
+Here, however, a small share of all investigated links (1.5\%) point to websites predominantly shared by members of either the Conservative or Labour parties.
+Also for Germany, only a fraction of links not covered by NewsGuard lead to news sites (1.2\%). This is four out of 62 missing domains (31.5\% of missing domains analyzed). These sites were primarily shared by members of the left, green, or liberal parties, indicating that they are not widely shared across party affiliations.
+
+Although the analysis examines only a limited number of domains not evaluated by NewsGuard, it demonstrates that NewsGuard provides a comprehensive list of domains shared by politicians in their social media communication across the US, UK, and Germany. Moreover, the absence of sources from both the left and right sides of the political spectrum suggests that NewsGuard's domain selection shows no substantial political bias.
+
 
 \textbf{Comparison with other lists.} In order to measure the actual coverage of sources per country, it is necessary to compare the sources covered by NewsGuard with other lists. However, other lists are often not compiled with the same objective as NewsGuard, which is to cover all sources responsible for most of the internet traffic. Therefore, their scope and rating system may differ. In addition, other lists are not available for every country. 
 
-For the US context, ~\citet{linHighLevelCorrespondence2023} have compared five lists of existing expert ratings with NewsGuard and found a high number of non-overlapping web domains between lists. However, ratings correlated significantly for the web domains included in multiple lists. Further, Puschmann et al. (2024) collected a list of German online news domains (GOND)\footnote{\href{https://osf.io/s5uhb/}{https://osf.io/s5uhb/}}, largely relying on web tracking data of a representative sample of 1,500 German citizens. In the first version of the list, the authors also classified the domains into types, among others ``legacy press'' (49\%), ``digital-born news outlet'' (18.0\%), or ``hyperpartisan news'' (8.2\%). GOND has 543 global sources in common with NewsGuard, including 147 English-language, 47 French, and 56 Italian sources. Out of all global sources that overlap, 285 are legacy press, and 56 are hyperpartisan news. Furthermore, GOND covers the same 237 German sources as NewsGuard, including 24 hyperpartisan and 19 digital-born news outlets. Overall, it seems that NewsGuard's coverage of the United States and Germany is extensive, while comparisons for other countries are missing.  
-%add a table to appendix!!!
+Primarily for the US context, ~\citet{linHighLevelCorrespondence2023} have compared the overlap and agreement between ratings across six lists of existing expert ratings, including the NewsGuard database. While trustworthiness ratings correlated significantly for the web domains included in multiple lists, the authors found a high number of non-overlapping web domains between lists. %potentially add more info on this or compare with Janas list?
+
+For the German context, Puschmann et al. (2024) collected a list of 1,147 unique German online news domains (GOND)\footnote{\href{https://osf.io/s5uhb/}{https://osf.io/s5uhb/}}, largely relying on web tracking data of a representative sample of 1,500 German citizens. 
+Overall, GOND has 551 sources in common with NewsGuard, among others labeled as ``legacy press'' (52.8\%), ``digital-born news outlet'' (18.0\%), or ``hyperpartisan news'' (8.2\%). NewsGuard covers 243 sources out of 573 German-speaking sources covered by GOND, which also includes some other languages.
+
+Overall, comparisons of the NewsGuard database with other available databases show fluctuations across lists. However, NewsGuard's coverage of the United States and Germany seems extensive in that NewsGuard generally tends to cover bigger outlets and tends to exclude niche and regional outlets, probably because of a focus on websites that gain the most traction.  
  
 \subsection{How can other information be used for misinformation research?}
-\textbf{Political Orientation.} The dataset also classifies sources according to their political orientation, relying on a left-to-right conception of the political spectrum. In December 2022, the categories were condensed from four (far left/ slightly left/slightly right/far right) to two (left/right). Overall, the political orientation label is only available for a minority of the sources. In the current version of the database, 31.2\% of the sources have a label for political orientation (2,980 sources). For countries other than the US, where 41.1\% of news outlets have a political orientation label, only a small minority of sources have such a label: 9.8\% of sources associated with Great Britain, 11.6\% for Italy, 16.1\% for Germany, and 15.3\% for France. Here, again, the over-representation of the United States in the data set becomes apparent. Figure~\ref{fig:fig4}C and Table~\ref{table:table3} show the total number of political orientation labels per country as well as the number and percentage of sources classified as left or right-leaning in the most recent version of the database.
-In most countries, the majority of sources with political orientation labels belong to the right-wing spectrum. Figure~\ref{fig:figa5} shows the distribution of political orientation per country over time. 
+\textbf{Political Orientation.} The dataset also classifies sources according to their political orientation, relying on a left-to-right conception of the political spectrum. 
+In December 2022, the categories were condensed from four (far left/ slightly left/slightly right/far right) to two (left/right; see Fig.~\ref{fig:fig4}A). Overall, the political orientation label is only available for a minority of the sources. 
+In the current version of the database, 31.1\% of the sources have a label for political orientation (3,038 sources). 
+
+
+For countries other than the US, where 41.5\% of news outlets have a political orientation label, only a small minority of sources have such a label: 9.4\% of sources associated with Great Britain, 11.0\% for Italy, 16.0\% for Germany, and 13.4\% for France. 
+Here, again, the over-representation of the United States in the data set becomes apparent. 
+Figure~\ref{fig:fig4}C and Table~\ref{table:table3} show the total number of political orientation labels per country as well as the number and percentage of sources classified as left or right-leaning in the most recent version of the database.
+In most countries, the majority of sources with political orientation labels belong to the right-wing spectrum. 
+Figure~\ref{fig:figa5} shows the distribution of political orientation per country over time. 
 
 \input{tables/t3_orientation_countries.tex}
 
-Trustworthiness ratings are generally lower for right-leaning sources. In the current database (December 2023), the mean trustworthiness score for right-leaning sources is 26.7 (SD=23.4), in contrast to 61.7 (SD=20.1) for left-leaning sources (Mdiff=35.0, t(2978)=32.4, p < .001). Before the political orientation label changed from four to two categories (see Fig.~\ref{fig:fig4}, slightly left- and right-leaning sources had moderate trustworthiness ratings (for example, in June 2021, 82.16 and 61.9, respectively), especially compared to far-left and far-right sources. In September 2021, however, when a high number of untrustworthy sources were added to the database, particularly the trustworthiness of slightly right-leaning sources dropped by almost 23 points, see Figure~\ref{fig:fig6}. When the label became binary, this led to a lower average score of right-leaning sources by adding low-quality sources classified as "far-right" before (where trustworthiness ranged between 13.5 and 17.8 points). 
+Trustworthiness ratings are generally lower for right-leaning sources (see Fig.~\ref{fig:fig4}B). In the current database (June 2024), the average trustworthiness score for right-leaning sources is 26.1 (SD=19.7), in contrast to 60.9 (SD=23.3) for left-leaning sources (Mdiff=34.9, t(2978)=32.9, \textit{p} < .001). 
+Before the political orientation label changed from four to two categories, slightly left- and right-leaning sources had moderate trustworthiness ratings (for example, in June 2021, 81.3 and 59.4, respectively), especially compared to far-left and far-right sources (54.0 and 15.9, respectively). 
 
-In addition to the changes in the taxonomy of political orientation used by NewsGuard, and therefore changes in the average trustworthiness of sources labelled as a given political category, the trustworthiness ratings averaged over political orientation also differ by country, as shown in Fig.~\ref{fig:fig4}B. While for some countries like France and Canada, the average trustworthiness of left and right sources only differs by about 20 points and the 95\% confidence intervals overlap, other countries like Australia, Germany, and Austria show extreme differences of over 40 points, on average. Nevertheless, across all countries, sources classified as belonging to the right side of the political spectrum, on average, always have a lower trustworthiness score than sources on the left. However, given the small percentage of sources classified as belonging to either side of the spectrum, we cannot infer that sources on the right, in general, have lower trustworthiness, as our findings could also be caused by a bias in NewsGuard's procedure of classifying sources as either left or right or not at all.
+%%continue here
+In July 2021, however, when a high number of untrustworthy sources were added to the database, particularly the average trustworthiness of sources categorized as slightly right-leaning dropped by almost 20 points. Figure~\ref{fig:fig4}A shows that the ``Slightly right''-category dropped below the ``Far Left''-category (by almost 15 points). 
+
+In addition to the changes in the taxonomy of political orientation used by NewsGuard, and therefore changes in the average trustworthiness of sources labeled as a given political category, the trustworthiness ratings averaged over political orientation also differ by country, as shown in Fig.~\ref{fig:fig4}B. While for some countries like France and Canada, the average trustworthiness of left and right sources only differs by about 20 points and the 95\% confidence intervals overlap, other countries like Australia, Germany, and Austria show extreme differences of over 40 points Nevertheless, across all countries, sources classified as belonging to the right side of the political spectrum, on average, always have a lower trustworthiness score than sources on the left. However, given the small percentage of sources classified as belonging to either side of the spectrum, we cannot infer that sources on the right, in general, have lower trustworthiness, as our findings could also be caused by a bias in NewsGuard's procedure of classifying sources as either left or right or not at all.
 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{figures/orientation-panel.pdf}
-    \caption{Trustworthiness averages by political orientation A) over time, and B) by country. C) shows the percentage of sources per country with political orientation, explaining differences in trustworthiness by country}
+    \caption{Trustworthiness averages by political orientation A) over time, and B) by country. C) shows the percentage of sources per country with political orientation, explaining differences in trustworthiness by country.}
     \label{fig:fig4}
 \end{figure}
 
+%add summary paragraph and potentially delete this paragraph?
 However, by mapping trustworthiness for each country and political orientation, we also see differences in trustworthiness per political orientation across countries. Figure~\ref{fig:fig4}B shows the average scores per country based on the most recent database. Sources that were considered far left prior to December 2022, for instance, had a trustworthiness score of >70 in Germany and Great Britain, whereas they were considered untrustworthy (<60) in five other countries (US, Australia, and Canada, Italy, France). Similarly, the trustworthiness of right-leaning sources varies based on the country. 
-%add summary paragraph
+
 
 \textbf{Topics.} NewsGuard experts assign topic labels based on the topics covered by the sources, which can also be found in the database. A source is usually assigned to multiple topics. The topic ratings were introduced around October 2020 and steadily increased over time. In the most recent version of the database, only 161 sources are without a topic label (1.7\%). The most popular topics are ``Local News'' (39.1\% of sources), ``Political News or Commentary'' (37.9\%), ``General News'' (19.9\%), ``Health or Medical Information'' (10.5\%), and ``Conspiracy Theories or Hoaxes'' (9.5\%). 
 
@@ -331,6 +363,9 @@ For sources labeled as left-leaning, trustworthiness is particularly low (below 
     \caption{Heatmap showing the interaction of topic trustworthiness and political orientation}
     \label{fig:fig10}
 \end{figure}
+
+
+%%add summary paragraph
 
 
 \section{Conclusion}
