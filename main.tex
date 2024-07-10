@@ -292,11 +292,12 @@ Primarily for the US context, ~\citet{linHighLevelCorrespondence2023} have compa
 For the German context, Puschmann et al. (2024) collected a list of 1,147 unique German online news domains (GOND)\footnote{\href{https://osf.io/s5uhb/}{https://osf.io/s5uhb/}}, largely relying on web tracking data of a representative sample of 1,500 German citizens. 
 Overall, GOND has 551 sources in common with NewsGuard, among others labeled as ``legacy press'' (52.8\%), ``digital-born news outlet'' (18.0\%), or ``hyperpartisan news'' (8.2\%). NewsGuard covers 243 sources out of 573 German-speaking sources covered by GOND, which also includes some other languages.
 
-Overall, comparisons of the NewsGuard database with other available databases show fluctuations across lists. However, NewsGuard's coverage of the United States and Germany seems extensive in that NewsGuard generally tends to cover bigger outlets and tends to exclude niche and regional outlets, probably because of a focus on websites that gain the most traction.  
+Overall, comparisons of the NewsGuard database with other available databases show fluctuations across lists. However, NewsGuard's coverage of the United States and Germany seems extensive in that NewsGuard generally tends to cover more prominent outlets and excludes niche and regional outlets, probably because of a focus on websites that gain the most traction.  
  
 \subsection{How can other information be used for misinformation research?}
 \textbf{Political Orientation.} The dataset also classifies sources according to their political orientation, relying on a left-to-right conception of the political spectrum. 
-In December 2022, the categories were condensed from four (far left/ slightly left/slightly right/far right) to two (left/right; see Fig.~\ref{fig:fig4}A). Overall, the political orientation label is only available for a minority of the sources. 
+In December 2022, the categories were condensed from four (far left/ slightly left/slightly right/far right) to two (left/right; see Fig.~\ref{fig:fig4}A). 
+Overall, the political orientation label is only available for a minority of the sources. 
 In the current version of the database, 31.1\% of the sources have a label for political orientation (3,038 sources). 
 
 
@@ -308,13 +309,30 @@ Figure~\ref{fig:figa5} shows the distribution of political orientation per count
 
 \input{tables/t3_orientation_countries.tex}
 
-Trustworthiness ratings are generally lower for right-leaning sources (see Fig.~\ref{fig:fig4}B). In the current database (June 2024), the average trustworthiness score for right-leaning sources is 26.1 (SD=19.7), in contrast to 60.9 (SD=23.3) for left-leaning sources (Mdiff=34.9, t(2978)=32.9, \textit{p} < .001). 
+Trustworthiness ratings are generally lower for right-leaning sources (see Fig.~\ref{fig:fig4}B). 
+In the current database (June 2024), the average trustworthiness score for right-leaning sources is 26.1 (SD=19.7), in contrast to 60.9 (SD=23.3) for left-leaning sources ($M_{diff}$ = 34.9, t(2978)=32.9, \textit{p} < .001).
 Before the political orientation label changed from four to two categories, slightly left- and right-leaning sources had moderate trustworthiness ratings (for example, in June 2021, 81.3 and 59.4, respectively), especially compared to far-left and far-right sources (54.0 and 15.9, respectively). 
 
-%%continue here
-In July 2021, however, when a high number of untrustworthy sources were added to the database, particularly the average trustworthiness of sources categorized as slightly right-leaning dropped by almost 20 points. Figure~\ref{fig:fig4}A shows that the ``Slightly right''-category dropped below the ``Far Left''-category (by almost 15 points). 
+In August 2021, however, when a number of untrustworthy sources (M=40.5, SD=37.2) were added to the database, particularly the average trustworthiness of sources categorized as slightly right-leaning dropped by almost 20 points. Figure~\ref{fig:fig4}A shows that the ``Slightly Right''-category dropped below the ``Far Left''-category (by almost 15 points). 
 
-In addition to the changes in the taxonomy of political orientation used by NewsGuard, and therefore changes in the average trustworthiness of sources labeled as a given political category, the trustworthiness ratings averaged over political orientation also differ by country, as shown in Fig.~\ref{fig:fig4}B. While for some countries like France and Canada, the average trustworthiness of left and right sources only differs by about 20 points and the 95\% confidence intervals overlap, other countries like Australia, Germany, and Austria show extreme differences of over 40 points Nevertheless, across all countries, sources classified as belonging to the right side of the political spectrum, on average, always have a lower trustworthiness score than sources on the left. However, given the small percentage of sources classified as belonging to either side of the spectrum, we cannot infer that sources on the right, in general, have lower trustworthiness, as our findings could also be caused by a bias in NewsGuard's procedure of classifying sources as either left or right or not at all.
+In addition to the changes in the taxonomy of political orientation used by NewsGuard, and therefore changes in the average trustworthiness of sources labeled as a given political category, the trustworthiness ratings averaged over political orientation also differ by country, as shown in Fig.~\ref{fig:fig4}B. 
+While for some countries like France and Canada, the average trustworthiness of left and right sources only differs by about 20 points and the 95\% confidence intervals overlap, other countries like Australia, Germany, and Austria show extreme differences of over 40 points.
+Nevertheless, across all countries, sources classified as belonging to the right side of the political spectrum, on average, always have a lower trustworthiness score than sources on the left. 
+However, given the small percentage of sources classified as belonging to either side of the spectrum, we cannot infer that sources on the right, in general, have lower trustworthiness, as our findings could also be caused by a bias in NewsGuard's procedure of classifying sources as either left or right or not at all.
+
+To get an idea of whether other sources are neutral or simply not classified by NewsGuard, we examined 60 German-speaking sources included in the most recent version of the database.
+Interestingly, the rated sources tended to be niche outlets with more extreme (and thus, clear-cut) political leanings.
+We manually annotated the left/right political orientation of each source based on the website's landing page, article headlines, ads, and article content. 
+Our annotations matched the existing ratings 90\% of the time. 
+The remaining 10\% of disagreements arose from sources where political bias was indiscernible or the site was inaccessible. 
+Consequently, in the German context, the ratings appear to be reliable.
+Additionally, we randomly selected 60 sources without political orientation ratings and manually annotated them where possible. 
+For most of these sources, we could not identify a clear political leaning. Out of the 60 sources, we rated nine as right-leaning and four as left-leaning. 
+These sources were typically local newspapers or magazines focusing on special interest topics (e.g., technology or health). 
+However, a certain percentage were legacy media or major online sources that slightly leaned towards a particular political orientation.
+Based on our findings, we believe that a missing political orientation rating can have two (not necessarily mutually exclusive) implications: 
+a) the sources have no overt political bias in their reporting or 
+b) the sources are too niche or small.
 
 \begin{figure}[!ht]
     \centering
@@ -323,25 +341,42 @@ In addition to the changes in the taxonomy of political orientation used by News
     \label{fig:fig4}
 \end{figure}
 
-%add summary paragraph and potentially delete this paragraph?
-However, by mapping trustworthiness for each country and political orientation, we also see differences in trustworthiness per political orientation across countries. Figure~\ref{fig:fig4}B shows the average scores per country based on the most recent database. Sources that were considered far left prior to December 2022, for instance, had a trustworthiness score of >70 in Germany and Great Britain, whereas they were considered untrustworthy (<60) in five other countries (US, Australia, and Canada, Italy, France). Similarly, the trustworthiness of right-leaning sources varies based on the country. 
+Before the rating system was simplified to a binary classification, a few domains frequently oscillated between more extreme and less extreme labels, but domains rarely switched their political orientation.
+Only five domains have changed their political orientation rating from left to right (none from right to left). 
+Only five domains have changed their political orientation rating from left to right (none have changed from right to left).
+These domains are US-based, and two of them also experienced a significant drop in their trustworthiness score, reducing it by 42 points in January 2020.
+Therefore, ratings generally remain stable for the few sources with a political orientation rating.
+
+In conclusion, although NewsGuard sporadically rates the political orientation of sources, particularly outside the US, the ratings of covered sources appear generally stable over time and reasonable for the German context.
+Therefore, the political orientation rating by NewsGuard may be a valuable addition to analyses related to source trustworthiness.  
+However, we recommend that researchers spot-check the ratings for the specific country in which they intend to use the database, especially for major outlets and mainstream media sources. 
+If the research focuses on comparing political orientations rather than controlling for political bias, we advise validating and extending the existing ratings provided by NewsGuard.
 
 
-\textbf{Topics.} NewsGuard experts assign topic labels based on the topics covered by the sources, which can also be found in the database. A source is usually assigned to multiple topics. The topic ratings were introduced around October 2020 and steadily increased over time. In the most recent version of the database, only 161 sources are without a topic label (1.7\%). The most popular topics are ``Local News'' (39.1\% of sources), ``Political News or Commentary'' (37.9\%), ``General News'' (19.9\%), ``Health or Medical Information'' (10.5\%), and ``Conspiracy Theories or Hoaxes'' (9.5\%). 
+\textbf{Topics.} NewsGuard experts assign topic labels based on the topics covered by the sources, which can also be found in the database. 
+Multiple topics are usually assigned to a source. 
+The first few topic ratings were introduced in October 2019 and steadily increased over time. 
+Until 2022, fewer topic labels were given, but as of May 2021, roughly 50\% of the sources became labels (see Fig.~\ref{fig:figa9}) for the total number and proportion of sources with ratings). In the most recent version of the database, only 147 sources are without a topic label (1.5\%). The most popular topics are ``Local News'' (38.9\% of sources), ``Political News or Commentary'' (37.4\%), ``General News'' (20.0\%), ``Health or Medical Information'' (10.5\%), and ``Conspiracy Theories or Hoaxes'' (9.9\%). 
 
-Up until 2022, fewer topic labels were given (see Fig.~\ref{fig:figa8}), but throughout the covered time frame, the most popular topics remained the same. Especially health-related information and political news peak at least once a year, most likely coinciding with update intervals. Interestingly, only about a year after the COVID-19 pandemic started, in August 2021, 1,039 labels related to COVID-19 misinformation were added to the database. This update coincides with a drop in trustworthiness for right-wing sources, as described above.
+%labels over time
+Over time, topic labels related to misinformation have been added (see Figure XYA with the topics mostly shared by sources classified as untrustworthy), most likely coinciding with some of the major updates marked above. 
+In April 2020, shortly after the COVID-19 pandemic started, NewsGuard increasingly added a label called ``COVID-19 misinformation.'', with major additions in August 2021.
 
-As shown in Fig.~\ref{fig:fig8}, average trustworthiness ratings greatly differ across topics. Sources covering issues related to ``Military and Defense'' (M=58.3, SD=39.6) and ``Political News or Commentary'' (M=61.5, SD=30.9) have the lowest average rating , while those covering sports and business have the highest average trustworthiness scores (around 80). 
+%average trustworthiness per topic
+As shown in Fig.~\ref{fig:fig8}, average trustworthiness ratings greatly differ across topics. 
+Sources covering issues related to ``Military and Defense'' (M=58.3, SD=39.6) and ``Political News or Commentary'' (M=61.5, SD=30.9) have the lowest average rating , while those covering sports and business have the highest average trustworthiness scores (around 80). 
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/f7-topics_score_recent-95ci.png}
+    \includegraphics[width=\textwidth]{figures/topics_score_recent.pdf}
     \caption{Average trustworthiness per topic. Error bars show the 95\% CI. The red dotted line indicates a trustworthiness score of 60, historically used by NewsGuard to label sources as "not trustworthy".}
     \label{fig:fig8}
 \end{figure}
 
+%bad sources and bad topics
 In the latest version of the database, conspiracy narratives and health-related misinformation only make up a small proportion of all untrustworthy information, while most of it relates to "Political News or Commentary", with 49.6\% of all untrustworthy sources (e.g. with a trustworthiness score <60), followed by ``Local News'' (45.6\% of sources). Only 10.8\% of untrustworthy sources cover ``Health or Medical Information'', and only 9.4\% are related to ``Conspiracy Theories or Hoaxes''. Nonetheless, this highlights that untrustworthy sources cover many topics and are not a fringe phenomenon. 
 
+%per country
 The trustworthiness of sources covering a given topic substantially depends on the country, and variance within topics largely depends on the country and the political orientation of the source. For instance, for medical information, sources in Canada are rated as trustworthy (M=91.29, SD=8.5), while the average is around 60 in the United States (M=62.1, SD=33.8). The between-country difference is even bigger for political news, with 53.4 (31.2) for the United States, 77.0 (29.7) for Germany, and 90.20 (13.5) for Canada. Differences in health and political information are illustrated in Figure~\ref{fig:fig9}, which shows the trustworthiness averages per country for the five most popular untrustworthy topics. 
 %visualize variance within countries differently?
 
@@ -352,6 +387,7 @@ The trustworthiness of sources covering a given topic substantially depends on t
     \label{fig:fig9}
 \end{figure}
 
+%per political orientation
 We also analyzed the interaction of average trustworthiness by topic and political orientation (see Figure~\ref{fig:fig10}). Political News or Commentary, as well as Local News, are the most popular topics for both left- and right-wing sources to cover, followed by local and general news. For sources classified as belonging to the right side of the political spectrum, trustworthiness scores for all topics are consistently lower on average than for sources on the left side. 
 For sources labeled as left-leaning, trustworthiness is particularly low (below 50) when they cover the topics Environment, Science, Criminal Justice or Fashion. However, due to the skewed distribution of political orientation in the database, the number of sources covering those topics is generally low on the left (e.g., for political news: left = 151, right = 1,159).
 
@@ -498,16 +534,9 @@ Final approval of the version to be published: R. Lazzaroni, J. Luehring, J. Las
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/fa4-scores_orientation_per_country_95.png}
-    \caption{Averages in trustworthiness per country by orientation and 95\% confidence intervals in recent database}
+    \includegraphics[width=\textwidth]{figures/topic_source_over_time.pdf}
+    \caption{Number of sources over time with and without topic labels.}
     \label{fig:figa9}
-\end{figure}
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=\textwidth]{figures/fa3-topics_over_time.png}
-    \caption{Topic counts over time}
-    \label{fig:figa10}
 \end{figure}
 
 
