@@ -153,7 +153,7 @@ Using fact-checked stories also reflects one of the limitations of corrective in
 Consequently, this approach tends to underestimate both the prevalence and impact of misinformation, failing to capture and judge the harmfulness of its broader dynamics effectively. 
 
 Source-based strategies offer the advantage of encompassing a broader spectrum of sources and narratives, thus enriching the sample by considering a more diverse information environment. 
-Source-based approaches also enable the inclusion of subtler forms of misinformation and facilitate accurate estimations of both the scale \citep{allenEvaluatingFakeNews2020, grinbergFakeNewsTwitter2019,guessExposureUntrustworthyWebsites2020a, yangCOVID19InfodemicTwitter2021a} and dynamics of dissemination \citep{Lasser2022, pennycookShiftingAttentionAccuracy2021a, robertsonUsersChooseEngage2023a, shaoSpreadLowcredibilityContent2018}. 
+Source-based approaches also enable the inclusion of subtler forms of misinformation and facilitate accurate estimations of both the scale \citep{allenEvaluatingFakeNews2020, grinbergFakeNewsTwitter2019,guessExposureUntrustworthyWebsites2020a, yangCOVID19InfodemicTwitter2021a} and dynamics of dissemination \citep{lasserSocialMediaSharing2022c, lasserAlternativeConceptionsHonesty2023, pennycookShiftingAttentionAccuracy2021a, robertsonUsersChooseEngage2023a, shaoSpreadLowcredibilityContent2018}. 
 Nevertheless, it is important to note that not every story originating from an untrustworthy source is necessarily false, introducing a degree of inaccuracy at the level of individual articles. 
 Despite potential accuracy errors at this granularity, source-based judgments of trustworthiness can be accurate at the macroscopic level. 
 For example, the same source may publish accurate reports of events, but they may also publish inaccurate opinion pieces. 
@@ -176,13 +176,13 @@ Third, while source judgments are typically made without requiring specific topi
 \subsection{The NewsGuard database}
 Source-based approaches are a promising way to track misinformation online. 
 However, to study the spread of unreliable news, scientists need access to reliable and credible databases of source ratings. 
-Since the 2016 US elections, the most popular way to track misinformation online has been to use a list of untrustworthy or unreliable sources and search for their web domains in URL text \citep{Lasser2022, grinbergFakeNewsTwitter2019, guessExposureUntrustworthyWebsites2020a, shaoSpreadLowcredibilityContent2018, yangCOVID19InfodemicTwitter2021a}. 
+Since the 2016 US elections, the most popular way to track misinformation online has been to use a list of untrustworthy or unreliable sources and search for their web domains in URL text \citep{lasserSocialMediaSharing2022c, grinbergFakeNewsTwitter2019, guessExposureUntrustworthyWebsites2020a, shaoSpreadLowcredibilityContent2018, yangCOVID19InfodemicTwitter2021a}. 
 The organization \href{https://www.newsguardtech.com/}{NewsGuard} offers the most comprehensive list of such domains \cite{linHighLevelCorrespondence2023a}. 
 It does not just blacklist untrustworthy sources but provides a continuous trustworthiness score for each source, covering news sources across the entire spectrum of news quality. 
-A trained team of experts, consisting mostly of journalists and editors, rates the news sources based on nine journalistic quality criteria \footnote{\href{https://web.archive.org/web/20240131155450/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://web.archive.org/web/20240131155450/https://www.newsguardtech.com/ratings/rating-process-criteria/}} and regularly updates both the coverage of the list (increasing the number of sources) and their overall trustworthiness rating.
+A trained team of experts, consisting mostly of journalists and editors, rates the news sources based on nine journalistic quality criteria \footnote{\href{https://web.archive.org/web/20240131155450/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://www.newsguardtech.com/ratings/rating-process-criteria/}} and regularly updates both the coverage of the list (increasing the number of sources) and their overall trustworthiness rating.
 The database is constantly growing and has been extended to countries beyond the United States in the last years, for example, Germany and Italy. 
 With recent political events and crises, demand for such databases has increased, enhancing the popularity of NewsGuard. 
-For instance, it has been used to study user engagement with unreliable news during the 2016 and 2020 US elections \citet{pratelliSwingingStatesDoes2023, robertsonUsersChooseEngage2023a}, to assess the changing quality of cited information of political elites in the US \citep{Lasser2022} or to estimate the effects of source labeling on decreasing misinformation sharing \citep{celadinDisplayingNewsSource2023}.
+For instance, it has been used to study user engagement with unreliable news during the 2016 and 2020 US elections \citep{pratelliSwingingStatesDoes2023, robertsonUsersChooseEngage2023a}, to assess the changing quality of cited information of political elites in the US \citep{lasserSocialMediaSharing2022c} or alternative understandings of honesty in truth in political discourse \citep{lasserAlternativeConceptionsHonesty2023}, and to estimate the effects of source labeling on decreasing misinformation sharing \citep{celadinDisplayingNewsSource2023}.
 
 However, the NewsGuard database was initially created as a tool for brand security rather than scientific research. 
 In addition, employing journalists and editors to assess the sources included in the list incurs significant expenses. 
@@ -228,7 +228,7 @@ NewsGuard does not rate these sources, but they make up 7.2\% of the listed sour
     \item Topics covered (e.g., ``local news'', ``political news'', ``health information'') by the source
 \end{itemize}
 
-The team of NewsGuard experts regularly judges the trustworthiness of the selected news sources based on nine journalistic criteria \footnote{\href{https://web.archive.org/web/20240131155450/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://web.archive.org/web/20240131155450/https://www.newsguardtech.com/ratings/rating-process-criteria/}} that are treated the same for different types of sources and from different countries. 
+The team of NewsGuard experts regularly judges the trustworthiness of the selected news sources based on nine journalistic criteria\footnote{\href{https://web.archive.org/web/20240131155450/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://www.newsguardtech.com/ratings/rating-process-criteria/}} that are treated the same for different types of sources and from different countries. 
 The trustworthiness score is a composite score of these nine indicators. More precisely, experts assign a binary label for each criterion, each awarding a number of points that together constitute the overall trustworthiness rating. 
 The criteria are weighted differently, ordered in descending relevance:
 
@@ -275,8 +275,7 @@ Domains belonging to the same parent domain usually have the same trustworthines
 Furthermore, NewsGuard updates domains belonging to the same parent domain at once, and they seem to assign the same unique identifier to those domains. 
 
 \textbf{Distribution.} NewsGuard trustworthiness ratings range from 0 to 100. 
-Historically, NewsGuard considered sources with a rating below 60 as not trustworthy, therefore assigning binary trustworthiness labels
-\footnote{Snapshot of the described rating process from December 31st, 2022: \href{https://web.archive.org/web/20221231134910/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://www.newsguardtech.com/ratings/rating-process-criteria/}}. 
+Historically, NewsGuard considered sources with a rating below 60 as not trustworthy, therefore assigning binary trustworthiness labels\footnote{Snapshot of the described rating process from December 31st, 2022: \href{https://web.archive.org/web/20221231134910/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://www.newsguardtech.com/ratings/rating-process-criteria/}}. 
 Since February 2023\footnote{Snapshot of the updated rating process from February 1st, 2023: \href{https://web.archive.org/web/20230201003836/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://www.newsguardtech.com/ratings/rating-process-criteria/}}, NewsGuard uses a more granular categorization, classifying sources with a score of 100 as "high credibility", scores between 75 and 99 as "generally credible", scores between 60 and 74 as "credible with exceptions", scores between 40 and 59 as "proceed with caution", and scores between 0 and 39 as "proceed with maximum caution". 
 Notably, NewsGuard is not a blacklist. 
 In fact, close to 60\% of sources have an overall rating of over 60 (see Fig.~\ref{fig:fig1}B for the distribution of trustworthiness scores in the most recent vs. the first version of the database and Fig.~\ref{fig:figa1} for distributions per year). 
@@ -348,7 +347,7 @@ On the other hand, a positive change for this criterion is the third most common
 \textbf{Reproducibility of downstream research results using different snapshots of the database.}
 Over the observation period, we observe both the addition of a substantial amount of sources, as well as some changes in the fulfillment of individual journalistic criteria and therefore, the overall score for individual sources. 
 This begets the question of whether such changes can potentially influence the conclusions drawn from investigations that rely on the NewsGuard database, depending on which version of the database is used.
-To provide a partial answer to this question, we reproduce some of the analyses of the trustworthiness ratings of sources shared by politicians in the US, UK and Germany by Lasser et al. \cite{Lasser2022}, using different versions of the NewsGuard database.
+To provide a partial answer to this question, we reproduce some of the analyses of the trustworthiness ratings of sources shared by politicians in the US, UK and Germany by Lasser et al. \cite{lasserSocialMediaSharing2022c}, using different versions of the NewsGuard database.
 In Figure~\ref{fig:reproduction} A, we show the temporal development of the average NewsGuard score of sources shared by Democrat and Republican members of Congress on Twitter between 2016 and 2022.
 We use snapshots of the NewsGuard database taken on March 1 of each year between 2019 and 2024 (the original research used the snapshot from March 1, 2022).
 For Republicans, the result barely changes between different versions of the database, with the exception of the snapshot from 2019, which results in substantially higher scores—on average 3.2 points higher than when using the snapshot from 2020.
@@ -373,7 +372,7 @@ Researchers investigating countries for which sources were only recently added t
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{figures/politician_trustworthiness_replication_score_difference.pdf}
-    \caption{Reproduction of the time series of NewsGuard scores of US Congress Members from Ref.~\cite{Lasser2022} using different versions of the NewsGuard database from 2019 to 2024 (always taken from the first hour of March 1st of the given year). Panel A: average scores for Democrats and Republicans indicated in different shades of blue and red for each year. Panel B: difference between the average Democrat and average Republican score, indicated in different shades of grey for each year. The time series represent a moving average over three months.}
+    \caption{Reproduction of the time series of NewsGuard scores of US Congress Members from Ref.~\cite{lasserSocialMediaSharing2022c} using different versions of the NewsGuard database from 2019 to 2024 (always taken from the first hour of March 1st of the given year). Panel A: average scores for Democrats and Republicans indicated in different shades of blue and red for each year. Panel B: difference between the average Democrat and average Republican score, indicated in different shades of grey for each year. The time series represent a moving average over three months.}
     \label{fig:reproduction}
 \end{figure}
 
@@ -405,10 +404,10 @@ However, the number of media outlets in each country may depend on numerous fact
 To get an understanding of the completeness of the NewsGuard database per country, we describe comparisons with domains shared on social media and covered by other lists in the following sections.
 
 \textbf{Comparison with domains shared on social media.}
-In the supplementary material of ~\cite{Lasser2022}, the authors describe a manual inspection of web domains in their Twitter (now X) dataset that were not covered by NewsGuard (see ``Reproducibility of downstream research results using different snapshots of the database''). 
+In the supplementary material of ~\cite{lasserSocialMediaSharing2022c}, the authors describe a manual inspection of web domains in their Twitter (now X) dataset that were not covered by NewsGuard (see ``Reproducibility of downstream research results using different snapshots of the database''). 
 More precisely, the authors investigate all links posted by politicians that point to web pages other than social media platforms and search platforms. Overall, NewsGuard seems to cover a notable fraction of those links (US: 46.5\%, Germany: 58.8\%, UK: 39.2\%). 
 Per country, the authors selected relevant domains not covered by NewsGuard by focusing on those that individually accounted for 0.1\% of the total volume of linked domains, i.e., these domains were likely to have been shared repeatedly. Subsequently, the authors inspected the missing domains and manually assigned labels to them (e.g., ``government'', ``news'', or ``blog'').
-In the following, we highlight only the main findings of this analysis of missing domains in the light of this study; however, more information can be found in the supplementary material of ~\cite{Lasser2022} online.
+In the following, we highlight only the main findings of this analysis of missing domains in the light of this study; however, more information can be found in the supplementary material of ~\cite{lasserSocialMediaSharing2022c} online.
 
 For the US, 47 domains were analyzed, making up only 21.2\% of missing domains in the dataset but comprising more than 0.1\% of the total link volume. While most of these domains link to government or personal websites, none of the 47 domains lead to a news site. 
 Similarly, in the UK, 19.3\% of the links related to 78 domains (40.3\% of missing domains) point to government websites. 
@@ -548,7 +547,7 @@ Even then, changes in trustworthiness ratings are usually minor due to only one 
 On the contrary, we found that changes in source coverage can be abrupt, with several instances of over 1,000 sources being removed from or added to the database in a single update.
 
 Different sources have varying degrees of popularity in terms of how often they are linked to or cited, and will therefore have different importance for research. 
-To account for this fact and shed some light on the impact of changes in the NewsGuard database on downstream research outcomes, we reproduced research investigating news-sharing practices or political elites in the US, Germany, and the UK~\citep{Lasser2022}. 
+To account for this fact and shed some light on the impact of changes in the NewsGuard database on downstream research outcomes, we reproduced research investigating news-sharing practices or political elites in the US, Germany, and the UK~\citep{lasserSocialMediaSharing2022c}. 
 We find that after 2019, the content of the database largely reached a stable state in the US, and using different versions of the database between 2020 and 2024 does not change research outcomes. 
 This process took longer for Germany and the UK, but after 2022, we also only observed minor changes in these countries. 
 Despite these nuances, the trustworthiness ratings by NewsGuard appear relatively insensitive to time, speaking for the reliability of source-based approaches. 
@@ -662,7 +661,7 @@ Final approval of the version to be published: R. Lazzaroni, J. Luehring, J. Las
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{figures/politician_trustworthiness_replication_DE.pdf}
-    \caption{Reproduction of trustworthiness ratings of sources shared by German politicians on Twitter over time from~\cite{Lasser2022}. Panel A shows average NewsGuard scores in Twitter posts by members of the party DIE LINKE, panel B for members of the Greens, panel C for members of the SPD, panel D for members of the FDP, panel E for members of the CDU and CSU, and panel F for members of the AFD.}
+    \caption{Reproduction of trustworthiness ratings of sources shared by German politicians on Twitter over time from~\cite{lasserSocialMediaSharing2022c}. Panel A shows average NewsGuard scores in Twitter posts by members of the party DIE LINKE, panel B for members of the Greens, panel C for members of the SPD, panel D for members of the FDP, panel E for members of the CDU and CSU, and panel F for members of the AFD.}
     \label{fig:figa4}
 \end{figure}
 
@@ -672,7 +671,7 @@ Final approval of the version to be published: R. Lazzaroni, J. Luehring, J. Las
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{figures/politician_trustworthiness_replication_UK.pdf}
-    \caption{Reproduction of trustworthiness ratings of sources shared by UK politicians on Twitter over time from~\cite{Lasser2022}. Panel A shows average NewsGuard scores in Twitter posts by members of the Labour party, panel B for members of the Scottish National Party, panel C for Liberal Democrats, panel D for Tories, and panel E for members of the Democratic Unionist Party.}
+    \caption{Reproduction of trustworthiness ratings of sources shared by UK politicians on Twitter over time from~\cite{lasserSocialMediaSharing2022c}. Panel A shows average NewsGuard scores in Twitter posts by members of the Labour party, panel B for members of the Scottish National Party, panel C for Liberal Democrats, panel D for Tories, and panel E for members of the Democratic Unionist Party.}
     \label{fig:figa5}
 \end{figure}
 
