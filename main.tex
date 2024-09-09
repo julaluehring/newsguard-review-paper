@@ -74,9 +74,8 @@
 \normalsize \textbf{} \vspace{-1.5em} \\
 Best practices for source-based research on misinformation \newline and news trustworthiness
 }
-
 %Author names and affiliations go here in the single \author{} , put authors' contact information in \thanks{}. Use extra spacing: \vspace{1em} to separate authors (unless the authors share the same affiliation.  
-\author{\normalsize LUEHRING, JULA \\ \normalsize University of Vienna \& Complexity Science Hub Vienna, Austria \vspace{1em} \\ \normalsize METZLER, HANNAH \\ \normalsize Medical University of Vienna, Austria, Complexity Science Hub Vienna, Austria \& \\Institute for Globally Distributed Open Research and Education \vspace{1em} \\ \normalsize LAZZARONI, RUGGERO MARINO \\ \normalsize RWTH Aachen, Germany \vspace{1em} \\ \normalsize SHETTY, APEKSHA \\ \normalsize Complexity Science Hub Vienna, Austria \& University of Vienna \vspace{1em} \\ \normalsize LASSER, JANA \\ \normalsize University of Graz \& Complexity Science Hub Vienna, Austria\thanks{\hspace{-1em} Corresponding author: jula.luehring@univie.ac.at} \thanks{\hspace{-1em} Date submitted: 2024-07-XX}}
+\author{\normalsize LUEHRING, JULA \\ \normalsize University of Vienna \& Complexity Science Hub Vienna, Austria \vspace{1em} \\ \normalsize METZLER, HANNAH \\ \normalsize Medical University of Vienna, Austria, Complexity Science Hub Vienna, Austria \& \\ \normalsize Institute for Globally Distributed Open Research and Education \vspace{1em} \\ \normalsize LAZZARONI, RUGGERO MARINO \\ \normalsize RWTH Aachen, Germany \vspace{1em} \\ \normalsize SHETTY, APEKSHA \\ \normalsize Complexity Science Hub Vienna, Austria \& University of Vienna \vspace{1em} \\ \normalsize LASSER, JANA \\ \normalsize University of Graz \& Complexity Science Hub Vienna, Austria\thanks{\hspace{-1em} Corresponding author: jula.luehring@univie.ac.at} \thanks{\hspace{-1em} Date submitted: 2024-07-XX}}
 
 \renewcommand\footnotemark{}
 \begin{document}
@@ -85,25 +84,29 @@ Best practices for source-based research on misinformation \newline and news tru
 \vspace{-8em}
 \begin{abstract}
 \noindent 
-Researchers need reliable and valid tools to identify cases of false information when studying the spread of misinformation on digital platforms. 
-Despite its restrictive access, the organization NewsGuard provides a comprehensive and increasingly popular database of source trustworthiness ratings.
-However, because NewsGuard requires a license and full validation is challenging, we assess its content and usefulness for misinformation research, focusing on the temporal stability and completeness of its ratings across countries. 
-We offer a detailed examination of the NewsGuard database, finding that the trustworthiness ratings are temporally stable and that coverage seems complete for the US and Germany.
-Meanwhile, political orientation and topic labels can be valuable assets in characterizing sources beyond trustworthiness.
-By evaluating the database over time and across countries, we identify potential pitfalls and provide recommendations for digital media research.
-We discuss appropriate use cases for the NewsGuard database and source-level approaches in general.
+Researchers need reliable and valid tools to identify cases of untrustworthy information when studying the spread of misinformation on digital platforms. 
+A common approach is to assess the trustworthiness of sources rather than individual pieces of content. 
+One of the most widely used and comprehensive databases for source trustworthiness ratings is provided by NewsGuard.
+Since creating the database in 2019, NewsGuard has continually added new sources and reassessed existing ones. 
+While NewsGuard initially focused only on the US, the database has expanded to include sources from other countries, such as Germany and Italy. 
+In addition to trustworthiness ratings, the NewsGuard database contains various contextual assessments of the sources, which are less often used in contemporary research on misinformation.
+In this work, we provide an analysis of the content of the NewsGuard database, focusing on the temporal stability and completeness of its ratings across countries, as well as the usefulness of information on political orientation and topics for misinformation studies.  
+We find that the trustworthiness ratings are temporally stable and that coverage seems complete for the US and Germany.
+Information on the political orientation and topic labels of sources are relatively complete and can be valuable assets in characterizing sources beyond trustworthiness.
+By evaluating the database over time and across countries, we identify potential pitfalls that threaten the validity of using NewsGuard as a tool for quantifying untrustworthy information.
+Lastly, we provide recommendations for digital media research on how to avoid these pitfalls and discuss appropriate use cases for the NewsGuard database and source-level approaches in general.
 \end{abstract}
 \keywords{\textit{misinformation, source trustworthiness, NewsGuard} \vspace{8ex}}
 
 
 Misinformation spreads on both social media platforms \citep{lazerScienceFakeNews2018} and mainstream media channels \citep{tsfatiCausesConsequencesMainstream2020}. 
-However, only a fraction of news consumption is attributed to false news -- roughly ~0.15\% \citep{allenEvaluatingFakeNews2020} -- and only a minority of users actively engage with unreliable information online \citep{baribi-bartovSupersharersFakeNews2024, grinbergFakeNewsTwitter2019}. 
-Typically, these individuals hold strong political or ideological beliefs and accept and actively look for information that echoes their opinions \citep{eckerPsychologicalDriversMisinformation2022} -- information that often comes from political elites or established media sources \citep{tsfatiCausesConsequencesMainstream2020}. 
+However, only a fraction of news consumption is attributed to false news --- roughly ~0.15\% \citep{allenEvaluatingFakeNews2020} --- and only a minority of users actively engage with unreliable information online \citep{baribi-bartovSupersharersFakeNews2024, grinbergFakeNewsTwitter2019}. 
+Typically, these individuals hold strong political or ideological beliefs and accept and actively look for information that echoes their opinions \citep{eckerPsychologicalDriversMisinformation2022} --- information that often comes from political elites or established media sources \citep{tsfatiCausesConsequencesMainstream2020}. 
 Misinformation capitalizes on these dynamics to stoke conflict and evoke negative emotions, thereby exacerbating partisan divides and fueling inter-group hostility \citep{gonzalez-bailonAsymmetricIdeologicalSegregation2023a, robertsonUsersChooseEngage2023a}. 
 Against a backdrop of declining trust in both media outlets \citep{newmanReutersInstituteDigital2023} and institutions \citep{bennettDisinformationAge2020}, it becomes increasingly crucial to comprehend the mechanisms driving the dissemination of misinformation, particularly in the digital sphere. 
-Digital media not only facilitate the measurement of these dynamics but also have the potential to reinforce polarization and misinformation \citep{lorenz-spreenSystematicReviewWorldwide2022}.
+While digital media facilitates the measurement of these dynamics, it also has the potential to reinforce polarization and misinformation \citep{lorenz-spreenSystematicReviewWorldwide2022}.
 
-Scholars across various disciplines have extensively studied the phenomenon of misinformation, employing terms such as misinformation, disinformation, fake news, rumors, or conspiracy theories, often used interchangeably \citep{guessMisinformationDisinformationOnline2020} 
+Scholars across various disciplines have extensively studied the phenomenon of misinformation, employing terms such as misinformation, disinformation, fake news, rumors, or conspiracy theories, often used interchangeably \citep{guessMisinformationDisinformationOnline2020}. 
 Although these terms share a focus on veracity, they differ in terms of intentionality.
 Misinformation is commonly used as an umbrella term for inaccurate or unreliable information, regardless of intent, e.g., \cite{eckerPsychologicalDriversMisinformation2022} or \cite{vanderlindenMisinformationSusceptibilitySpread2022}. 
 However, the ambiguous nature of misinformation presents significant methodological challenges, granting researchers several degrees of freedom. 
@@ -118,26 +121,30 @@ Consequently, this semantic and methodological variability has contributed to im
 While some scholars, such as \citet{altayMisinformationMisinformationConceptual2023a}, argue that the effects of misinformation are overstated, calling it a symptom of broader social issues, others, like \cite{tayThinkingClearlyMisinformation2024}, reason that the heterogeneity in measuring misinformation contributes to divergent evidence and creates a false dichotomy between understanding misinformation as a symptom or a cause \citep[also see][]{bozarthHigherGroundHow2020}.
 
 In digital media research, one of the most prominent ways to measure misinformation has been to use a list of sources that are known to share misinformation frequently.
-NewsGuard has emerged as the most widely used database for source ratings \citep{celadinDisplayingNewsSource2023, guessExposureUntrustworthyWebsites2020a, lasserSocialMediaSharing2022c, pratelliSwingingStatesDoes2023, robertsonUsersChooseEngage2023a} and is especially popular in misinformation research for its comprehensive source-level trustworthiness scores, which are compiled and updated by professional editors and journalists based on online activity data. 
-However, NewsGuard requires a license, and researchers who need to quantify misinformation must weigh the disadvantages of source-based methods and the investment required to access the NewsGuard database, making an in-depth analysis of its content necessary.
-To assist in this decision, we assess its content and usefulness for misinformation research, focusing on the temporal stability and completeness of its ratings across countries. 
-We provide recommendations for effectively utilizing the NewsGuard database and source-based approaches in research.
+NewsGuard has emerged as the most widely used database for source ratings \citep{celadinDisplayingNewsSource2023, guessExposureUntrustworthyWebsites2020a, lasserSocialMediaSharing2022c, pratelliSwingingStatesDoes2023, robertsonUsersChooseEngage2023a} and is especially popular in misinformation research for its comprehensive source-level trustworthiness scores, which are compiled based on web tracking data and rated and updated by professional editors and journalists 
+In addition to its comprehensiveness, NewsGuard also offers a more fine-grained assessment of the trustworthiness of sources based on adherence to journalistic quality criteria and provides a point score ranging from 0 (the source is untrustworthy because it severely violates basic journalistic standards) to 100 (the source adheres to all standards of credibility and transparency).
+Since the start of the database in 2019, NewsGuard has constantly added new sources.
+While initially the focus of NewsGuard was the US, the database has expanded to other countries, such as Germany and France. 
+Given the popularity of the NewsGuard database as a tool to quantify the prevalence of misinformation, an in-depth analysis of the temporal stability of ratings and the completeness of the database for different countries is warranted.
+Furthermore, NewsGuard requires a license, and researchers in need of a measurement instrument to quantify misinformation must weigh the advantages and disadvantages of source-based methods and the investment required to access the NewsGuard database. With the present in-depth analysis of the database's content we aim to provide researchers with the necessary information to make this decision.
+Where warranted, we provide recommendations for effectively utilizing the NewsGuard database and source-based approaches alongside our analysis of the content of the database.
 
 \section{Tracking Misinformation on Digital Media}
-To study the diffusion or discussion of misinformation on social media, computational researchers commonly opt for either content- or source-based methodologies, searching for web links (via the URL) to content or a source (via their web domain).
+To study the diffusion or discussion of misinformation on digital platforms, computational researchers commonly opt for either content- or source-based methodologies, searching for web links to content (via the URL) or a source (via their web domain).
 Both approaches rely on experts, such as fact-checkers, to curate lists of content or sources, which serve as the foundation for collecting data from digital platforms. 
-Source-based strategies offer the advantage of encompassing a broader spectrum of sources and narratives, thus enriching the sample by considering a more diverse information environment. 
+Source-based strategies, which are the focus of the present work, offer the advantage of encompassing a broader spectrum of sources and narratives, thus enriching the sample by considering a more diverse information environment. 
 Source-based approaches also enable the inclusion of subtler forms of misinformation and facilitate accurate estimations of both the scale \citep{allenEvaluatingFakeNews2020, grinbergFakeNewsTwitter2019,guessExposureUntrustworthyWebsites2020a, yangCOVID19InfodemicTwitter2021a} and dynamics of dissemination \citep{lasserSocialMediaSharing2022c, lasserAlternativeConceptionsHonesty2023, pennycookShiftingAttentionAccuracy2021a, robertsonUsersChooseEngage2023a, shaoSpreadLowcredibilityContent2018}. 
 
 The precision of source-based approaches hinges mainly on the selection and quality of source ratings within a given list. 
-Strictly speaking, this conceptualization covers information disseminated by unreliable sources -- making it essential to recognize that observed patterns may be intricately linked to the inherent biases or external forces in the selection of sources. 
+Strictly speaking, this conceptualization covers information disseminated by unreliable sources (rather than individual pieces of misinformation).
+Therefore, observed patterns may be intricately linked to the inherent biases or external forces in the selection of sources. 
 For instance, if we analyzed misinformation in politicians' social media posts, an unbalanced selection of unreliable sources would most likely reveal patterns due to partisanship rather than patterns universal to misinformation. 
 This underscores the importance of assessing confounding factors such as political biases or editorial practices of the sources, considering that a lack of editorial oversight can compromise the quality of news reporting \citep{lazerScienceFakeNews2018}.
 In other words, to obtain a balanced selection of sources and account for the influence of source-related variables other than reliability, source-based approaches can incorporate assessments of political, cultural, or editorial biases and misleading tendencies while maintaining generalizability. 
 Nonetheless, several problems remain in practice: 
 First, source categorizations often rely on a binary classification system (fake/real), oversimplifying the nuanced spectrum of misinformation.
-Second, it is crucial to acknowledge that source ratings vary across time and cultural contexts, for example, following a change in ownership or editorial practices. 
-For example, to account for misinformation-sharing in different populations, Lin et al. (\citeyear{linReducingMisinformationSharing2024}) combined source-level quality ratings with context-specific keywords, e.g., hashtags linked to an anti-vaccination protest in Ottawa.
+Second, it is crucial to acknowledge that source ratings vary across time and cultural contexts, for instance, following a change in ownership or editorial practices. 
+For example, Lin et al. (\citeyear{linReducingMisinformationSharing2024}) combined source-level quality ratings with context-specific keywords, e.g., hashtags linked to an anti-vaccination protest in Ottawa to account for misinformation-sharing in different populations.
 Third, while source judgments are typically made without requiring specific topic expertise, they often reflect the journalistic traditions of a particular media ecosystem, which may not be universally applicable across different contexts \citep{bruggemannHallinManciniRevisited2014b}.
 Source-based approaches are a promising way to track misinformation online at scale. 
 However, to study the spread of unreliable news, scientists need access to reliable and credible databases of source ratings. 
@@ -145,18 +152,18 @@ However, to study the spread of unreliable news, scientists need access to relia
 \section{NewsGuard: A Popular Database for Source Ratings}
 Since the 2016 US elections, the most popular way to track misinformation online has been to use a list of untrustworthy or unreliable sources and search for their web domains in URL text \citep{lasserSocialMediaSharing2022c, grinbergFakeNewsTwitter2019, guessExposureUntrustworthyWebsites2020a, shaoSpreadLowcredibilityContent2018, yangCOVID19InfodemicTwitter2021a}. 
 The organization \href{https://www.newsguardtech.com/}{NewsGuard} offers the most comprehensive list of such domains \citep{linHighLevelCorrespondence2023a}. 
-It does not just blacklist untrustworthy sources but provides a trustworthiness score for each source, covering news sources across the entire spectrum of news quality. 
-A trained team of experts, mainly consisting of journalists and editors, rates the news sources based on nine journalistic quality criteria\footnote{\href{https://web.archive.org/web/20240131155450/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://www.newsguardtech.com/ratings/rating-process-criteria/}} and regularly updates both the coverage of the list (increasing the number of sources) and their overall trustworthiness rating.
-The database has been constantly growing and extended to countries beyond the United States in the last few years, such as Germany and Italy. 
+It does not just provide a blacklist of untrustworthy sources but provides a trustworthiness score for each source, covering news sources across the entire spectrum of news quality. 
+A trained team of experts, mainly consisting of journalists and editors, rates the news sources based on nine journalistic quality criteria\footnote{\href{https://web.archive.org/web/20240131155450/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://www.newsguardtech.com/ratings/rating-process-criteria/}} and regularly updates both the coverage of the list by adding new sources and the trustworthiness ratings of existing sources.
+Since its start in 2019, the database has been constantly growing and has recently extended to countries beyond the United States, such as Germany and Italy. 
 With recent political events and crises, demand for such databases has increased, enhancing the popularity of NewsGuard. 
-For instance, it has been used to study user engagement with unreliable news during the 2016 and 2020 US elections \citep{pratelliSwingingStatesDoes2023, robertsonUsersChooseEngage2023a}, to assess the changing quality of cited information of political elites in the US \citep{lasserSocialMediaSharing2022c} or alternative understandings of honesty in truth in political discourse \citep{lasserAlternativeConceptionsHonesty2023}, and to estimate the effects of source labeling on decreasing misinformation sharing \citep{celadinDisplayingNewsSource2023}.
+For instance, it has been used to study user engagement with unreliable news during the 2016 and 2020 US elections \citep{pratelliSwingingStatesDoes2023, robertsonUsersChooseEngage2023a}, to assess the changing quality of cited information of political elites in the US \citep{lasserSocialMediaSharing2022c} or alternative understandings of honesty and truth in political discourse \citep{lasserAlternativeConceptionsHonesty2023}, and to estimate the effects of source labeling on decreasing misinformation sharing \citep{celadinDisplayingNewsSource2023}.
 
 However, the NewsGuard database was initially created as a tool for brand security rather than scientific research. 
 In addition, employing journalists and editors to assess the sources included in the list incurs significant expenses. 
-Given its predominantly private audience and expenses, the NewsGuard database is only available to subscribers who pay a significant fee.
-Here, we provide a comprehensive assessment of the database to consider the resources required to access the NewsGuard database and the limitations of source-based approaches in general.
+Given its predominantly private audience and expenses, the NewsGuard database is only available to subscribers who pay for licensing the database.
+Here, we provide a comprehensive assessment of the database to help misinformation researchers weigh the resources required to access the NewsGuard database and the advantages and limitations of source-based approaches in general.
 We aim to answer the following main research question: How volatile are source-level trustworthiness ratings, such as those in the NewsGuard database, across time and language contexts?
-For this, we first assess the distribution of trustworthiness ratings, the process of updating them, and the selection and removal of sources over time. 
+To answer our research question, we first assess the distribution of trustworthiness ratings, the process of updating them, and the inclusion and removal of sources over time. 
 Second, we assess the completeness of the database for different countries. 
 Lastly, we estimate the usefulness of other source-level information provided in the database, such as the political orientation and topics covered by sources. To assess different aspects of the database, we introduce three sub-questions:
 
@@ -164,22 +171,22 @@ Lastly, we estimate the usefulness of other source-level information provided in
 Investigating the development of the NewsGuard database over time is important to estimate whether using an older version of the database distorts results and should be used to measure trustworthiness in older data. 
 We describe the composition of the trustworthiness score and different database versions.
 We also explore the frequency and reasons for major changes, such as how often ratings change or sources are removed.
-Additionally, we provide an exemplary reproduction of published research relying on the NewsGuard list with other versions to assess the degree to which results vary based on small changes in the measurement instrument.
+Additionally, we provide an exemplary reproduction of published research using NewsGuard ratings from different points in time to assess the degree to which results vary based on changes in the measurement instrument.
 
 \textbf{How complete is the database across countries, particularly for non-US countries?} 
 A recent study has shown high agreement of NewsGuard with other expert-rated lists in the US context~\citep{linHighLevelCorrespondence2023a}, but an assessment for other countries is missing. 
 Therefore, we describe the coverage across and differences between countries.
-Further, we compare the completeness of information provided by NewsGuard across different contexts by cross-checking the NewsGuard database with a dataset of domains shared on social media (US, Germany, UK) and other existing lists of low-quality web domains. 
+Further, we compare the completeness of information provided by NewsGuard across different contexts by cross-checking the NewsGuard database with a dataset of domains shared on social media for the US, Germany, and UK, and other existing lists of low-quality web domains. 
 
-\textbf{How valuable are other source labels for misinformation research?} 
-NewsGuard labels the topics covered as well as the political orientation of the source. 
-We also analyze the temporal stability and completeness of these labels across countries. 
-Additionally, we spot-check a sub-sample of German-speaking sources. 
+\textbf{How valuable are contextual source labels for misinformation research?} 
+NewsGuard labels the topics covered as well as the political orientation sources. 
+We analyze the temporal stability and completeness of these labels across countries. 
+Additionally, we manually validate the labels for German-speaking sources.
 We assess in what way such labels can complement source characterizations and shed light on aspects of misinformation beyond trustworthiness.
 
 \section{Dataset Construction}
-NewsGuard collects the list of sources it rates by tracking online activity. 
-On their website, NewsGuard claims to have reviewed news sources accounting for 95\% of online engagement. 
+NewsGuard curates the list of sources it rates by tracking online activity. 
+On their website, NewsGuard claims to have reviewed news sources accounting for 95\% of online engagement, including news consumed and shared online. 
 The organization also manually adds sources they deem influential or that changed their web domain. 
 The database automatically updates every hour and allows tracking changes back to March 2019, when the organization started operating. 
 Still, how domains are selected or removed is not disclosed on the website.
@@ -195,7 +202,7 @@ For the remaining 11,233 sources, the database includes the following characteri
     \item Topics covered (e.g., ``local news'', ``political news'', ``health information'') by the source
 \end{itemize}
 
-The team of NewsGuard experts regularly judges the trustworthiness of the selected news sources based on nine journalistic criteria that are universal across countries.
+The team of NewsGuard experts regularly judges the trustworthiness of the selected news sources based on nine journalistic criteria that are universally applied across countries.
 The trustworthiness score is a composite score of these nine indicators. 
 More precisely, experts assign a binary label for each criterion. 
 Each criterion has a weight, a number of points, which together make up the overall trustworthiness rating (ranging from 0 to 100). 
@@ -221,7 +228,7 @@ In the following, we review how the database, particularly the trustworthiness r
 
 \textbf{Coverage across time.} 
 Over the span of five years, NewsGuard has grown from 2,647 to 12,097 entries in total, as shown in Figure~\ref{fig:trustworthiness_panel}. 
-NewsGuard regularly adds new sources but rarely removes any, i.e., the database has been growing to three times its initial size. 
+NewsGuard regularly adds new sources but rarely removes any, i.e., the database has been growing to four times its initial size. 
 When counting the added domains based on monthly comparisons of the list, NewsGuard has added 8,713 domains over time but only removed 671, adding an average of 139 new domains per month.
 
 NewsGuard ratings are available for customers in an online database (Amazon S3 bucket), where a current snapshot is uploaded every hour. 
@@ -243,7 +250,8 @@ Furthermore, 5,654 of the rated domains belong to only 436 unique parent domains
 Some parent domains have multiple variations of the domain name, probably representing the same source, e.g., theragingpatriot.org has domains ending with .blog, .com, .net,  and .pro. Other parent domains have very different sub-domains, e.g., 24usnews.com and africdaily.com belong to charmdaily.com. 
 The other 6,443 ratings do not have a parent domain entry in the database. 
 Domains belonging to the same parent domain usually have the same trustworthiness rating.
-Furthermore, NewsGuard updates domains belonging to the same parent domain at once, and they seem to assign the same unique identifier to those domains. 
+Furthermore, NewsGuard updates domains belonging to the same parent domain at the same time, and they seem to assign the same unique identifier to those domains. 
+Therefore, while the database contains 10,683 unique domains, it only contains 6,971 unique identifiers and, therefore, individually rated (parent) domains. 
 
 \textbf{Distribution.} NewsGuard trustworthiness ratings range from 0 to 100. 
 Historically, NewsGuard considered sources with a rating below 60 as not trustworthy, therefore assigning binary trustworthiness labels\footnote{Snapshot of the described rating process from December 31st, 2022: \href{https://web.archive.org/web/20221231134910/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://www.newsguardtech.com/ratings/rating-process-criteria/}}. 
@@ -271,22 +279,22 @@ For all major updates, the proportion of added sources is larger than changed so
 The highest number of sources added was in September 2020, when 1,030 sources with on average very low trustworthiness ($M$=35.3, $SD$=14.1) were included. 
 It is unclear if this development is due to an effort by NewsGuard to include more untrustworthy news or a global increase in untrustworthy sources. 
 
-Second, NewsGuard employs teams of experts per country, potentially leading to differences in coverage and ratings in different countries. 
+Second, NewsGuard employs teams of experts per country, potentially leading to differences in coverage and ratings between countries. 
 Dips in trustworthiness may be related to country-specific sources being added. 
 For instance, 1,015 of the 1,030 added sources in September 2020 are coded as US, resulting in a drop in trustworthiness of roughly 5\%. 
-In contrast, adding entirely new countries to the database seems to have little effect on the trustworthiness scores (see the dotted lines with country flags in Figure~\ref{fig:trustworthiness_panel}C). 
+In contrast, adding entirely new countries to the database seems to have little effect on the overall trustworthiness score (see the dotted lines with country flags in Figure~\ref{fig:trustworthiness_panel}C), indicating that NewsGuard curates a balanced mix of trustworthy and untrustworthy sources when adding a new country. 
 Overall, smaller dips appear across all countries covered and are most likely related to many low-quality sources gaining traction around the time of the COVID-19 pandemic. 
 
-A third possibility is updates of existing ratings. 
+A third influence on the overall trustworthiness score is updates of existing ratings. 
 NewsGuard indicates the date when a rating was last updated, even if the score did not change. 
 Updates to entries are documented on average once every eight months (248 days), but this varies strongly per source between a few seconds to a maximum of 790 days (interquartile range: 164 to 332 days). 
 When updated, trustworthiness scores mostly remain unchanged (on average, 20\% of updates mean a change in the rating). 
 In other words, ratings realistically change every two years ($M$=570 days, IQR=397 days to 670 days). 
-In addition, the majority of sources have not decreased in trustworthiness ($M$=0.1, $SD$=3.6). 
+In addition, the majority of sources have not decreased in trustworthiness (average change of rating per source=0.1, $SD$=3.6). 
 However, a few sources drastically dropped in trustworthiness; for instance, conservativedailynews.com lost 80 points in one update in November 2020. 
-Figure~\ref{fig:score_updates} illustrates the differences in consecutive scores over time, with major score updates in early 2020. 
+Figure~\ref{fig:score_updates} in the appendix illustrates the differences in consecutive scores over time, with major score updates in early 2020. 
 
-Overall, the decrease in trustworthiness we can see in Figure~\ref{fig:trustworthiness_panel}C can, therefore, be attributed to NewsGuard adding untrustworthy sources rather than previously trustworthy sources losing their reliability. 
+Overall, the decrease in the overall trustworthiness of sources we can see in Figure~\ref{fig:trustworthiness_panel}C can, therefore, be attributed to NewsGuard adding untrustworthy sources rather than previously trustworthy sources losing points. 
 This interpretation is also supported by our analysis of changes in individual rating criteria below.
 
 \textbf{Composition of trustworthiness score.} 
@@ -305,10 +313,10 @@ In line with that, 13.6\% of all sources meet only the two top criteria combined
 The most common combination of criteria is that all nine criteria are satisfied simultaneously (15.6\% of sources). 
 We provide a correlation matrix of criteria in the Appendix (Table~\ref{tab:criteria_correlation_recent}).
 
-We find that around 60\% of sources have never changed in journalistic criteria during updates. 
+We find that around 60\% of sources have never changed in their fulfillment of journalistic quality criteria during updates. 
 We present update patterns of individual criteria over time in Figure~\ref{fig:criteria_panel}A.
 The most common change is sources that stop disclosing ownership and financing, accounting for 12.4\% out of the observed changes.
-The opposite change (a disclosure of ownership and financing) is the third most common pattern, occurring in 10.7\% of score updates. This indicates that NewsGuard might frequently check criteria related to ownership. 
+The opposite change (a disclosure of ownership and financing) is the third most common pattern, occurring in 10.7\% of score updates. This indicates either that NewsGuard frequently checks criteria related to ownership or that adherence to such criteria is more volatile. 
 
 \begin{figure}[!ht]
     \centering
@@ -320,7 +328,7 @@ The opposite change (a disclosure of ownership and financing) is the third most 
 \textbf{Reproducibility of downstream research results using different snapshots of the database.}
 Over the observation period, we observe both a substantial addition of sources, as well as more minor changes in individual journalistic criteria and therefore, the overall score for individual sources. 
 This begets the question of whether such changes can potentially influence the conclusions drawn from investigations that rely on the NewsGuard database, depending on which version is used.
-To provide a partial answer to this question, we reproduce some of the analyses of the trustworthiness ratings of sources shared by politicians in the US, UK and Germany by Lasser et al. \cite{lasserSocialMediaSharing2022c}, using different versions of the NewsGuard database.
+To provide a partial answer to this question, we reproduce some of the analyses of the trustworthiness ratings of sources shared by politicians in the US, UK and Germany by \cite{lasserSocialMediaSharing2022c}, using different versions of the NewsGuard database.
 In Figure~\ref{fig:reproduction}A, we show the temporal development of the average NewsGuard score of sources shared by Democrat and Republican members of Congress on Twitter between 2016 and 2022.
 We use snapshots of the NewsGuard database taken on March 1 from 2019 to 2024 (the original research used the snapshot from March 1, 2022).
 For Republicans, the result barely changes between different versions of the database, except in 2019, where scores are substantially higher--on average 3.2 points higher than the snapshot from 2020.
@@ -331,15 +339,15 @@ However, even given the sometimes relevant differences in scores, the main findi
 Figure~\ref{fig:reproduction}B shows the average difference in the NewsGuard score of sources shared by the politicians over time. 
 When using the 2019 snapshot, which deviates most strongly from the others, the difference between parties is smaller in the years 2020 to 2022 compared to other snapshots, but remains substantial.
 
-That there are only minor changes depending on which version of the database is used for the US is likely mostly due to the fact that sources rarely change their rating, and that almost all major US news sources were already covered in the first version of the NewsGuard database: the snapshot from 2019 covers 15.0\% of links posted by Democrats on Twitter and 18.5\% of links posted by Republicans. 
+The finding that there are only minor changes depending on which version of the database is used for the US is likely due to the fact that sources rarely change their rating, and that almost all major US news sources were already covered in the first version of the NewsGuard database: the snapshot from 2019 covers 15.0\% of links posted by Democrats on Twitter and 18.5\% of links posted by Republicans. 
 For the 2024 snapshot, the coverage slightly increases to 16.3\% and 19.6\% of links for Democrats and Republicans, respectively.
 
 For the other two countries, Germany and the UK, the picture changes: differences in average ratings stratified by party show larger differences between years (see Figures~\ref{fig:politician_trustworthiness_replication_DE} and~\ref{fig:politician_trustworthiness_replication_UK} in the appendix). 
 This is likely due to massive changes in the coverage of the sources shared by politicians in these countries by NewsGuard. 
 For example, for members of the German party SPD, coverage increased from 0.5\% in 2019 to 12.7\% in 2024 and from 0.2\% to 12.0\% for members of CDU/CSU. 
-For smaller parties like DIE LINKE and the Greens, using different versions of the database also leads to different conclusions: for the 2019 version, it seems like there is an upward trend in the average NewsGuard score of linked sources, whereas for other versions, this trend is absent. 
+%For smaller parties like DIE LINKE and the Greens, using different versions of the database also leads to different conclusions: for the 2019 version, it seems like there is an upward trend in the average NewsGuard score of linked sources, whereas for other versions, this trend is absent. 
 In the UK, the coverage for members of the Labour Party increased from 7.8\% to 13.5\%, and for Tories, from 2.4\% to 7.8\%. 
-In this specific case, the main conclusion that there is no trend in the average NewsGuard score would not have changed depending on the database version. 
+%In this specific case, the main conclusion that there is no trend in the average NewsGuard score would not have changed depending on the database version. 
 Taken together, such coverage differences between years would lead to different conclusions in some cases, but not in others. For instance, the NewsGuard score of small parties like DIE LINKE and the Greens in Germany shows an upward trend with the 2019 version but not with newer versions. In the UK, all versions would yield the same main conclusion, namely that the average score shows no specific trend over time. It is usually the earlier versions of the database that lead to different scores, given that coverage was still low in 2019. Later versions, especially 2022-2024, usually yield the same result. 
 
 
@@ -351,7 +359,7 @@ Taken together, such coverage differences between years would lead to different 
 \end{figure}
 
 This analysis shows that for countries other than the US, the usage of different versions of the database has the potential to significantly influence research outcomes, likely due to the addition of a significant number of relevant new sources to the database over the years. 
-Researchers investigating countries for which sources were only recently added to the database (e.g., New Zealand or Austria) should, therefore, proceed with caution and invest time into validating the coverage of the database for the given country. 
+Researchers investigating countries for which sources were only recently added to the database (e.g., New Zealand or Austria) should, therefore, proceed with caution and invest time to validate the coverage of the database for a given country. 
 
 \subsection{How complete is the database across countries, particularly for non-US countries?}
 \textbf{Country coverage.} The dataset (2019-2024) contains sources from nine countries in total (United States, Great Britain, Italy, Canada, France, Germany, Austria, Australia, and New Zealand) plus sources considered to be global. 
@@ -363,7 +371,7 @@ NewsGuard also labels the language of a source, with English being the most repr
 
 \input{tables/countries}
 
-Across all versions of the database and most countries, the overall trustworthiness of sources remains above 65, except for the United States. US-based outlets are of lower trustworthiness on average (see Table~\ref{table:countries}). 
+Across all versions of the database and in most countries, the overall trustworthiness of sources remains above 65, except for the United States. US-based outlets are of lower trustworthiness on average (see Table~\ref{table:countries}). 
 Figure~\ref{fig:criteria_panel}C shows the average trustworthiness of sources per country over time (see also Figures~\ref{fig:scores_per_country_recent} and~\ref{fig:scores_per_country_over_time} for plots by country). 
 The score for the US was lower from the first database version onward. 
 It is unclear whether US sources are of lower trustworthiness overall or if larger coverage of low trustworthy outlets from the start can explain this finding. 
@@ -375,9 +383,9 @@ For most countries, more than 50\% of sources meet each criterion.
 Interestingly, over 70\% of Italian sources do not provide names of content creators, and over 80\% do not effectively correct errors. 
 A similar but less pronounced pattern is visible for French sources. 
 Across all criteria, the United States shows the highest percentage of sources not fulfilling the criteria, with 47.9\% of sources failing to gather and present information responsibly, almost twice the share of sources than in any other country.
-Furthermore, 17.1\% of US-based sources fail the heavy-weighted criterion ``Does not repeatedly publish false or egregiously misleading content''.
+Furthermore, 17.1\% of US-based sources fail to fulfill the heavily-weighted criterion ``Does not repeatedly publish false or egregiously misleading content''.
 
-Intervals between updates of sources vary by country (see Table~\ref{table:countries}, ranging from 224 days for the US and 278 days for New Zealand to 307 days for Germany. 
+Intervals between updates of sources vary by country (see Table~\ref{table:countries}), ranging from 224 days for the US and 278 days for New Zealand to 307 days for Germany. 
 Sources get updated once a year per country, on average. 
 Overall, the US coverage seems the most stable and complete. 
 However, the number of media outlets in each country may depend on numerous factors (e.g., population size, fragmentation of the media system, political system, and so on). 
@@ -392,17 +400,17 @@ Subsequently, they inspected the missing domains and manually assigned labels to
 
 For the US, 47 domains were analyzed, accounting for 21.2\% of missing domains in the dataset. 
 While most of these domains link to government or personal websites, none of the 47 domains lead to a news site. 
-Similarly, in the UK, out of the 78 analyzed domains (40.3\% of missing domains), 19.3\% point to government websites. 
-However, a small share of the investigated links (1.5\%) point to websites predominantly shared by members of either the Conservative or Labour parties.
-Also for Germany, only a fraction of links not covered by NewsGuard lead to news sites (1.2\%), corresponding to four out of the 62 missing domains (31.5\% of missing domains analyzed). 
+For the UK, out of the 78 analyzed domains (40.3\% of missing domains), four domains not covered by NewsGuard are news sites, comprising a total of 1.5\% of the links shared by the politicians. 
+Of these sites, one was a clearly right-leaning site and two were mostly linked to by members of the labour party, while the last site was a news aggregator with no clear political leaning.
+Similarly, for Germany only a fraction of links not covered by NewsGuard lead to existing news sites (1.2\%), corresponding to four out of the 62 manually analyzed missing domains (31.5\% of missing domains analyzed). 
 These sites were primarily shared by members of the left, green, or liberal parties, indicating that they are not widely shared across party affiliations.
 
-Although the analysis examines only 20-40\% of domains not evaluated by NewsGuard, it demonstrates that NewsGuard provides a comprehensive list of domains shared by politicians in their social media communication across the US, UK, and Germany. 
-Moreover, the relative absence of news sources from both the left and right political spectrum in the missing domains suggests that NewsGuard's domain selection shows no substantial political bias.
+Although the investigation examines only 20-40\% of domains not evaluated by NewsGuard, by analyzing the domains that were most frequently shared, it demonstrates that NewsGuard provides a comprehensive list of domains shared by politicians in their social media communication across the US, UK, and Germany. 
+Moreover, the small number of missing news sites and the relative absence of  sources from both the left and right political spectrum in the missing domains suggests that NewsGuard's domain curation shows no systematic political bias.
 
 
 \textbf{Comparison with other lists.} 
-In order to measure the actual coverage of sources per country, it is necessary to compare the sources covered by NewsGuard with other lists. 
+In order to assess the actual coverage of sources per country, we compare the sources covered by NewsGuard with other lists. 
 However, other lists are often not compiled with the same objective as NewsGuard, which is to cover all sources responsible for most of the internet traffic. Therefore, their scope and rating system may differ. 
 In addition, other lists are not available for every country. 
 
@@ -411,14 +419,14 @@ While trustworthiness ratings correlated significantly for the web domains inclu
 
 For the German context, Puschmann et al. (2024) collected a list of 1,147 unique German online news domains (GOND)\footnote{\href{https://osf.io/s5uhb/}{https://osf.io/s5uhb/}}, largely relying on web tracking data of a representative sample of 1,500 German citizens. 
 Overall, GOND has 552 sources in common with NewsGuard (see Table~\ref{tab:overlap_lists}, among others labeled as ``legacy press'' (52.9\%), ``digital-born news outlet'' (12.0\%), or ``hyperpartisan news'' (10.1\%). 
-NewsGuard covers 244 sources out of 573 German-speaking sources covered by GOND, which also includes some other languages.
+NewsGuard covers 244 out of 573 German-speaking sources covered by GOND, including some other languages.
 
-Overall, comparisons of NewsGuard with other lists reveal many non-overlapping domains.  
-However, NewsGuard's coverage of the United States and Germany seems extensive in that NewsGuard generally tends to cover more prominent outlets and excludes niche and regional outlets, probably because it focuses on websites that gain the most traction.  
+Overall, comparisons of NewsGuard with the two lists for the US and Germany reveal many non-overlapping domains.  
+However, NewsGuard's coverage of the United States and Germany seems extensive in that NewsGuard generally tends to cover more prominent outlets and excludes niche and regional outlets, probably because it focuses on websites with the most engagement.  
 
-\subsection{How valuable are other source labels for misinformation research?}
+\subsection{How valuable are contextual source labels for misinformation research?}
 \textbf{Political orientation.} 
-The dataset also classifies sources according to their political orientation, relying on a left-to-right conception of the political spectrum. 
+In addition to trustworthiness ratings, the NewsGuard database also classifies sources according to their political orientation, relying on a left-to-right conception of the political spectrum. 
 In December 2022, the categories were condensed from four (far left/ slightly left/slightly right/far right) to two (left/right; see Fig.~\ref{fig:orientation_panel}A). 
 Overall, the political orientation label is only available for a minority of the sources, specifically 31.2\% (3,061 sources) in the current database version. 
 
@@ -428,30 +436,31 @@ In most countries, the majority of sources with political orientation labels bel
 Figure~\ref{fig:orientation_over_time_per_country_before_after} shows the distribution of political orientation per country over time. 
 
 Trustworthiness ratings are generally lower for right-leaning sources (see Fig.~\ref{fig:orientation_panel}B). 
-In the database from July 2024, the average trustworthiness score for right-leaning sources is 26.3 ($SD$=19.8), in contrast to 60.9 ($SD$=23.2) for left-leaning sources ($M_{diff}$ = 34.6, t(3059)=32.8, \textit{p} < .001).
-When political orientation was still divided into four categories, slightly left- and right-leaning sources had moderate trustworthiness ratings (for example, in June 2021, 81.3 and 59.4, respectively), especially compared to far-left and far-right sources (54.0 and 15.9, respectively). 
-In August 2021, however, when a number of untrustworthy sources ($M$=40.5, $SD$=37.2) were added to the database, particularly the average trustworthiness of sources categorized as slightly right-leaning dropped by almost 20 points. 
-Figure~\ref{fig:orientation_panel}A shows that the ``Slightly Right''-category dropped below the ``Far Left''-category by almost 15 points. 
+In the database snapshot from July 2024, the average trustworthiness score for right-leaning sources is 26.3 ($SD$=19.8), in contrast to 60.9 ($SD$=23.2) for left-leaning sources ($M_{diff}$ = 34.6, t(3059)=32.8, \textit{p} < .001).
+When political orientation was still divided into four categories, slightly left- and right-leaning sources had moderate trustworthiness ratings (for example, in June 2021, 81.3 and 59.4, respectively), and far-left and far-right sources had comparatively lower ratings (54.0 and 15.9, respectively). 
+In August 2021, however, when a number of untrustworthy sources ($M$=40.5, $SD$=37.2) were added to the database, the average trustworthiness of sources categorized as slightly right-leaning dropped by almost 20 points. 
+Figure~\ref{fig:orientation_panel}A shows that the ``Slightly Right'' category dropped below the ``Far Left'' category by almost 15 points. 
 
-In addition to trustworthiness changes caused by the changed taxonomy of political orientation used by NewsGuard, the trustworthiness averages per political orientation also differ by country, as shown in Fig.~\ref{fig:orientation_panel}B. 
+In addition to the change in average trustworthiness scores within political orientation categories caused by the changed taxonomy of political orientation used by NewsGuard, the trustworthiness averages per political orientation also differ by country, as shown in Fig.~\ref{fig:orientation_panel}B. 
 While for some countries like France and Canada, the average trustworthiness of left and right sources only differs by about 20 points and 95\% confidence intervals overlap, other countries like Australia, Germany, and Austria show extreme differences of over 40 points.
 Nevertheless, across all countries, sources classified as right, on average, always have a lower trustworthiness score than sources on the left. 
 However, given the small percentage of sources classified as belonging to either side of the spectrum, we cannot infer that sources on the right, in general, have lower trustworthiness. 
 A bias in NewsGuard's procedure of classifying sources as either left or right or not at all could also produce these findings.
 
-To get an idea of whether sources with labels are correctly classified and whether sources without labels are neutral or not classified by NewsGuard for other reasons, we spot-checked 120 German-speaking sources included in the database as of June 15th, 2024. 
-We manually annotated the left/right political orientation of each source based on the website's front page, article headlines, ads, and article content. 
-We first looked at the 60 sources with a label for political orientation. 
-For sources where NewsGuard labels are available, our annotations matched the existing ratings 90\% of the time. 
-The 10\% of disagreements arose from sources where political bias was indiscernible or the site was inaccessible. 
-Consequently, in the German context, the existing ratings match our manual orientation labels.
+To get an idea of whether sources with labels are correctly classified and whether sources without labels are neutral or not classified by NewsGuard for other reasons, we compared NewsGuard ratings with manual and other expert source labels.
+First, we manually annotated the political orientation of all German-speaking sources ever covered by NewsGuard (as of July 15th, 2024) based on the website's front page, article headlines, ads, and article content.  
+We followed the labels by NewsGuard (right, left) and added two labels:  neutral and unidentifiable (e.g., when the website is unreachable).
+For sources with available ratings, the agreement between NewsGuard and the manual annotations was 84\% (for 63 domains out of 400, excluding 21 dead links).
+Second, we compared the NewsGuard labels to labels by MediaBiasFactCheck\footnote{See here for rating system as of August 20th, 2024: \href{https://web.archive.org/web/20240820015752/https://mediabiasfactcheck.com/methodology/}{https://mediabiasfactcheck.com/methodology/}} (MBFC, 31 labels in total), resulting in an agreement of 83\%.
+Both comparisons showed that disagreements mostly occurred in cases where the manual annotations were labeled as neutral, while the expert ratings assigned a specific label.
+In only one case, NewsGuard differed from both MBFC and the manual annotation.
+
+Consequently, in the German context, the existing ratings largely matched manual political orientation labels.
 Interestingly, the rated sources tended to be niche outlets with more extreme (and thus, clear-cut) political leanings.
-Additionally, we randomly selected 60 sources without political orientation labels and manually annotated them where possible. 
-For most of these sources, we could not identify a clear political leaning. 
-Non-rated were typically local newspapers or magazines focusing on special interest topics (e.g., technology or health). 
+For the neutral sources, we could not identify a clear political leaning. 
+Such sources were typically local newspapers or magazines focusing on special interest topics (e.g., technology or health). 
 However, roughly half were legacy media or major online sources that slightly leaned towards a particular political orientation.
-Out of the 60 sources without a label, we rated nine as right-leaning and four as left-leaning. 
-Our findings suggest two (not necessarily mutually exclusive) implications for a missing political orientation: Either the sources have no overt political bias in their reporting or are too niche or small.
+Our findings suggest two (not necessarily mutually exclusive) implications for a missing political orientation: Either the sources have no overt political bias in their reporting or are too niche to be labeled by NewsGuard.
 
 \begin{figure}[!ht]
     \centering
@@ -464,23 +473,26 @@ Before the rating became binary, a few domains frequently oscillated between mor
 This might have been a reason for simplifying the label.
 Only five domains have changed their political orientation rating from left to right (none have changed from right to left).
 These domains are US-based, and two of them also experienced a significant drop in their trustworthiness score, reducing it by 42 points in January 2020.
-Therefore, ratings generally remain stable for the few sources with a political orientation rating.
+We therefore conclude that political orientation labels generally remain stable for the relatively small number of sources that have such a label.
 
-In conclusion, although NewsGuard sporadically rates the political orientation of sources, particularly outside the US, the ratings of covered sources appear generally stable over time and reasonable for the German context.
+In summary, although the political orientation labels of sources provided by NewsGuard are sparse, particularly outside the US, the ratings of covered sources appear generally stable over time. 
+An in-depth investigation of labels for German sources showed that NewsGuard's political orientation assessment is reasonable and the low number of labels can be explained by sources not showing a political leaning or being too niche.
 Therefore, the political orientation rating by NewsGuard may be a valuable addition to analyses related to source trustworthiness.  
-However, we recommend that researchers spot-check the ratings for the specific country in which they intend to use the database, especially for major outlets and mainstream media sources. 
+However, we recommend that researchers (at least) spot-check the ratings for the specific country in which they intend to use the database, especially for major outlets and mainstream media sources. 
 If the research focuses on comparing political bias rather than controlling for it, we advise validating and extending the existing ratings provided by NewsGuard.
 
 
 \textbf{Topics.} 
-NewsGuard experts assign labels for the topics covered by the sources, usually multiple topics per source. 
-The number of topic labels has steadily increased since their introduction in October 2019.  
-Until 2022, the number of topic labels was low, but as of May 2021, roughly 50\% of the sources had labels (see Fig.~\ref{fig:topic_source_over_time}) for the total number and proportion of sources with topic ratings). 
+NewsGuard experts assign labels for the topics covered by the sources. 
+Usually a single source has multiple assigned topics. 
+The number of sources with topic labels has steadily increased since their introduction in October 2019.  
+As of May 2021, roughly 50\% of the sources had topic labels (see Fig.~\ref{fig:topic_source_over_time}) for the total number and proportion of sources with topic labels). 
 In July 2024, only 148 sources are without a topic label (1.5\%). 
 In Figure~\ref{fig:topics_panel}B, we show the topic counts. 
 The most popular topics are ``Local news'' (39.0\% of sources), ``Political news or commentary'' (37.5\%), ``General news'' (20.0\%), ``Health or medical information'' (10.6\%), and ``Conspiracy theories or hoaxes'' (9.8\%). 
-Over time, topic labels related to misinformation have been added, most likely coinciding with some of the major updates marked above. Figure~\ref{fig:topics_panel}C shows the top topics discussed by sources classified as untrustworthy (at least 20\% of untrustworthy sources publish on those topics).
-In April 2020, shortly after the COVID-19 pandemic started, NewsGuard increasingly added a label called ``COVID-19 misinformation.'', with major additions in August 2021.
+Over time, topic labels related to misinformation have been added, most likely coinciding with some of the major database updates discussed above. 
+Figure~\ref{fig:topics_panel}C shows the top five topics discussed by sources classified as untrustworthy (measured by the percentage of untrustworthy sources publishing on those topics).
+In April 2020, shortly after the COVID-19 pandemic started, NewsGuard increasingly added a label called ``COVID-19 misinformation'', with major additions in August 2021.
 Once a source receives a topic label, it rarely changes (except for foxnews.com, which has changed seven times).
 
 As shown in Figure~\ref{fig:topics_panel}A, average trustworthiness ratings greatly differ across topics (white dots show the average trustworthiness of sources covering that topic). 
@@ -488,18 +500,23 @@ The lowest average rating is given to sources covering issues related to conspir
 In contrast, those covering law or crime have the highest average trustworthiness scores ($M$=79.7, $SD$=24.6, but this is only 0.4\% of the sources).
 Generally, topics with low coverage tend to have high trustworthiness scores with low variance (e.g., religion with 74.9 on average, $SD$=24.4), see Figure~\ref{fig:topics_panel}B.
 Considering only untrustworthy sources, however, only 14.5\% of them are labeled as covering conspiracy theories. 
-Instead, untrustworthy sources seem to commonly publish ``Political news or commentary'', with 50.1\% of all untrustworthy sources (e.g., with a trustworthiness score < 60), followed by ``Local news'' (41.4\%) and ``General news'' (18.5\%). 
+Instead, untrustworthy sources seem to commonly publish ``Political news or commentary'', with 50.1\% of all untrustworthy sources (e.g., with a trustworthiness score < 60) covering this topic, followed by ``Local news'' (41.4\%) and ``General news'' (18.5\%). 
 These topics generally receive a significantly higher number of labels from NewsGuard and show a high variance in trustworthiness, for instance, ``General news'' or ``Local news'' (see Fig.~\ref{fig:topics_panel}A and B).
 This highlights that both untrustworthy and trustworthy sources cover a wide range of topics, including mainstream ones, and that fringe topics only make up a small proportion of the news.
 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{figures/topics_panel.pdf}
-    \caption{A) shows the distributions of trustworthiness per topic and political orientation (left/right in blue/red, respectively), sorted by their average trustworthiness (white dot within the boxplot that represents the quartiles and whiskers show the whole range). Note: We excluded topics with a count below 50. Some topics are abbreviated. B) gives the count of topics as of July 15th, 2024. C) shows the addition of misinformation-related labels over time and the average topic label count in grey and dashed with the 95\%CI. The top five topics assigned to untrustworthy sources were selected. The dotted, vertical lines show the removal of two of those labels.}
+    \caption{A) shows the distributions of trustworthiness per topic and political orientation (left/right in blue/red, respectively), sorted by their average trustworthiness (white dot within the boxplot that represents the quartiles and whiskers show the whole range). 
+    Note: We excluded topics with a count below 50. Some topics are abbreviated. B) gives the count of topics as of July 15th, 2024.
+    C) shows the frequency of misinformation-related labels over time.
+    Colored lines show the top five topics covered by untrustworthy sources. 
+    The dotted, vertical lines show the removal of two of those labels.
+    The grey and dashed line shows the average topic label count of those topics across all sources with the 95\%CI.}
     \label{fig:topics_panel}
 \end{figure}
 
-Across countries, sources more or less publish on the same topics (see Fig.~\ref{fig:topics_country}). 
+Across countries, sources more or less publish on the same topics (see Fig.~\ref{fig:topics_country} in the appendix). 
 However, sources with low trustworthiness seem to publish on different topics, i.e., the trustworthiness of sources covering a given topic substantially depends on the country (see Fig.~\ref{fig:topics_score_per_country}. 
 For instance, for medical information, sources in Canada are rated as trustworthy ($M$=88.1, $SD$=10.3, 38 sources), while trustworthiness is well below 60 in the United States ($M$=43.9, $SD$=36.0, 726 sources). 
 The difference between countries is also substantial for political news, with an average trustworthiness of 49.4 (33.8, 2,511 sources) in the US, 71.7 (33.8, 115 sources) in Germany, and 76.3 (22.7, 1650 sources) in Great Britain. 
@@ -524,17 +541,17 @@ Here, we summarize practical recommendations for using NewsGuard in research and
 
 Over 50\% of the sources included in the database have a score of 60 points or higher, deemed at least ``credible with exceptions'' according to NewsGuard's nomenclature. 
 These sources typically meet two high-weight criteria: ``Avoids deceptive headlines'' and ``Does not repeatedly publish false or egregiously misleading content''. 
-The trustworthiness score has decreased over time due to adding untrustworthy sources rather than downgrading existing ones.
-NewsGuard updates its database hourly, but an analysis of update time stamps shows that source information is likely checked annually per country, with infrequent changes to trustworthiness ratings usually triggered by changes in website ownership or editorial practices.
-Such changes are generally minor, involving updates of only one criterion. 
+The average trustworthiness score of sources included in the database has decreased over time due to the addition of untrustworthy sources rather than the degradation of trustworthiness of existing ones.
+NewsGuard provides a new snapshot of its database hourly, but an analysis of update time stamps of sources shows that source information is likely checked annually, with infrequent changes to trustworthiness ratings usually triggered by changes in transparency about website ownership and financing or editorial practices.
+Such changes are generally minor, involving updates of only one of the nine journalistic quality criteria. 
 However, changes in source coverage can be abrupt, with instances of over 1,000 sources being added or removed in a single update.
 To shed some light on the impact of changes in the NewsGuard database on downstream research outcomes, we reproduced research investigating news-sharing practices of political elites in the US, Germany, and the UK~\citep{lasserSocialMediaSharing2022c}. 
 We find that after 2019, the content of the database largely reached a stable state in the US, and using different versions of the database between 2020 and 2024 does not change research outcomes. 
-This process took longer for Germany and the UK, but after 2022, we also only observed minor changes in these countries. 
+This process took longer for Germany and the UK, but after 2022, we also only observed minor database changes for these countries. 
 Despite these nuances, the trustworthiness ratings by NewsGuard appear relatively insensitive to time, speaking for the reliability of source-based approaches. 
 
-US sources generally score lower on trustworthiness and journalistic quality criteria compared to other countries. 
-Importantly, this does not say anything about the trustworthiness of news actually consumed by the US population, which could be higher.
+US sources generally score lower on trustworthiness compared to other countries. 
+Importantly, this does not say anything about the trustworthiness of news actually consumed by the US population, which could be higher, depending on the contribution of each source to the news diets of US Americans.
 Country-specific factors seem to significantly influence journalistic traditions across countries with similar media systems.
 Italy and France, part of the Southern cluster, show distinct patterns compared to Central (e.g., Germany) and Western clusters (e.g., US).
 According to Brüggemann et al. (\citeyear{bruggemannHallinManciniRevisited2014b}), countries belonging to the Southern cluster have a less professionalized journalism sector than the Central or Western clusters.
@@ -543,59 +560,60 @@ In other words, when journalistic professionalism is low, journalists lack profe
 NewsGuard's criteria broadly reflect differences in media systems––at least for the Western, educated, industrialized, rich, and democratic countries covered.
 Nonetheless, the differences in journalistic traditions underscore that applications of the database need to be tailored to individual contexts and that researchers should double-check the relevance of the criteria for the country studied\footnote{\href{https://web.archive.org/web/20231230155214/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://www.newsguardtech.com/ratings/rating-process-criteria/}}.
 
-The NewsGuard database provides more than just trustworthiness ratings; it also includes source labels for the political orientation and covered topics, which could be valuable information for misinformation research.
+The NewsGuard database provides more than just trustworthiness ratings; it also includes labels for the political orientation of sources and covered topics, which could be valuable contextual information for misinformation research.
 While most sources have multiple topic labels, only a minority of sources have one for political orientation. 
 While about 41\% of sources have a political orientation label in the US, only around 10\% do in other countries.
-In our manual annotation of German sources, we observed that NewsGuard tends to rate only sources with a clear political leaning. 
+In our manual analysis of German sources, we observed that NewsGuard tends to rate only sources with a clear political leaning. 
 Most rated sources are right-leaning, and these are often deemed less trustworthy compared to left-leaning sources. 
 This disparity raises the question of whether it stems from a sampling bias by NewsGuard editors rather than an actual difference in trustworthiness.
 We argue that NewsGuard seems unbiased for the countries where coverage and ratings have stabilized for the following reasons:
 First, NewsGuard selects sources based on web tracking data, suggesting that it should reflect the online media landscape for the respective country. 
 Research on alternative media suggests the emergence of right-wing counter-publics as a response to the political and legacy media context \citep{heftBreitbartComparingRightWing2020}. 
-More precisely, the theory goes that a prevalence of left-leaning opinions in political and mainstream media spheres \citep{osmundsenPartisanPolarizationPrimary2021a} may lead to an under-representation of right-wing views and the fragmentation of a counter-public along the right-wing spectrum that is highly connected \citep{heftTransnationalInformationEcology2021}.
+More precisely, the theory posits that a prevalence of left-leaning opinions in political and mainstream media spheres \citep{osmundsenPartisanPolarizationPrimary2021a} may lead to an under-representation of right-wing views and the fragmentation of a counter-public along the right-wing spectrum that is highly connected \citep{heftTransnationalInformationEcology2021}.
 As NewsGuard only labels the political orientation of explicitly partisan, sometimes hyper-partisan sources, this explanation would result in a higher number of smaller, right-wing online sources.
 A demand for right-wing fringe publications would also explain lower trustworthiness on the right-wing spectrum, which aligns with the political asymmetry repeatedly observed in susceptibility to misinformation, e.g., recently by Robertson et al. (\citeyear{robertsonUsersChooseEngage2023a}). 
 Second, the source selection and trustworthiness ratings provided by NewsGuard are largely consistent with other independent fact-checking organizations \citep{linHighLevelCorrespondence2023a}. 
-Therefore, it is unlikely that NewsGuard has an inherent bias against right-leaning sources, both in selecting more right-wing sources and giving them lower trustworthiness ratings.
+Therefore, it is unlikely that NewsGuard has an inherent bias against right-leaning sources, both in selecting more right-wing sources and in giving them lower trustworthiness ratings.
 NewsGuard also discusses this topic in their 2023 Social Impact Report\footnote{https://web.archive.org/web/20240228003711/https://www.newsguardtech.com/special-reports/social-impact-report-2023/}, emphasizing that their trustworthiness ratings are intended to be apolitical. 
 Despite being incomplete, the political orientation labels may be a useful addition to the trustworthiness ratings, especially in combination with topic labels.
 However, they should be interpreted with caution and potentially validated and extended for countries other than the US and Germany.
 
 Our analysis faces several limitations due to a scarcity of comparable datasets, particularly for countries other than the United States, the United Kingdom, and Germany. 
 As a result, we cannot assess the reliability and validity of the NewsGuard database; we can only evaluate the internal and temporal stability of ratings. 
-To address this, we reproduced previous research findings using different database versions, compared the database with the few existing lists, and conducted spot checks on subsamples of ratings. 
-Based on this analysis, the NewsGuard database appears stable and complete for Great Britain, the US, Germany, and possibly France and Italy. 
+To address this, we reproduced previous research findings using different database versions, compared the database with the few existing lists, and manually validated ratings. 
+Based on these analyses, the NewsGuard database appears stable and complete for Great Britain, the US, Germany, and possibly France and Italy. 
 Additionally, our results are reproducible across different database versions, even with slight changes in the instrument, especially for its early versions.
 Given our observations, we recommend that researchers using NewsGuard's trustworthiness ratings examine several snapshots of the database to ensure no major source additions or deletions occurred recently. 
-For countries included in NewsGuard for longer, e.g., the US, Canada, France, Italy, Germany and the UK, we suggest that researchers use whatever version of the database after 2022 they have access to. 
+For countries included in NewsGuard for longer, e.g., the US, Canada, France, Italy, Germany and the UK, we suggest that researchers use whatever version of the database after 2022 they have access to.
+Using different versions of the database for different portions of any data being analyzed from different time periods does not seem necessary, given the general stability of trustworthiness ratings once a source has been included in the database.
 For more recent additions, e.g., Australia, Austria and New Zealand, we suggest that researchers always use the most recent version of the database and carefully examine it for differences in coverage for different units of analysis, such as political leaning. 
-Lastly, the topic and journalistic criteria ratings appear stable and may offer valuable insights into misinformation dynamics.
+Lastly, the topic and journalistic criteria ratings appear stable and may offer valuable context for the analysis of misinformation dynamics.
 A combination of political orientation and topic labels could effectively characterize sources and identify untrustworthy sources that address and decontextualize mainstream issues beyond hyper-partisan contexts.
 It is important to note that this analysis is specifically relevant to online misinformation research, as NewsGuard uses web traffic data to select sources for assessment. 
 Future research should compare lists of online news domains to cross-platform and offline news consumption and examine how sampling based on sources versus stories influences downstream results. 
 
 In conclusion, using a list of rated online news domains appears to be a stable method for identifying misinformation online at scale.
-A source-based approach is particularly valuable and theoretically sound because it can encompass a wide range of sources, including less extreme forms of misinformation, thereby better reflecting people's information diets. 
+A source-based approach with a fine-grained rating scheme based on journalistic quality criteria is particularly valuable and theoretically sound because it can encompass a wide range of sources, including less extreme forms of misinformation, thereby better-reflecting people's information diets. 
 While the NewsGuard database serves as a useful tool for tracking online misinformation at the level of the source, researchers should weigh its utility for the studied context against associated costs and consider alternative sources \citep[e.g.,][]{linHighLevelCorrespondence2023a} for comprehensive analysis. 
 Our findings underscore the critical need for dynamic, multifaceted, and openly accessible methods to get a clear and robust answer on the impact of misinformation on entire populations.
 
 \section{Acknowledgments}
 We acknowledge David Garcia and Noëlle Lebernegg for discussions about measurement issues in misinformation research and Annie Waldherr for her helpful feedback on the manuscript.
 
-NewsGuard funding statement
+%NewsGuard funding statement
 J. Luehring, H.M., A.S. were supported by the Vienna Science and Technology Fund (WWTF) and the City of Vienna under grant 10.47379/ICT20028 and grant 10.47379/VRG16005.  
 The funders played no role in study design, data collection and analysis, decision to publish or preparation of the article.
 
 \section{Data and Code Availability}
 Reproduction materials, including code and extended data, excluding the NewsGuard database, which is proprietary, are accessible at \href{https://github.com/julaluehring/newsguard-review-analysis}{Github}).
-To acquire data from NewsGuard, contact support@newsguardtech.com.
+To license the NewsGuard database, contact support@newsguardtech.com.
 
 \section{Author Contributions}
-\noindent Contributed to the conception and design: J. Luehring, H. Metzler, J. Lasser \\
+\noindent Contributed to the conception and design: J. Luehring, H. Metzler, J. Lasser, A. Shetty \\
 Contributed to the analysis and interpretation of data: J. Luehring, R. Lazzaroni, J. Lasser, H. Metzler \\
 Wrote the article: J. Luehring \\
-Revised the article: J. Luehring, H. Metzler, J. Lasser \\
-Final approval of the version to be published: R. Lazzaroni, J. Luehring, J. Lasser, H. Metzler
+Revised the article: J. Luehring, H. Metzler, J. Lasser, A. Shetty \\
+Final approval of the version to be published: R. Lazzaroni, J. Luehring, J. Lasser, H. Metzler, A. Shetty
 
 \bibliography{newsguard-review.bib}
 
