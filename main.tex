@@ -258,16 +258,8 @@ Historically, NewsGuard considered sources with a rating below 60 as not trustwo
 Since February 2023\footnote{Snapshot of the updated rating process from February 1st, 2023: \href{https://web.archive.org/web/20230201003836/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://www.newsguardtech.com/ratings/rating-process-criteria/}}, NewsGuard uses a more granular categorization, classifying sources with a score of 100 as "high credibility", scores between 75 and 99 as "generally credible", scores between 60 and 74 as "credible with exceptions", scores between 40 and 59 as "proceed with caution", and scores between 0 and 39 as "proceed with maximum caution". 
 Notably, NewsGuard is not a blacklist. 
 In fact, close to 60\% of sources have an overall rating of over 60 (see Fig.~\ref{fig:trustworthiness_panel}B for the distribution of trustworthiness scores in the most recent vs. the first version of the database and Fig.~\ref{fig:score_per_year-violinplot} for distributions per year). 
-
 Furthermore, the distributions also clearly show a multimodal structure, indicative of the quasi-continuous nature of the overall NewsGuard score. 
 In addition, some combinations of characteristics seem much more prevalent than others, indicating that the individual characteristics are not independent (see also ``Composition of trustworthiness score'' below).
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=\textwidth]{figures/trustworthiness_panel.pdf}
-    \caption{Description of trustworthiness ratings with A showing the number of sources with rating over time based on two different sampling strategies: when sampling one snapshot of the database mid-month (solid line), we observe a steady increase, whereas sampling at the beginning of the month results in two irregular dips (dashed line). Panel B: distribution of trustworthiness in the first and most recent database as a histogram. Panel C: changes in trustworthiness scores over time (monthly granularity), with flags (legend shows countries in order of appearance of the flags) and dotted lines indicating when countries were added and vertical lines highlighting the top five updates (i.e., major score changes, also shown with arrows). The height of the bars describes the number of sources added vs. changed, with colors indicating the proportions. Note: We include the average trustworthiness of sources added in green for the major changes. Countries are listed in the order added at the top of panel C.}
-    \label{fig:trustworthiness_panel}
-\end{figure}
 
 When looking at the score distribution over time, the skew towards high ratings diminishes slightly: while the average score was 71.8 ($SD$=33.3) in 2019, it is now at 63.8 ($SD$=32.5) as shown in Figure~\ref{fig:trustworthiness_panel}C. 
 Various explanations for decreases in trustworthiness over time are possible:
@@ -297,6 +289,13 @@ Figure~\ref{fig:score_updates} in the appendix illustrates the differences in co
 Overall, the decrease in the overall trustworthiness of sources we can see in Figure~\ref{fig:trustworthiness_panel}C can, therefore, be attributed to NewsGuard adding untrustworthy sources rather than previously trustworthy sources losing points. 
 This interpretation is also supported by our analysis of changes in individual rating criteria below.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/trustworthiness_panel.pdf}
+    \caption{Description of trustworthiness ratings with A showing the number of sources with rating over time based on two different sampling strategies: when sampling one snapshot of the database mid-month (solid line), we observe a steady increase, whereas sampling at the beginning of the month results in two irregular dips (dashed line). Panel B: distribution of trustworthiness in the first and most recent database as a histogram. Panel C: changes in trustworthiness scores over time (monthly granularity), with flags (respective country codes in order of appearance) and dotted lines indicating when countries were added and vertical lines highlighting the top five updates (i.e., major score changes, also shown with arrows). The height of the bars describes the number of sources added vs. changed, with colors indicating the proportions. Note: We include the average trustworthiness of sources added in green for the major changes. Countries are listed in the order added at the top of panel C.}
+    \label{fig:trustworthiness_panel}
+\end{figure}
+
 \textbf{Composition of trustworthiness score.} 
 The trustworthiness score is a composite score calculated based on nine journalistic criteria. 
 For each source, NewsGuard's raters assign a Boolean value (yes/no) per criterion. 
@@ -318,13 +317,15 @@ We present update patterns of individual criteria over time in Figure~\ref{fig:c
 The most common change is sources stopping disclosing ownership and financing, accounting for 12.4\% of the observed changes.
 The opposite change (a disclosure of ownership and financing) is the third most common pattern, occurring in 10.7\% of score updates. This indicates either that NewsGuard frequently checks criteria related to ownership or that adherence to such criteria is more volatile. 
 
-\begin{figure}[!ht]
+
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/criteria_panel.pdf}
     \caption{Panel A: percentage of sources that have stopped or started to fulfill a criterion, including multiple changes (positive vs. negative) of a single source. Panel B: percentage of sources that do not fulfill a criterion per country (July 15th, 2024). Panel C: trustworthiness per country over time (truncated to range from 55 to 90), aggregated per year with 95\% confidence intervals.}
     \label{fig:criteria_panel}
 \end{figure}
 
+\newpage
 \textbf{Reproducibility of downstream research results using different snapshots of the database.}
 Over the observation period, we observe both a substantial addition of sources, as well as more minor changes in individual journalistic criteria and therefore, the overall score for individual sources. 
 This begets the question of whether such changes can potentially influence the conclusions drawn from investigations that rely on the NewsGuard database, depending on which version is used.
@@ -342,6 +343,13 @@ When using the 2019 snapshot, which deviates most strongly from the others, the 
 The finding that there are only minor changes depending on which version of the database is used for the US is likely due to the fact that sources rarely change their rating, and that almost all major US news sources were already covered in the first version of the NewsGuard database: the snapshot from 2019 covers 15.0\% of links posted by Democrats on Twitter and 18.5\% of links posted by Republicans. 
 For the 2024 snapshot, the coverage slightly increases to 16.3\% and 19.6\% of links for Democrats and Republicans, respectively.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/politician_trustworthiness_replication_score_difference.pdf}
+    \caption{Reproduction of the time series of NewsGuard scores of US Congress Members from Ref.~\cite{lasserSocialMediaSharing2022c} using different versions of the NewsGuard database from 2019 to 2024 (always taken from the first hour of March 1st of the given year). Panel A: average scores for Democrats and Republicans indicated in different shades of blue and red for each year. Panel B: difference between the average Democrat and average Republican score, indicated in different shades of grey for each year. The time series represent a moving average over three months.}
+    \label{fig:reproduction}
+\end{figure}
+
 For the other two countries, Germany and the UK, the picture changes: differences in average ratings stratified by party show larger differences between years (see Figures~\ref{fig:politician_trustworthiness_replication_DE} and~\ref{fig:politician_trustworthiness_replication_UK} in the appendix). 
 This is likely due to massive changes in the coverage of the sources shared by politicians in these countries by NewsGuard. 
 For example, for members of the German party SPD, coverage increased from 0.5\% in 2019 to 12.7\% in 2024 and from 0.2\% to 12.0\% for members of CDU/CSU. 
@@ -350,13 +358,6 @@ In the UK, the coverage for members of the Labour Party increased from 7.8\% to 
 %In this specific case, the main conclusion that there is no trend in the average NewsGuard score would not have changed depending on the database version. 
 Taken together, such coverage differences between years would lead to different conclusions in some cases, but not in others. For instance, the NewsGuard score of small parties like DIE LINKE and the Greens in Germany shows an upward trend with the 2019 version but not with newer versions. In the UK, all versions would yield the same main conclusion, namely that the average score shows no specific trend over time. It is usually the earlier versions of the database that lead to different scores, given that coverage was still low in 2019. Later versions, especially 2022-2024, usually yield the same result. 
 
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{figures/politician_trustworthiness_replication_score_difference.pdf}
-    \caption{Reproduction of the time series of NewsGuard scores of US Congress Members from Ref.~\cite{lasserSocialMediaSharing2022c} using different versions of the NewsGuard database from 2019 to 2024 (always taken from the first hour of March 1st of the given year). Panel A: average scores for Democrats and Republicans indicated in different shades of blue and red for each year. Panel B: difference between the average Democrat and average Republican score, indicated in different shades of grey for each year. The time series represent a moving average over three months.}
-    \label{fig:reproduction}
-\end{figure}
 
 This analysis shows that for countries other than the US, the usage of different versions of the database has the potential to significantly influence research outcomes, likely due to the addition of a significant number of relevant new sources to the database over the years. 
 Researchers investigating countries for which sources were only recently added to the database (e.g., New Zealand or Austria) should, therefore, proceed with caution and invest time to validate the coverage of the database for a given country. 
@@ -441,6 +442,15 @@ When political orientation was still divided into four categories, slightly left
 In August 2021, however, when a number of untrustworthy sources ($M$=40.5, $SD$=37.2) were added to the database, the average trustworthiness of sources categorized as slightly right-leaning dropped by almost 20 points. 
 Figure~\ref{fig:orientation_panel}A shows that the ``Slightly Right'' category dropped below the ``Far Left'' category by almost 15 points. 
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/orientation_panel.pdf}
+    \caption{Trustworthiness averages by political orientation. Panel A: over time. Panel B: by country. Panel C: percentage of sources per country with political orientation, explaining differences in trustworthiness by country.}
+    \label{fig:orientation_panel}
+\end{figure}
+
+\newpage 
+
 In addition to the change in average trustworthiness scores within political orientation categories caused by the changed taxonomy of political orientation used by NewsGuard, the trustworthiness averages per political orientation also differ by country, as shown in Fig.~\ref{fig:orientation_panel}B. 
 While for some countries like France and Canada, the average trustworthiness of left and right sources only differs by about 20 points and 95\% confidence intervals overlap, other countries like Australia, Germany, and Austria show extreme differences of over 40 points.
 Nevertheless, across all countries, sources classified as right, on average, always have a lower trustworthiness score than sources on the left. 
@@ -451,7 +461,7 @@ To get an idea of whether sources with labels are correctly classified and wheth
 First, we manually annotated the political orientation of all German-speaking sources ever covered by NewsGuard (as of July 15th, 2024) based on the website's front page, article headlines, ads, and article content.  
 We followed the labels by NewsGuard (right/left) and added two labels:  neutral and unidentifiable (e.g., when the website is unreachable).
 For sources with available ratings, the agreement between NewsGuard and the manual annotations was 84\% (for 63 domains out of 400, excluding 21 dead links).
-Second, we compared the NewsGuard labels to labels by MediaBiasFactCheck\footnote{See here for rating system as of August 20th, 2024: \href{https://web.archive.org/web/20240820015752/https://mediabiasfactcheck.com/methodology/}{https://mediabiasfactcheck.com/methodology/}} (MBFC, 31 labels in total), resulting in an agreement of 83\%.
+Second, we compared the NewsGuard labels to labels by MediaBiasFactCheck\footnote{See here for rating system as of August 20th, 2024: cd \href{https://web.archive.org/web/20240820015752/https://mediabiasfactcheck.com/methodology/}{https://mediabiasfactcheck.com/methodology/}} (MBFC, 31 labels in total), resulting in an agreement of 83\%.
 Both comparisons showed that disagreements mainly occurred in cases where the manual annotations were labeled as neutral, while the expert ratings assigned a specific label.
 In only one case, NewsGuard differed from both MBFC and the manual annotation.
 
@@ -462,12 +472,6 @@ Such sources were typically local newspapers or magazines focusing on special in
 However, roughly half were legacy media or major online sources that slightly leaned towards a particular political orientation.
 Our findings suggest two (not necessarily mutually exclusive) implications for a missing political orientation: Either the sources have no overt political bias in their reporting or are too niche to be labeled by NewsGuard.
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=\textwidth]{figures/orientation_panel.pdf}
-    \caption{Trustworthiness averages by political orientation. Panel A: over time. Panel B: by country. Panel C: percentage of sources per country with political orientation, explaining differences in trustworthiness by country.}
-    \label{fig:orientation_panel}
-\end{figure}
 
 Before the rating became binary, a few domains frequently oscillated between more extreme and less extreme labels, but domains rarely switched their political orientation. 
 This might have been a reason for simplifying the label.
@@ -495,6 +499,7 @@ Figure~\ref{fig:topics_panel}C shows the top five topics discussed by sources cl
 In April 2020, shortly after the COVID-19 pandemic started, NewsGuard increasingly added a label called ``COVID-19 misinformation'', with major additions in August 2021.
 Once a source receives a topic label, it rarely changes (except for foxnews.com, which has changed seven times).
 
+
 As shown in Figure~\ref{fig:topics_panel}A, average trustworthiness ratings greatly differ across topics (white dots show the average trustworthiness of sources covering that topic). 
 The lowest average rating is given to sources covering issues related to conspiracy theories ($M$=51.7, $SD$=35.9) and health or medical information ($M$=54.3, $SD$=35.9).
 In contrast, those covering law or crime have the highest average trustworthiness scores ($M$=79.7, $SD$=24.6, but this is only 0.4\% of the sources).
@@ -504,7 +509,7 @@ Instead, untrustworthy sources seem to commonly publish ``Political news or comm
 These topics generally receive a significantly higher number of labels from NewsGuard and show a high variance in trustworthiness, for instance, ``General news'' or ``Local news'' (see Fig.~\ref{fig:topics_panel}A and B).
 This highlights that both untrustworthy and trustworthy sources cover a wide range of topics, including mainstream ones, and that fringe topics only make up a small proportion of the news.
 
-\begin{figure}[!ht]
+\begin{figure}[!h]
     \centering
     \includegraphics[width=\textwidth]{figures/topics_panel.pdf}
     \caption{A) shows the distributions of trustworthiness per topic and political orientation (left/right in blue/red, respectively), sorted by their average trustworthiness (white dot within the boxplot that represents the quartiles and whiskers show the whole range). 
@@ -515,6 +520,7 @@ This highlights that both untrustworthy and trustworthy sources cover a wide ran
     The grey and dashed line shows the average topic label count of those topics across all sources with the 95\%CI.}
     \label{fig:topics_panel}
 \end{figure}
+
 
 Across countries, sources more or less publish on the same topics (see Fig.~\ref{fig:topics_country} in the appendix). 
 However, sources with low trustworthiness seem to publish on different topics, i.e., the trustworthiness of sources covering a given topic substantially depends on the country (see Fig.~\ref{fig:topics_score_per_country}). 
@@ -618,9 +624,9 @@ Final approval of the version to be published: R. Lazzaroni, J. Luehring, J. Las
 \bibliography{newsguard-review.bib}
 
 \newpage
+\clearpage 
 
 \appendix
-
 
 \renewcommand\thefigure{A.\arabic{figure}}
 \setcounter{figure}{0}
@@ -686,6 +692,8 @@ Final approval of the version to be published: R. Lazzaroni, J. Luehring, J. Las
     \caption{Trustworthiness per country over time, aggregated by month.}
     \label{fig:scores_per_country_over_time}
 \end{figure}
+
+\clearpage
 
 \input{tables/overlap_lists.tex}
 
