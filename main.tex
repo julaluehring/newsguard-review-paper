@@ -60,7 +60,7 @@
 %\fancypagestyle{firstpage}{
 %  \fancyhf{}% clear all fields
 %  \fancyfoot[L]{ \footnotesize Copyright \copyright 2024 (Luehring et al.). Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License. Available at: \url{http://journalqd.org}} 
-%  \lhead{ \footnotesize Journal of Quantitative Description: Digital Media 5(2025), 1–n} %Replace n with number of last page, including the Online Appendix.
+%  \lhead{ \footnotesize Journal of Quantitative Description: Digital Media 5(2025), 1–48} %Replace n with number of last page, including the Online Appendix.
 %\rhead{ \footnotesize 10.51685/jqd.2024.XXX}
 %}
 \pagestyle{fancy}
@@ -71,11 +71,10 @@
 %\fancyhead[RE]{ \footnotesize Journal of Quantitative Description: Digital Media 5(2025) \thepage}
 
 \title{
-\normalsize \textbf{} \vspace{-1.5em} \\
-Best practices for source-based research on misinformation \newline and news trustworthiness
+\normalsize \textbf{Best practices for source-based research on misinformation and\newline news trustworthiness} \vspace{-3em}
 }
 %Author names and affiliations go here in the single \author{} , put authors' contact information in \thanks{}. Use extra spacing: \vspace{1em} to separate authors (unless the authors share the same affiliation.  
-\author{\normalsize LUEHRING, JULA \\ \normalsize University of Vienna \& Complexity Science Hub Vienna, Austria \vspace{1em} \\ \normalsize METZLER, HANNAH \\ \normalsize Medical University of Vienna, Austria, Complexity Science Hub Vienna, Austria \& \\ \normalsize Institute for Globally Distributed Open Research and Education \vspace{1em} \\ \normalsize LAZZARONI, RUGGERO MARINO \\ \normalsize RWTH Aachen, Germany \vspace{1em} \\ \normalsize SHETTY, APEKSHA \\ \normalsize Complexity Science Hub Vienna, Austria \& University of Vienna \vspace{1em} \\ \normalsize LASSER, JANA \\ \normalsize University of Graz \& Complexity Science Hub Vienna, Austria\thanks{\hspace{-1em} Corresponding author: jula.luehring@univie.ac.at} \thanks{\hspace{-1em} Date submitted: 2024-07-XX}}
+\author{\normalsize LUEHRING, JULA \\ \normalsize University of Vienna \& Complexity Science Hub Vienna, Austria \vspace{1em} \\ \normalsize METZLER, HANNAH \\ \normalsize Medical University of Vienna, Austria, Complexity Science Hub Vienna, Austria \& \\ \normalsize Institute for Globally Distributed Open Research and Education \vspace{1em} \\ \normalsize LAZZARONI, RUGGERO MARINO \\ \normalsize RWTH Aachen, Germany \vspace{1em} \\ \normalsize SHETTY, APEKSHA \\ \normalsize Complexity Science Hub Vienna, Austria \& University of Vienna \vspace{1em} \\ \normalsize LASSER, JANA \\ \normalsize University of Graz \& Complexity Science Hub Vienna, Austria\thanks{\hspace{-1em} Corresponding author: jula.luehring@univie.ac.at} \thanks{\hspace{-1em} Date submitted: 2024-09-19}}
 
 \renewcommand\footnotemark{}
 \begin{document}
@@ -267,6 +266,15 @@ In addition, some combinations of characteristics seem much more prevalent than 
 When looking at the score distribution over time, the skew towards high ratings diminishes slightly: while the average score was 71.8 ($SD$=33.3) in 2019, it is now at 63.6 ($SD$=32.6) as shown in Figure~\ref{fig:trustworthiness_panel}C. 
 Various explanations for decreases in trustworthiness over time are possible:
 First, the database has tripled in size and added many sources with lower trustworthiness scores (on average 59.6, $SD$=27.5). 
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/trustworthiness_panel.pdf}
+    \caption{Description of trustworthiness ratings with A showing the number of sources with rating over time based on two different sampling strategies: when sampling one snapshot of the database mid-month (solid line), we observe a steady increase, whereas sampling at the beginning of the month results in two irregular dips (dashed line). Panel B: distribution of trustworthiness in the first and most recent database as a histogram. Panel C: changes in trustworthiness scores over time (monthly granularity), with flags (respective country codes in order of appearance) and dotted lines indicating when countries were added and vertical lines highlighting the top five updates (i.e., major score changes, also shown with arrows). The height of the bars describes the number of sources added vs. changed, with colors indicating the proportions. Note: We include the average trustworthiness of sources added in green for the major changes. Countries are listed in the order added at the top of panel C.}
+    \label{fig:trustworthiness_panel}
+\end{figure}
+
 A significant number of sources with lower ratings were added, especially during the outbreak of the COVID-19 pandemic in 2020. 
 The dashed lines with arrows in Figure~\ref{fig:trustworthiness_panel}C show the top five updates in terms of their impact on the average trustworthiness. 
 The height of the bars shows the number of sources added vs. changed (with proportions in colors and the average trustworthiness of added sources in green).
@@ -292,12 +300,6 @@ Figure~\ref{fig:score_updates} in the appendix illustrates the differences in co
 Overall, the decrease in the overall trustworthiness of sources we can see in Figure~\ref{fig:trustworthiness_panel}C can, therefore, be attributed to NewsGuard adding untrustworthy sources rather than previously trustworthy sources losing points. 
 This interpretation is also supported by our analysis of changes in individual rating criteria below.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{figures/trustworthiness_panel.pdf}
-    \caption{Description of trustworthiness ratings with A showing the number of sources with rating over time based on two different sampling strategies: when sampling one snapshot of the database mid-month (solid line), we observe a steady increase, whereas sampling at the beginning of the month results in two irregular dips (dashed line). Panel B: distribution of trustworthiness in the first and most recent database as a histogram. Panel C: changes in trustworthiness scores over time (monthly granularity), with flags (respective country codes in order of appearance) and dotted lines indicating when countries were added and vertical lines highlighting the top five updates (i.e., major score changes, also shown with arrows). The height of the bars describes the number of sources added vs. changed, with colors indicating the proportions. Note: We include the average trustworthiness of sources added in green for the major changes. Countries are listed in the order added at the top of panel C.}
-    \label{fig:trustworthiness_panel}
-\end{figure}
 
 \textbf{Composition of trustworthiness score.} 
 The trustworthiness score is a composite score calculated based on nine journalistic criteria. 
@@ -608,21 +610,19 @@ Our findings underscore the critical need for dynamic, multifaceted, and openly 
 
 \section{Acknowledgments}
 We acknowledge David Garcia and Noëlle Lebernegg for discussions about measurement issues in misinformation research and Annie Waldherr for her helpful feedback on the manuscript.
-
-%NewsGuard funding statement
 J. Luehring, H.M., A.S. were supported by the Vienna Science and Technology Fund (WWTF) and the City of Vienna under grant 10.47379/ICT20028 and grant 10.47379/VRG16005.  
 The funders played no role in study design, data collection and analysis, decision to publish or preparation of the article.
 
 \section{Data and Code Availability}
-Reproduction materials, including code and extended data, excluding the NewsGuard database, which is proprietary, are accessible at \href{https://github.com/julaluehring/newsguard-review-analysis}{Github}).
+Reproduction materials, including code and extended data, excluding the NewsGuard database, which is proprietary, are accessible on \href{https://github.com/julaluehring/newsguard-review-analysis}{Github}.
 To license the NewsGuard database, contact support@newsguardtech.com.
 
 \section{Author Contributions}
-\noindent Contributed to the conception and design: J. Luehring, H. Metzler, J. Lasser, A. Shetty \\
-Contributed to the analysis and interpretation of data: J. Luehring, R. Lazzaroni, J. Lasser, H. Metzler \\
+\noindent Contributed to the conception and design: J. Luehring, H.M., J. Lasser, A.S.\\
+Contributed to the analysis and interpretation of data: J. Luehring, R.M.L., J. Lasser, H.M. \\
 Wrote the article: J. Luehring \\
-Revised the article: J. Luehring, H. Metzler, J. Lasser, A. Shetty \\
-Final approval of the version to be published: R. Lazzaroni, J. Luehring, J. Lasser, H. Metzler, A. Shetty
+Revised the article: J. Luehring, H.M., J. Lasser, A.S. \\
+Final approval of the version to be published: J. Luehring, J. Lasser, H.M., A.S., R.M.L.
 
 \bibliography{newsguard-review.bib}
 
@@ -727,7 +727,7 @@ Final approval of the version to be published: R. Lazzaroni, J. Luehring, J. Las
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{figures/topics_score_per_country.pdf}
-    \caption{Trustworthiness score for the top five most popular topics across countries in the most recent database (July 15, 2024).}
+    \caption{Trustworthiness score for the top five most popular topics across countries in the most recent database (September 15, 2024).}
     \label{fig:topics_score_per_country}
 \end{figure}
 
