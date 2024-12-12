@@ -90,8 +90,8 @@ Since creating the database in 2019, NewsGuard has continually added new sources
 While NewsGuard initially focused only on the US, the database has expanded to include sources from other countries. 
 In addition to trustworthiness ratings, the NewsGuard database contains various contextual assessments of the sources, which are less often used in contemporary research on misinformation.
 In this work, we provide an analysis of the content of the NewsGuard database, focusing on the temporal stability and completeness of its ratings across countries, as well as the usefulness of information on political orientation and topics for misinformation studies.  
-We find that the trustworthiness ratings are temporally stable and that coverage seems complete for the US and Germany.
-Information on the political orientation and topic labels of sources are relatively complete and can be valuable assets in characterizing sources beyond trustworthiness.
+We find that the trustworthiness ratings are temporally stable, with US sources consistently scoring lower than those from other countries across comparable points in time.
+Coverage appears complete for the US and Germany, with information on the political orientation and covered topics of sources being relatively comprehensive, providing valuable assets for characterizing sources beyond trustworthiness.
 By evaluating the database over time and across countries, we identify potential pitfalls that threaten the validity of using NewsGuard as a tool for quantifying untrustworthy information, particularly if dichotomous ``trustworthy''/``untrustworthy'' labels are used.
 Lastly, we provide recommendations for digital media research on how to avoid these pitfalls and discuss appropriate use cases for the NewsGuard database and source-level approaches in general.
 \end{abstract}
@@ -191,7 +191,7 @@ The organization also manually adds sources they deem influential or that change
 The database automatically updates every hour and allows tracking changes back to March 2019, when the organization started operating. 
 Still, how domains are selected or removed is not disclosed on the website.
 As of September 15, 2024, the database has 12,288 entries in total, some without a trustworthiness rating (7.6\%). 
-This includes 70 sources classified as a ``platform'' (e.g., YouTube), 63 sources judged as ``satire'' (e.g., The Onion) and 806 lifestyle sources (e.g., healthquote- free.com).
+This includes 70 sources classified as a ``platform'' (e.g., YouTube), 63 sources judged as ``satire'' (e.g., The Onion) and 806 lifestyle sources (e.g., healthquote-free.com).
 For the remaining 11,349 sources, the database includes the following characteristics:
 \begin{itemize}
     \item Unique identifier for each rating and date of the last update
@@ -408,11 +408,13 @@ NewsGuard also labels the language of a source, with English being the most repr
 
 \input{tables/countries}
 
-Across all versions of the database and in most countries, the overall trustworthiness of sources remains above 65, except for the United States. US-based outlets are of lower trustworthiness on average (see Table~\ref{table:countries}). 
+Across all versions of the database and in most countries, the overall trustworthiness of sources remains above 65, except for the United States. 
+US-based outlets are of lower trustworthiness on average (see Table~\ref{table:countries}). 
 Figure~\ref{fig:criteria_panel}C shows the average trustworthiness of sources per country over time (see also Figures~\ref{fig:scores_per_country_recent} and~\ref{fig:scores_per_country_over_time} for plots by country). 
-The trustworthiness score for the US was lower from the first database version onward. 
-It is unclear whether US sources are of lower trustworthiness overall or if larger coverage of low trustworthy outlets from the start can explain this finding. 
-The development of trustworthiness indicates that for countries with a higher number of sources, the database seems to have settled into a stable state, whereas for newer countries (Canada, New Zealand, Australia), rating coverage still seems to vary.
+The trustworthiness score for US sources was lower from the first database version onward and remained consistently lower compared to other countries when considering the number of sources rated at comparable points in time.
+For example, the average score for US sources was lower six or twelve months after their addition to the database compared to French sources at the same interval.
+This suggests that US sources may generally have lower trustworthiness overall, rather than the finding being solely explained by a larger coverage of low-trustworthy outlets. 
+Overall, however, the development of trustworthiness indicates that for countries with a higher number of sources, the database seems to have settled into a stable state, whereas for newer countries (Canada, New Zealand, Australia), rating coverage still seems to vary.
 
 When comparing the number of sources that meet the journalistic criteria per country, we observe some striking patterns. 
 Figure~\ref{fig:criteria_panel}B shows the percentage of sources that \emph{do not fulfill} a given indicator by country, i.e., a high percentage indicates that many sources fail to meet the criterion.
@@ -443,7 +445,7 @@ Similarly, for Germany only a fraction of links not covered by NewsGuard lead to
 These sites were primarily shared by members of the left, green, or liberal parties, indicating that they are not widely shared across party affiliations.
 
 Although the investigation examines only 20-40\% of domains not evaluated by NewsGuard, by analyzing the domains that were most frequently shared, it demonstrates that NewsGuard provides a comprehensive list of domains shared by politicians in their social media communication across the US, UK, and Germany. 
-Moreover, the small number of missing news sites and the relative absence of  sources from both the left and right political spectrum in the missing domains suggests that NewsGuard's domain curation shows no systematic political bias.
+Moreover, the small number of missing news sites and the relative absence of sources from both the left and right political spectrum in the missing domains suggests that NewsGuard's domain curation shows no systematic political bias.
 
 
 \textbf{Comparison with other lists.} 
@@ -454,7 +456,7 @@ In addition, other lists are not available for every country.
 Primarily for the US context, \citet{linHighLevelCorrespondence2023a} have compared the overlap and agreement between ratings across six lists of existing expert ratings, including the NewsGuard database. 
 While trustworthiness ratings correlated significantly for the web domains included in multiple lists, the authors found a high number of non-overlapping web domains between lists. 
 
-For the German context, Puschmann et al. (2024) collected a list of 1,147 unique German online news domains (GOND)\footnote{\href{https://osf.io/s5uhb/}{https://osf.io/s5uhb/}}, largely relying on web tracking data of a representative sample of 1,500 German citizens. 
+For the German context,~\citet{puschmannGermanOnlineNews2023a} collected a list of 1,147 unique German online news domains (GOND)\footnote{\href{https://osf.io/s5uhb/}{https://osf.io/s5uhb/}}, largely relying on web tracking data of a representative sample of 1,500 German citizens. 
 Overall, GOND has 552 sources in common with NewsGuard (see Table~\ref{tab:overlap_lists}, among others labeled as ``legacy press'' (52.9\%), ``digital-born news outlet'' (12.0\%), or ``hyperpartisan news'' (10.1\%). 
 NewsGuard covers 244 out of 573 German-speaking sources covered by GOND, including some other languages.
 
@@ -599,7 +601,7 @@ The picture changes if binary ``trustworthy'' and ``untrustworthy'' labels for n
 In this case we observe large differences in the fraction of untrustworthy links that are shared by politicians, depending on the version of the data base we used for the analysis.
 As a result, we strongly caution researchers against using binary trustworthiness classes if continuous scores are available.
 
-US sources generally score lower on trustworthiness compared to other countries. 
+US sources generally score lower on trustworthiness compared to other countries, a trend that persists even when accounting for different points in time and the number of sources rated. 
 Importantly, this does not say anything about the trustworthiness of news actually consumed by the US population, which could be higher, depending on the contribution of each source to the news diets of US Americans.
 Country-specific factors seem to significantly influence journalistic traditions across countries with similar media systems.
 Italy and France, part of the Southern cluster, show distinct patterns compared to Central (e.g., Germany) and Western clusters (e.g., US).
@@ -628,7 +630,9 @@ Despite being incomplete, the political orientation labels may be a useful addit
 However, they should be interpreted with caution and potentially validated and extended for countries other than the US and Germany.
 
 Our analysis faces several limitations due to a scarcity of comparable datasets, particularly for countries other than the United States, the United Kingdom, and Germany. 
-As a result, we cannot assess the reliability and validity of the NewsGuard database; we can only evaluate the internal and temporal stability of ratings. 
+This limitation is especially critical when considering the absence of data on non-Western countries, which remains a substantial gap in the study of misinformation.
+Addressing this gap would require expanding the scope of databases like NewsGuard to include a broader range of countries, especially in the Global South, where the impact of misinformation may be profound but less studied.
+As a result of these limitations, we cannot assess the reliability and validity of the NewsGuard database globally; we can only evaluate the internal and temporal stability of existing ratings. 
 To address this, we reproduced previous research findings using different database versions, compared the database with the few existing lists, and manually validated ratings. 
 Based on these analyses, the NewsGuard database appears stable and complete for Great Britain, the US, Germany, and possibly France and Italy. 
 Additionally, our results are reproducible across different database versions, even with slight changes in the instrument, especially for its early versions.
