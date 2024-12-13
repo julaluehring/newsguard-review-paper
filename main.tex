@@ -115,9 +115,9 @@ Implicit, often partisan, interpretations of facts differ from explicit lies, ma
 Second, identifying misinformation involves ethical considerations, with different experts reaching different conclusions.
 To navigate these challenges, researchers often focus on binary (true/false) cases of misinformation, typically identified by fact-checkers. 
 While this approach addresses some ethical concerns by clearly classifying false information, it captures only a small portion of misinformation.
-Finally, conceptual choices are often shaped by methodological constraints (e.g., available data) or disciplinary preferences (e.g., methodological traditions), which is why misinformation is often used as a general umbrella term for different phenomena \citep{weeksWhatNextSix2021}.
+Finally, conceptual choices are often shaped by methodological constraints (e.g., available data) or disciplinary preferences (e.g., methodological traditions), which is why misinformation is often used as a general umbrella term for different phenomena~\citep{weeksWhatNextSix2021}.
 Consequently, this semantic and methodological variability has contributed to imprecise or inconclusive findings regarding the prevalence and impact of misinformation. 
-While some scholars, such as \citet{altayMisinformationMisinformationConceptual2023a} or \citet{budakMisunderstandingHarmsOnline2024a}, argue that the effects of misinformation are overstated, calling it a symptom of broader social issues, others, like \cite{tayThinkingClearlyMisinformation2024}, reason that the heterogeneity in measuring misinformation contributes to divergent evidence and creates a false dichotomy between understanding misinformation as a symptom or a cause \citep[also see][]{bozarthHigherGroundHow2020}.
+While some scholars, such as~\citet{altayMisinformationMisinformationConceptual2023a} or~\citet{budakMisunderstandingHarmsOnline2024a}, argue that the effects of misinformation are overstated, calling it a symptom of broader social issues, others, like~\cite{tayThinkingClearlyMisinformation2024}, reason that the heterogeneity in measuring misinformation contributes to divergent evidence and creates a false dichotomy between understanding misinformation as a symptom or a cause~\citep[also see][]{bozarthHigherGroundHow2020}.
 
 In digital media research, one of the most prominent ways to measure misinformation has been to use a list of sources that are known to share misinformation frequently.
 NewsGuard has emerged as the most widely used database for source ratings \citep{celadinDisplayingNewsSource2023, guessExposureUntrustworthyWebsites2020a, lasserSocialMediaSharing2022c, pratelliSwingingStatesDoes2023, robertsonUsersChooseEngage2023a} and is especially popular in misinformation research for its comprehensive source-level trustworthiness scores, which are compiled based on web tracking data and rated and updated by professional editors and journalists.
@@ -150,13 +150,13 @@ Source-based approaches are a promising way to track misinformation online at sc
 However, to study the spread of unreliable news, scientists need access to reliable and credible databases of source ratings. 
 
 \section{NewsGuard: A Popular Database for Source Ratings}
-Since the 2016 US elections, the most popular way to track misinformation online has been to use a list of untrustworthy or unreliable sources and search for their web domains in URL text \citep{lasserSocialMediaSharing2022c, grinbergFakeNewsTwitter2019, guessExposureUntrustworthyWebsites2020a, shaoSpreadLowcredibilityContent2018, yangCOVID19InfodemicTwitter2021a}. 
-The organization \href{https://www.newsguardtech.com/}{NewsGuard} offers the most comprehensive list of such domains \citep{linHighLevelCorrespondence2023a}. 
+Since the 2016 US elections, the most popular way to track misinformation online has been to use a list of untrustworthy or unreliable sources and search for their web domains in URL text~\citep{ lasserSocialMediaSharing2022c, grinbergFakeNewsTwitter2019, guessExposureUntrustworthyWebsites2020a, guessCrackingOpenNews2021, shaoSpreadLowcredibilityContent2018, yangCOVID19InfodemicTwitter2021a}. 
+The organization \href{https://www.newsguardtech.com/}{NewsGuard} offers the most comprehensive list of such domains~\citep{linHighLevelCorrespondence2023a}. 
 It does not just provide a blacklist of untrustworthy sources but provides a trustworthiness score for each source, covering news sources across the entire spectrum of news quality. 
 A trained team of experts, mainly consisting of journalists and editors, rates the news sources based on nine journalistic quality criteria\footnote{\href{https://web.archive.org/web/20240131155450/https://www.newsguardtech.com/ratings/rating-process-criteria/}{https://www.newsguardtech.com/ratings/rating-process-criteria/}} and regularly updates both the coverage of the list by adding new sources and the trustworthiness ratings of existing sources.
 Since its start in 2019, the database has been constantly growing and has recently extended to countries beyond the United States, such as Germany and Italy. 
 With recent political events and crises, demand for such databases has increased, enhancing the popularity of NewsGuard. 
-For instance, it has been used to study user engagement with unreliable news during the 2016 and 2020 US elections \citep{pratelliSwingingStatesDoes2023, robertsonUsersChooseEngage2023a}, to assess the changing quality of cited information of political elites in the US \citep{lasserSocialMediaSharing2022c} or alternative understandings of honesty and truth in political discourse \citep{lasserAlternativeConceptionsHonesty2023}, and to estimate the effects of source labeling on decreasing misinformation sharing \citep{celadinDisplayingNewsSource2023}.
+For instance, it has been used to study user engagement with unreliable news during the 2016 and 2020 US elections~\citep{pratelliSwingingStatesDoes2023, robertsonUsersChooseEngage2023a}, to assess the changing quality of cited information of political elites in the US~\citep{lasserSocialMediaSharing2022c} or alternative understandings of honesty and truth in political discourse \citep{lasserAlternativeConceptionsHonesty2023}, and to estimate the effects of source labeling on decreasing misinformation sharing~\citep{aslettNewsCredibilityLabels2022a, celadinDisplayingNewsSource2023}.
 
 However, the NewsGuard database was initially created as a tool for brand security rather than scientific research. 
 In addition, employing journalists and editors to assess the sources included in the list incurs significant expenses. 
@@ -269,7 +269,7 @@ First, the database has tripled in size and added many sources with lower trustw
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{figures/trustworthiness_panel.pdf}
+    \includegraphics[width=\textwidth]{figures/trustworthiness_panel_flags.pdf}
     \caption{Description of trustworthiness ratings with A showing the number of sources with rating over time based on two different sampling strategies: when sampling one snapshot of the database mid-month (solid line), we observe a steady increase, whereas sampling at the beginning of the month results in two irregular dips (dashed line). Panel B: distribution of trustworthiness in the first and most recent database as a histogram. Panel C: changes in trustworthiness scores over time (monthly granularity). Flags (respective country codes in order of appearance) and dotted lines indicate when countries were added and dashed lines with colored arrows highlight the top five major score changes. The height of the bars describes the number of sources added vs. changed, with colors indicating the proportions. We also show the average trustworthiness of sources added in the green text boxes.}
     \label{fig:trustworthiness_panel}
 \end{figure}
@@ -619,8 +619,8 @@ Most rated sources are right-leaning, and these are often deemed less trustworth
 This disparity raises the question of whether it stems from a sampling bias by NewsGuard editors rather than an actual difference in trustworthiness.
 We argue that NewsGuard seems unbiased for the countries where coverage and ratings have stabilized for the following reasons:
 First, NewsGuard selects sources based on web tracking data, suggesting that it should reflect the online media landscape for the respective country. 
-Research on alternative media suggests the emergence of right-wing counter-publics as a response to the political and legacy media context \citep{heftBreitbartComparingRightWing2020}. 
-More precisely, the theory posits that a prevalence of left-leaning opinions in political and mainstream media spheres \citep{osmundsenPartisanPolarizationPrimary2021a} may lead to an under-representation of right-wing views and the fragmentation of a counter-public along the right-wing spectrum that is highly connected \citep{heftTransnationalInformationEcology2021}.
+Research on alternative media suggests the emergence of right-wing counter-publics as a response to the political and legacy media context~\citep{heftBreitbartComparingRightWing2020}. 
+More precisely, the theory posits that a prevalence of left-leaning opinions in political and mainstream media spheres~\citep{osmundsenPartisanPolarizationPrimary2021a} may lead to an under-representation and marginalization of right-wing views~\citep{benklerNetworkPropagandaManipulation2018a} and the fragmentation of a counter-public along the right-wing spectrum that is highly connected~\citep{heftTransnationalInformationEcology2021}.
 As NewsGuard only labels the political orientation of explicitly partisan, sometimes hyper-partisan sources, this explanation would result in a higher number of smaller, right-wing online sources.
 A demand for right-wing fringe publications would also explain lower trustworthiness on the right-wing spectrum, which aligns with the political asymmetry repeatedly observed in susceptibility to misinformation, e.g., recently by Robertson et al. (\citeyear{robertsonUsersChooseEngage2023a}). 
 Second, the source selection and trustworthiness ratings provided by NewsGuard are largely consistent with other independent fact-checking organizations \citep{linHighLevelCorrespondence2023a}. 
@@ -741,7 +741,7 @@ Final approval of the version to be published: J. Luehring, J. Lasser, H.M., A.S
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{figures/scores_per_country_recent.pdf}
-    \caption{Distribution of trustworthiness per country as of July, 2024.}
+    \caption{Distribution of trustworthiness per country as of September, 2024.}
     \label{fig:scores_per_country_recent}
 \end{figure}
 
