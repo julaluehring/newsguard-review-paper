@@ -89,8 +89,8 @@ Since creating the database in 2019, NewsGuard has continually added new sources
 While NewsGuard initially focused only on the US, the database has expanded to include sources from other countries. 
 In addition to trustworthiness ratings, the NewsGuard database contains various contextual assessments of the sources, which are less often used in contemporary research on misinformation.
 In this work, we provide an analysis of the content of the NewsGuard database, focusing on the temporal stability and completeness of its ratings across countries, as well as the usefulness of information on political orientation and topics for misinformation studies.  
-We find that the trustworthiness ratings are temporally stable, with US sources consistently scoring lower than those from other countries across comparable points in time.
-Coverage appears complete for the US and Germany, with information on the political orientation and covered topics of sources being relatively comprehensive, providing valuable assets for characterizing sources beyond trustworthiness.
+We find that trustworthiness ratings and source coverage have remained relatively stable since 2022, particularly for the US, France, Italy, Germany, and Canada, with US sources consistently scoring lower than those from other countries across comparable time periods.
+Additional information on the political orientation and topics covered by sources is comprehensive and provides valuable assets for characterizing sources beyond trustworthiness.
 By evaluating the database over time and across countries, we identify potential pitfalls that threaten the validity of using NewsGuard as a tool for quantifying untrustworthy information, particularly if dichotomous ``trustworthy''/``untrustworthy'' labels are used.
 Lastly, we provide recommendations for digital media research on how to avoid these pitfalls and discuss appropriate use cases for the NewsGuard database and source-level approaches in general.
 \end{abstract}
@@ -175,7 +175,7 @@ Additionally, we provide an exemplary reproduction of published research using N
 
 \textbf{How complete is the database across countries, particularly for non-US countries?} 
 A recent study has shown high agreement of NewsGuard with other expert-rated lists in the US context~\citep{linHighLevelCorrespondence2023a}, but an assessment for other countries is missing. 
-Therefore, we describe the coverage across and differences between countries.
+Therefore, we describe the coverage across and differences between countries and assess the stability of source ratings and coverage over time.
 Further, we compare the completeness of information provided by NewsGuard across different contexts by cross-checking the NewsGuard database with a dataset of domains shared on social media for the US, Germany, and UK, and other existing lists of low-quality web domains. 
 
 \textbf{How valuable are contextual source labels for misinformation research?} 
@@ -326,7 +326,7 @@ The opposite change (a disclosure of ownership and financing) is the third most 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/criteria_panel.pdf}
-    \caption{Panel A: percentage of sources that have stopped or started to fulfill a criterion, including multiple changes (positive vs. negative) of a single source. Panel B: heatmap showing percentage of sources that do not fulfill a criterion per country (July 15th, 2024). Panel C: trustworthiness per country over time (truncated to range from 55 to 90), aggregated per year with 95\% confidence intervals.}
+    \caption{Panel A: percentage of sources that have stopped or started to fulfill a criterion, including multiple changes (positive vs. negative) of a single source. Panel B: heatmap showing percentage of sources that do not fulfill a criterion per country (September 15th, 2024). Panel C: trustworthiness per country over time (truncated to range from 55 to 90), aggregated per year with 95\% confidence intervals.}
     \label{fig:criteria_panel}
 \end{figure}
 
@@ -365,7 +365,7 @@ Later versions, especially 2022-2024, usually yield the same result.
 As the difference between different years is largely caused by differences in coverage and not by differences in the ratings of individual sites, it is questionable if the use of a dynamic matching of scores and observations would increase the validity of results:
 Observations from earlier times with lower NewsGuard coverage of sources would be less likely to be matched with a score, introducing a higher likelihood of bias for these times due to uneven coverage.
 Using more recent snapshots of the NewsGuard data base to infer ratings at earlier points in time---as is effectively done if for example a snapshot from 2024 is used to score news sources in 2019---alleviates the lacking coverage at the potential cost of using ratings that are less accurate.
-In summary, our analysis shows that for countries other than the US, even for continuous scores the usage of different versions of the database has the potential to significantly influence research outcomes, likely due to the addition of a significant number of relevant new sources to the database over the years. 
+In summary, our analysis shows that for countries other than the US, even for continuous scores, the usage of different versions of the database has the potential to significantly influence research outcomes, likely due to the addition of a significant number of relevant new sources to the database over the years. 
 Researchers investigating countries for which sources were only recently added to the database (e.g., New Zealand or Austria) should, therefore, proceed with caution and invest time to validate the coverage of the database for a given country. 
 
 Figure~\ref{fig:reproduction}C shows the fraction of untrustworthy links, e.g. sources with a NewsGuard score <60. 
@@ -400,23 +400,22 @@ In cases where no continuous ratings are available, the use of dynamic ratings c
 \end{figure}
 
 \section{How complete is the database across countries, particularly for non-US countries?}
-\textbf{Country coverage.} The dataset (2019-2024) contains sources from nine countries in total (United States, Great Britain, Italy, Canada, France, Germany, Austria, Australia, and New Zealand) plus sources considered to be global. 
+\textbf{Country comparisons.} The dataset (2019-2024) contains sources from nine countries in total (United States, Great Britain, Italy, Canada, France, Germany, Austria, Australia, and New Zealand) plus sources considered to be global. 
 Countries were added in the following order: Great Britain (country name in the database ``GB''), United States (US), Italy (IT), France (FR), Germany (DE) -- all added in 2019, Canada (CA, added in 2021), Australia (AU, added in 2021), Austria (AT, added in 2022), and New Zealand (NZ, added in 2023). 
 In the following analysis, we will drop the category ``ALL''.
 
 The majority of sources are from the United States (76.1\%), followed by Great Britan (5.2\%). 
-Table~\ref{table:countries} gives an overview of the total number of sources per country and their average trustworthiness scores (also see Fig.~\ref{fig:n_sources_per_country_over_time} for the number of sources over time per country). 
+Table~\ref{table:countries} gives an overview of the total number of sources per country and their average trustworthiness scores (also see Fig.~\ref{fig:stable_intervals} for the number of sources over time per country). 
 NewsGuard also labels the language of a source, with English being the most represented (9,455 sources; 86.9\%), followed by Italian (4.9\%), French (4.4\%), and German (3.8\%).
 
 \input{tables/countries}
 
 Across all versions of the database and in most countries, the overall trustworthiness of sources remains above 65, except for the United States. 
 US-based outlets are of lower trustworthiness on average (see Table~\ref{table:countries}). 
-Figure~\ref{fig:criteria_panel}C shows the average trustworthiness of sources per country over time (see also Figures~\ref{fig:scores_per_country_recent} and~\ref{fig:scores_per_country_over_time} for plots by country). 
+Figure~\ref{fig:criteria_panel}C shows the average trustworthiness of sources per country over time (see also Figures~\ref{fig:scores_per_country_recent} and~\ref{fig:stable_intervals} for plots by country). 
 The trustworthiness score for US sources was lower from the first database version onward and remained consistently lower compared to other countries when considering the number of sources rated at comparable points in time.
 For example, the average score for US sources was lower six or twelve months after their addition to the database compared to French sources at the same interval.
 This suggests that US sources may generally have lower trustworthiness overall, rather than the finding being solely explained by a larger coverage of low-trustworthy outlets. 
-Overall, however, the development of trustworthiness indicates that for countries with a higher number of sources, the database seems to have settled into a stable state, whereas for newer countries (Canada, New Zealand, Australia), rating coverage still seems to vary.
 
 When comparing the number of sources that meet the journalistic criteria per country, we observe some striking patterns. 
 Figure~\ref{fig:criteria_panel}B shows the percentage of sources that \emph{do not fulfill} a given indicator by country, i.e., a high percentage indicates that many sources fail to meet the criterion.
@@ -430,6 +429,32 @@ Intervals between updates of sources vary by country (see Table ~\ref{table:coun
 Sources get updated once a year per country, on average. 
 Overall, the US coverage seems the most stable and complete. 
 However, the number of media outlets in each country may depend on numerous factors (e.g., population size, fragmentation of the media system, political system, and so on). 
+
+
+\textbf{Temporal analysis of country coverage.}
+Overall, the development of trustworthiness indicates that for countries with a higher number of sources, the database seems to have settled into a stable state. 
+In contrast, for newer countries (Canada, New Zealand, and Australia), rating coverage still seems to vary.
+To estimate when a country achieves a stable state, we determine a window of ``poor coverage'' per country.
+To this end, we developed two criteria to evaluate stability:
+First, we examine the development of average trustworthiness scores over time as a proxy for a potentially biased inclusion of more untrustworthy (or trustworthy) sources when a country is first added to the database. 
+We generally observe higher variability in the first months up to a year after a country is added to the database. 
+Therefore, we assess the stability of the overall trustworthiness for a given country in 6-month intervals. 
+Within every interval, we calculate the difference in average trustworthiness from one month to the next month. 
+We then compare this difference to the overall variability of trustworthiness in the country, measured as half the standard deviation of trustworthiness over the entire observation period. 
+If one month-to-month change in a given 6-month interval surpasses the overall variability, we classify the entire interval as unstable with respect to overall trustworthiness. 
+
+Second, we analyze the growth in the number of sources included in the database for a given country. 
+While the total number of sources varies substantially between countries, the initial growth rate tends to be steeper. 
+However, the number of sources continues to increase over time, which is why we calculate the percentage change in sources from month to month as second stability indicator within 6-month intervals.
+Here, we again apply a conservative threshold of 5\% growth. 
+Therefore, similar to the stability criterion relating to the overall trustworthiness, if in a given month a number of sources larger than 5\% of the already existing number of sources in the database was added, the entire 6-month interval is considered unstable with respect to source additions.
+
+We define a country as stable if two consecutive 6-month periods (one year) meet both stability criteria. 
+According to our criteria, this means that the sources included for a country are likely not systematically biased towards more trustworthy or untrustworthy sources and that no major news outlets are missing. 
+We visualize the development of trustworthiness and source coverage for each country in Figure~\ref{fig:stable_intervals} with stable windows shaded in gray.
+Our analysis shows that coverage of the US, Italy, France, Germany, and Canada has been stable since 2022. 
+Further, Australia, New Zealand and Austria show a tendency to stabilize from 2024 onward. 
+While Great Britain has instability in the number of sources throughout, the trustworthiness score has been relatively stable since early 2022. 
 To better understand how complete the database is per country, we describe comparisons with domains shared on social media and with other lists in the following sections.
 
 \textbf{Comparison with domains shared on social media.}
@@ -465,29 +490,6 @@ NewsGuard covers 244 out of 573 German-speaking sources covered by GOND, includi
 Overall, comparisons of NewsGuard with the two lists for the US and Germany reveal many non-overlapping domains.  
 However, NewsGuard's coverage of the United States and Germany seems extensive in that NewsGuard generally tends to cover more prominent outlets and excludes niche and regional outlets, probably because it focuses on websites with the most engagement.  
 
-\textbf{Temporal analysis of country coverage.}
-In addition to the comparison with domains shared on social media and other datasets, we estimate a window of ``poor coverage'' per country and determine when a country achieves a stable state. 
-To this end, we develop two criteria to evaluate stability:
-First, we examine the development of average trustworthiness scores over time as a proxy for a potentially biased inclusion of more untrustworthy (or trustworthy) sources when a country is first added to the database. 
-We generally observe higher variability in the first months up to a year after a country is added to the database. 
-Therefore, we assess the stability of the overall trustworthiness for a given country in 6-month intervals. 
-Within every interval, we calculate the difference in average trustworthiness from one month to the next month. 
-We then compare this difference to the overall variability of trustworthiness in the country, measured as half the standard deviation of trustworthiness over the entire observation period. 
-If one month-to-month change in a given 6-month interval surpasses the overall variability, we classify the entire interval as unstable with respect to overall trustworthiness. 
-
-Second, we analyze the growth in the number of sources included in the database for a given country. 
-While the total number of sources varies substantially between countries, the initial growth rate tends to be steeper. 
-However, the number of sources continues to increase over time, which is why we calculate the percentage change in sources from month to month as second stability indicator within 6-month intervals.
-Here, we again apply a conservative threshold of 5\% growth. 
-Therefore, similar to the stability criterion relating to the overall trustworthiness, if in a given month a number of sources larger than 5\% of the already existing number of sources in the database was added, the entire 6-month interval is considered unstable with respect to source additions.
-
-We define a country as stable if two consecutive 6-month periods (one year) meet both stability criteria. 
-According to our criteria, this means that the sources included for a country are likely not systematically biased towards more trustworthy or untrustworthy sources and that no major news outlets are missing. 
-We visualize the development of trustworthiness and source coverage for each country in ~\ref{fig:} with stable windows shaded in gray.
-Our analysis shows that coverage of the US, Italy, France, Germany, and Canada has been stable since 2022. 
-Further, Australia, New Zealand and Austria show a tendency to stabilize from 2024 onward. 
-While Great Britain has instability in the number of sources throughout, the trustworthiness score has been relatively stable since early 2022. 
-
 
 \section{How valuable are contextual source labels for misinformation research?}
 \textbf{Political orientation.} 
@@ -515,7 +517,7 @@ Figure~\ref{fig:orientation_panel}A shows that the ``Slightly Right'' category d
 
 \newpage 
 
-In addition to the change in average trustworthiness scores within political orientation categories caused by the changed taxonomy of political orientation used by NewsGuard, the trustworthiness averages per political orientation also differ by country, as shown in Fig.~\ref{fig:orientation_panel}B. 
+In addition to the change in average trustworthiness scores within political orientation categories caused by the changed taxonomy of political orientation used by NewsGuard, the trustworthiness averages per political orientation also differ by country, as shown in Figure~\ref{fig:orientation_panel}B. 
 While for some countries like France and Canada, the average trustworthiness of left and right sources only differs by about 20 points and 95\% confidence intervals overlap, other countries like Australia, Germany, and Austria show extreme differences of over 40 points.
 Nevertheless, across all countries, sources classified as right, on average, always have a lower trustworthiness score than sources on the left. 
 However, given the small percentage of sources classified as belonging to either side of the spectrum, we cannot infer that sources on the right, in general, have lower trustworthiness. 
@@ -766,23 +768,16 @@ Final approval of the version to be published: J. Luehring, J. Lasser, H.M., A.S
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{figures/n_sources_per_country_over_time.pdf}
-    \caption{Number of sources over time, per country.}
-    \label{fig:n_sources_per_country_over_time}
+    \includegraphics[width=\textwidth]{figures/stable_intervals.pdf}
+    \caption{Development of overall trustworthiness per country over time (green) and the number of sources (blue line) with shaded areas representing stable 6-month windows.}
+    \label{fig:stable_intervals}
 \end{figure}
 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{figures/scores_per_country_recent.pdf}
-    \caption{Distribution of trustworthiness per country as of September, 2024.}
+    \caption{Distribution of trustworthiness per country as of September 15th, 2024.}
     \label{fig:scores_per_country_recent}
-\end{figure}
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=\textwidth]{figures/scores_per_country_over_time.pdf}
-    \caption{Trustworthiness per country over time, aggregated by month.}
-    \label{fig:scores_per_country_over_time}
 \end{figure}
 
 \clearpage
